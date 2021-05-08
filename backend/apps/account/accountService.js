@@ -1,11 +1,12 @@
 const axios = require('axios')
 
-let getAccountInfo = async function(account, callbak){
+let getAccountFromExternal = function(account, callbak){
     
     console.log("[service] ------> getAccountInfo")
 
-    await axios.get("https://api-cypress.scope.klaytn.com/v1/accounts/"+ account)
+    axios.get("https://api-cypress.scope.klaytn.com/v1/accounts/"+ account)
         .then(response => {
+          a= response.dat
             callbak({success : true , response: response.data})
         })
         .catch(error => {
@@ -14,6 +15,6 @@ let getAccountInfo = async function(account, callbak){
 };
 
 module.exports = {
-    getAccountInfo: getAccountInfo
+    getAccountFromExternal: getAccountFromExternal
 };
 

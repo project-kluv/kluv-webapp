@@ -20,6 +20,7 @@
     </div>
     <br>
     <strong>{{accountInfo}}</strong>
+
   </div>
 </template>
 <script>

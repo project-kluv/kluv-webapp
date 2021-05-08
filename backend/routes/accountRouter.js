@@ -6,4 +6,5 @@ const controller = require('../apps/account/accountController');
 /* GET users listing. */
 router.get('/getInfo/:account', controller.getAccountInfo)
 
+
 module.exports = router;
