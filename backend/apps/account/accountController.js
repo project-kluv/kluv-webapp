@@ -8,8 +8,8 @@ let getAccountInfo = function(req, res){
             res.send(rslt)
         }else{
             //TODO Error Handling
+            res.send(rslt)
         }
-
     });
 
 };
