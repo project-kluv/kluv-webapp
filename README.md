@@ -14,3 +14,6 @@ Aggregate Klaytn tokens from your address!
 
 ### Inital URL
     http://localhost:8080
+
+### Confluence
+https://kluv.atlassian.net/wiki/spaces/KLUV/overview
