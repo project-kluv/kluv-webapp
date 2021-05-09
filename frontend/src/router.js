@@ -17,9 +17,12 @@ const routes = [
     redirect: "/app/pages/blank",
 
     children: [
-     
-
-   
+      // dashboard
+      {
+        path: "/app/dashboard",
+        component: () => import("./views/app/dashboard")
+      },
+      
       // pages
       {
         path: "/app/pages",
@@ -53,8 +56,8 @@ const routes = [
           {
             path: "blank",
             component: () => import("./views/app/pages/blank")
-          },
-          
+          }
+  
         ]
       },
 
