@@ -8,7 +8,7 @@ import Vuelidate from "vuelidate";
 // import VueFormWizard from "vue-form-wizard";
 import VueLazyload from "vue-lazyload";
 // import VCalendar from "v-calendar";
-// import VueGoodTablePlugin from "vue-good-table";
+import VueGoodTablePlugin from "vue-good-table";
 // import VueSlider from "vue-slider-component";
 import Meta from "vue-meta";
 import FlagIcon from "vue-flag-icon";
@@ -79,7 +79,7 @@ export default {
 
     // import the styles
 
-    // Vue.use(VueGoodTablePlugin);
+    Vue.use(VueGoodTablePlugin);
 
     // import VueCropper from "./plugins/imageCropper";
 
