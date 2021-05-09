@@ -12,12 +12,26 @@
       class="sidebar-left rtl-ps-none ps scroll"
     >
       <div>
-        <ul class="navigation-left">
+        <ul class="navigation-left">          
           <li
             @mouseenter="toggleSubMenu"
-            :class="{ active: selectedParentMenu == 'pages' }"
+            class="nav-item"
+            data-item="dashboards"
+            :class="{ active: selectedParentMenu == 'dashboards' }"
+            :data-submenu="false"
+          >
+            <router-link tag="a" class="nav-item-hold" to="/app/dashboard">
+              <i class="nav-icon i-Bar-Chart"></i>
+                <span class="nav-text">{{ $t("dashboard") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>          
+          <li
+            @mouseenter="toggleSubMenu"
             class="nav-item"
             data-item="pages"
+            :class="{ active: selectedParentMenu == 'pages' }"
+            :data-submenu="true"
           >
             <a class="nav-item-hold" href="#">
               <i class="nav-icon i-Double-Tap"></i>
@@ -25,12 +39,12 @@
             </a>
             <div class="triangle"></div>
           </li>
-
           <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
-            :class="{ active: selectedParentMenu == 'sessions' }"
             data-item="sessions"
+            :class="{ active: selectedParentMenu == 'sessions' }"
+            :data-submenu="true"
           >
             <a class="nav-item-hold" href="#">
               <i class="nav-icon i-Administrator"></i>
@@ -153,7 +167,7 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   components: {
-    Topnav,
+    Topnav
   },
 
   data() {
@@ -162,7 +176,7 @@ export default {
       isMenuOver: false,
       isStyle: true,
       selectedParentMenu: "",
-      isMobile,
+      isMobile
     };
   },
   mounted() {
@@ -177,7 +191,7 @@ export default {
     window.removeEventListener("resize", this.handleWindowResize);
   },
   computed: {
-    ...mapGetters(["getSideBarToggleProperties"]),
+    ...mapGetters(["getSideBarToggleProperties"])
   },
 
   methods: {
@@ -185,7 +199,7 @@ export default {
       "changeSecondarySidebarProperties",
       "changeSecondarySidebarPropertiesViaMenuItem",
       "changeSecondarySidebarPropertiesViaOverlay",
-      "changeSidebarProperties",
+      "changeSidebarProperties"
     ]),
 
     handleWindowResize() {
@@ -206,7 +220,7 @@ export default {
     toggleSelectedParentMenu() {
       const currentParentUrl = this.$route.path
         .split("/")
-        .filter((x) => x !== "")[1];
+        .filter(x => x !== "")[1];
 
       if (currentParentUrl !== undefined || currentParentUrl !== null) {
         this.selectedParentMenu = currentParentUrl.toLowerCase();
@@ -215,12 +229,16 @@ export default {
       }
     },
     toggleSubMenu(e) {
-      let childrens = this.$refs.sidebarChild.children;
+      let hasSubmenu = e.target.dataset.submenu;
       let parent = e.target.dataset.item;
+      if (hasSubmenu) {
+        this.selectedParentMenu = parent;
 
-      this.selectedParentMenu = parent;
-
-      this.changeSecondarySidebarPropertiesViaMenuItem(true);
+        this.changeSecondarySidebarPropertiesViaMenuItem(true);
+      } else {
+        this.selectedParentMenu = parent;
+        this.changeSecondarySidebarPropertiesViaMenuItem(false);
+      }
     },
 
     removeOverlay() {
@@ -241,11 +259,11 @@ export default {
 
       event.currentTarget.classList.toggle("open");
 
-      dropdownMenus.forEach((dropdown) => {
+      dropdownMenus.forEach(dropdown => {
         dropdown.classList.remove("open");
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
