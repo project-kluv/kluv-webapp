@@ -1,0 +1,4905 @@
+{
+  "POOL_VOTING_VIEW": [{
+      "constant": true,
+      "inputs": [],
+      "name": "vksp",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getGovernanceSetting",
+      "outputs": [{
+          "name": "govFeeRate",
+          "type": "uint256"
+        },
+        {
+          "name": "govMiningRate",
+          "type": "uint256"
+        },
+        {
+          "name": "settingInterval",
+          "type": "uint256"
+        },
+        {
+          "name": "nextSettingTime",
+          "type": "uint256"
+        },
+        {
+          "name": "rateDenom",
+          "type": "uint256"
+        },
+        {
+          "name": "maxMiningRate",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "conVersion",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "getUserPoolVotingStat",
+      "outputs": [{
+          "name": "balance",
+          "type": "uint256"
+        },
+        {
+          "name": "poolCount",
+          "type": "uint256"
+        },
+        {
+          "name": "totalVoting",
+          "type": "uint256"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "name": "addrs",
+          "type": "address[]"
+        },
+        {
+          "name": "pendingRewards",
+          "type": "uint256[]"
+        },
+        {
+          "name": "totalRewards",
+          "type": "uint256[]"
+        },
+        {
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "name": "symbols",
+          "type": "string[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "poolVotingVersion",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getVKSPStat",
+      "outputs": [{
+          "name": "totalSupply",
+          "type": "uint256"
+        },
+        {
+          "name": "totalLocked",
+          "type": "uint256"
+        },
+        {
+          "name": "lastMined",
+          "type": "uint256"
+        },
+        {
+          "name": "miningIndex",
+          "type": "uint256"
+        },
+        {
+          "name": "validPools",
+          "type": "address[]"
+        },
+        {
+          "name": "prevValidPools",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "poolVoting",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "getUserVKSPStat",
+      "outputs": [{
+          "name": "balance",
+          "type": "uint256"
+        },
+        {
+          "name": "lockedKSP",
+          "type": "uint256"
+        },
+        {
+          "name": "unlockTime",
+          "type": "uint256"
+        },
+        {
+          "name": "pendingKSP",
+          "type": "uint256"
+        },
+        {
+          "name": "totalKSP",
+          "type": "uint256"
+        },
+        {
+          "name": "userLastIndex",
+          "type": "uint256"
+        },
+        {
+          "name": "maximumLockPeriod",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPoolVotingData",
+      "outputs": [{
+          "name": "uints",
+          "type": "uint256[]"
+        },
+        {
+          "name": "pools",
+          "type": "address[]"
+        },
+        {
+          "name": "prevAmounts",
+          "type": "uint256[]"
+        },
+        {
+          "name": "curAmounts",
+          "type": "uint256[]"
+        },
+        {
+          "name": "curRates",
+          "type": "uint256[]"
+        },
+        {
+          "name": "nextRates",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{
+          "name": "_governance",
+          "type": "address"
+        },
+        {
+          "name": "_version",
+          "type": "string"
+        },
+        {
+          "name": "_poolVotingVersion",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "POOL_VOTING": [{
+      "constant": false,
+      "inputs": [{
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeVoting",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "poolRanking",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "marketIndexA",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_validPoolOperator",
+        "type": "address"
+      }],
+      "name": "setValidPoolOperator",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userVotingPoolAddress",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "addVoting",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "removeAllVoting",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_VOTING_POOL_COUNT",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userLastIndexA",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "validPoolOperator",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "isValidPool",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userRewardSumA",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimRewardAll",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "removeAllVoting",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userLastIndexB",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "marketIndexB",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "entered",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "poolAmount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "grabKlayFromExchange",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "marketUpdateB",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "userVotingPoolAmount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "exchange",
+        "type": "address"
+      }],
+      "name": "claimReward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userRewardSumB",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "userVotingPoolCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "updatePoolRanking",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "pool",
+          "type": "address"
+        },
+        {
+          "name": "valid",
+          "type": "bool"
+        }
+      ],
+      "name": "setValidPool",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "poolCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "marketUpdateA",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddVoting",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RemoveVoting",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lastMined",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "miningIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdateMarketIndex",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lastIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "rewardSum",
+          "type": "uint256"
+        }
+      ],
+      "name": "GiveReward",
+      "type": "event"
+    }
+  ],
+  "VOTING_KSP": [{
+      "constant": false,
+      "inputs": [],
+      "name": "unlockKSP",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_mining",
+        "type": "uint256"
+      }],
+      "name": "setMining",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [{
+        "name": "",
+        "type": "uint8"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "getCurrentBalance",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "userRewardSum",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mining",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "balanceOf",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "lockedKSP",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "blockNumber",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPriorBalance",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "unlockTime",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "lockPeriod",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "miningIndex",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "getUserUnlockTime",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "lockPeriodRequested",
+        "type": "uint256"
+      }],
+      "name": "refixBoosting",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "entered",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastMined",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimReward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "updateMiningIndex",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "lockPeriodRequested",
+          "type": "uint256"
+        }
+      ],
+      "name": "lockKSP",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "snapShotBalance",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "userLastIndex",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "snapShotBlock",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "snapShotCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "lockPeriod",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "KSPAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LockKSP",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "lockPeriod",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "boostingAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RefixBoosting",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "vKSPAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "KSPAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "UnlockKSP",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "_mining",
+        "type": "uint256"
+      }],
+      "name": "ChangeMiningRate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "lastMined",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "miningIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdateMiningIndex",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lastIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "rewardSum",
+          "type": "uint256"
+        }
+      ],
+      "name": "GiveReward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    }
+  ],
+  "KSP": [{
+      "constant": true,
+      "inputs": [{
+        "name": "idx",
+        "type": "uint256"
+      }],
+      "name": "getPoolAddress",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mined",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sendReward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimTeamAward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "path",
+          "type": "address[]"
+        }
+      ],
+      "name": "exchangeKlayPos",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sendTokenToExchange",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [{
+        "name": "",
+        "type": "uint8"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "tokenA",
+          "type": "address[]"
+        },
+        {
+          "name": "tokenB",
+          "type": "address[]"
+        },
+        {
+          "name": "rate",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "changeMiningRate",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "name": "path",
+          "type": "address[]"
+        }
+      ],
+      "name": "exchangeKctPos",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "teamWallet",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "name": "path",
+          "type": "address[]"
+        }
+      ],
+      "name": "exchangeKctNeg",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getExchangeImplementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_nextOwner",
+        "type": "address"
+      }],
+      "name": "changeNextOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "changeOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nextOwner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "balanceOf",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newExImp",
+        "type": "address"
+      }],
+      "name": "_setExchangeImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "halfLife",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "miningAmount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "poolExist",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPoolCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "teamAward",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "teamRatio",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "path",
+          "type": "address[]"
+        }
+      ],
+      "name": "exchangeKlayNeg",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "grabKlayFromExchange",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "pools",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_teamWallet",
+        "type": "address"
+      }],
+      "name": "changeTeamWallet",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "createFee",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "unfreezeBlock",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "exchangeImplementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "createKlayPool",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_createFee",
+        "type": "uint256"
+      }],
+      "name": "changeCreateFee",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "createKctPool",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "changePoolFee",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "minableBlock",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "tokenToPool",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "_createFee",
+        "type": "uint256"
+      }],
+      "name": "ChangeCreateFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "_teamWallet",
+        "type": "address"
+      }],
+      "name": "ChangeTeamWallet",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "award",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalAward",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimTeamAward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "nextOwner",
+        "type": "address"
+      }],
+      "name": "ChangeNextOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "owner",
+        "type": "address"
+      }],
+      "name": "ChangeOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "fee",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "exchange",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "exid",
+          "type": "uint256"
+        }
+      ],
+      "name": "CreatePool",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExchangePos",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExchangeNeg",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": true,
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    }
+  ],
+  "LP_POOL": [{
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenA",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCurrentPool",
+      "outputs": [{
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountA",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "addKlayLiquidityWithLimit",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "grabKlayFromFactory",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [{
+        "name": "",
+        "type": "uint8"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "addKlayLiquidity",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_mining",
+        "type": "uint256"
+      }],
+      "name": "changeMiningRate",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "userRewardSum",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenB",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "exchangeNeg",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "mining",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_fee",
+        "type": "uint256"
+      }],
+      "name": "changeFee",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "balanceOf",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "miningIndex",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "removeLiquidity",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "name": "amountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "addKctLiquidity",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastMined",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimReward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "estimateNeg",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "updateMiningIndex",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "exchangePos",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountA",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "addKctLiquidityWithLimit",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "allowance",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "fee",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "estimatePos",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "userLastIndex",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "to",
+        "type": "address"
+      }],
+      "name": "initPool",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountA",
+          "type": "uint256"
+        },
+        {
+          "name": "minAmountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeLiquidityWithLimit",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "_mining",
+        "type": "uint256"
+      }],
+      "name": "ChangeMiningRate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "_fee",
+        "type": "uint256"
+      }],
+      "name": "ChangeFee",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "lastMined",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "miningIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "UpdateMiningIndex",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lastIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "rewardSum",
+          "type": "uint256"
+        }
+      ],
+      "name": "GiveReward",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExchangePos",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        }
+      ],
+      "name": "ExchangeNeg",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "liquidity",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddLiquidity",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "tokenA",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountA",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "tokenB",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amountB",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "liquidity",
+          "type": "uint256"
+        }
+      ],
+      "name": "RemoveLiquidity",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": true,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": true,
+          "name": "holder",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    }
+  ],
+  "BALANCE_BOOK": [{
+    "constant": true,
+    "inputs": [{
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "name": "tokens",
+        "type": "address[]"
+      }
+    ],
+    "name": "balanceOf",
+    "outputs": [{
+      "name": "",
+      "type": "uint256[]"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }],
+  "FACTORY_VIEW": [{
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getPoolCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getFullData",
+      "outputs": [{
+          "name": "totalSupply",
+          "type": "uint256"
+        },
+        {
+          "name": "poolCount",
+          "type": "uint256"
+        },
+        {
+          "name": "mined",
+          "type": "uint256"
+        },
+        {
+          "name": "maxMiningRate",
+          "type": "uint256"
+        },
+        {
+          "name": "fixedDatas",
+          "type": "address[]"
+        },
+        {
+          "name": "fees",
+          "type": "uint256[]"
+        },
+        {
+          "name": "amountDatas",
+          "type": "uint256[]"
+        },
+        {
+          "name": "miningDatas",
+          "type": "uint256[]"
+        },
+        {
+          "name": "decimalDatas",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "si",
+          "type": "uint256"
+        },
+        {
+          "name": "ei",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUserData",
+      "outputs": [{
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        },
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{
+        "name": "_governance",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "GOVERNANCE": [{
+      "constant": false,
+      "inputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "sendReward",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_MINING_POOL_COUNT",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_executor",
+        "type": "address"
+      }],
+      "name": "setExecutor",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implAdmin",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setVotingKSPImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isInitialized",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "vKSPMiningRate",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_nextOwner",
+        "type": "address"
+      }],
+      "name": "changeNextOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "treasury",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "changeOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_kaiAdmin",
+        "type": "address"
+      }],
+      "name": "setKaiAdmin",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nextOwner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setPoolVotingImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setExchangeImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_implAdmin",
+        "type": "address"
+      }],
+      "name": "setImplAdmin",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "_factory",
+          "type": "address"
+        },
+        {
+          "name": "_factoryImpl",
+          "type": "address"
+        },
+        {
+          "name": "_exchangeImpl",
+          "type": "address"
+        },
+        {
+          "name": "_votingKSP",
+          "type": "address"
+        },
+        {
+          "name": "_poolVoting",
+          "type": "address"
+        },
+        {
+          "name": "_treasury",
+          "type": "address"
+        },
+        {
+          "name": "_feeShareRate",
+          "type": "uint256"
+        }
+      ],
+      "name": "init",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "kaiAdmin",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "setMiningRate",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "rate",
+        "type": "uint256"
+      }],
+      "name": "setVotingKSPMiningRate",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "entered",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "transactionValue",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_count",
+        "type": "uint256"
+      }],
+      "name": "setMaxMiningPoolCount",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "transactionData",
+      "outputs": [{
+        "name": "",
+        "type": "bytes"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "transactionCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "transactionExecuted",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "executor",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setFactoryImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "name": "transactionDestination",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "votingKSP",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "feeShareRate",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "poolVoting",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "destination",
+          "type": "address"
+        },
+        {
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "addTransaction",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "tid",
+        "type": "uint256"
+      }],
+      "name": "executeTransaction",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "rate",
+        "type": "uint256"
+      }],
+      "name": "setFeeShareRate",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "transactionId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "destination",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "Submission",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "transactionId",
+        "type": "uint256"
+      }],
+      "name": "Execution",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "transactionId",
+        "type": "uint256"
+      }],
+      "name": "ExecutionFailure",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "nextOwner",
+        "type": "address"
+      }],
+      "name": "ChangeNextOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "owner",
+        "type": "address"
+      }],
+      "name": "ChangeOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "implAdmin",
+        "type": "address"
+      }],
+      "name": "ChangeImplAdmin",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "executor",
+        "type": "address"
+      }],
+      "name": "ChangeExecutor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "kaiAdmin",
+        "type": "address"
+      }],
+      "name": "ChangeKaiAdmin",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "vKSPMiningRate",
+        "type": "uint256"
+      }],
+      "name": "ChangeVotingKSPMiningRate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "feeShareRate",
+        "type": "uint256"
+      }],
+      "name": "ChangeFeeShareRate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+        "indexed": false,
+        "name": "maxPoolCount",
+        "type": "uint256"
+      }],
+      "name": "ChangeMaxMiningPoolCount",
+      "type": "event"
+    }
+  ],
+  "KLAYSTATION": [{
+      "constant": true,
+      "inputs": [{
+          "name": "sklay",
+          "type": "uint256"
+        },
+        {
+          "name": "swapKlay",
+          "type": "uint256"
+        },
+        {
+          "name": "swapSKlay",
+          "type": "uint256"
+        }
+      ],
+      "name": "_estimateKlayFromLiquidity",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getWalletImplementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "delegationContract",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "sklayContract",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "klay",
+        "type": "uint256"
+      }],
+      "name": "_estimateSKlayFromSwap",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "klay",
+        "type": "uint256"
+      }],
+      "name": "_estimateSKlayFromDelegation",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "klay",
+        "type": "uint256"
+      }],
+      "name": "_estimateSKlayFromLiquidity",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "historyCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setWalletImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_entered",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_delegation",
+        "type": "address"
+      }],
+      "name": "_setDelegationContract",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "name": "klayForSwap",
+          "type": "uint256"
+        },
+        {
+          "name": "sklayBySwap",
+          "type": "uint256"
+        }
+      ],
+      "name": "_calcKlayForDelegation",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "sklay",
+        "type": "uint256"
+      }],
+      "name": "_estimateKlayFromSwap",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "swapPoolRate",
+        "type": "uint256"
+      }],
+      "name": "addLiquidity",
+      "outputs": {},
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "sklay",
+        "type": "uint256"
+      }],
+      "name": "_estimateKlayFromDelegation",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "hid",
+        "type": "uint256"
+      }],
+      "name": "claimKlay",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "_estimateLPFromKlay",
+      "outputs": [{
+        "name": "lp",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "claimCount",
+      "outputs": [{
+        "name": "",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nextOwner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "history",
+      "outputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "lp",
+          "type": "uint256"
+        },
+        {
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "name": "sklay",
+          "type": "uint256"
+        },
+        {
+          "name": "totalReturn",
+          "type": "uint256"
+        },
+        {
+          "name": "uid",
+          "type": "uint256"
+        },
+        {
+          "name": "requestTime",
+          "type": "uint256"
+        },
+        {
+          "name": "completionTime",
+          "type": "uint256"
+        },
+        {
+          "name": "isClaimed",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_getPoolRate",
+      "outputs": [{
+          "name": "delegationPoolRate",
+          "type": "uint256"
+        },
+        {
+          "name": "swapPoolRate",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "_estimateKlayByQuickWithdraw",
+      "outputs": [{
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "name": "sklay",
+          "type": "uint256"
+        },
+        {
+          "name": "klayFromSwap",
+          "type": "uint256"
+        },
+        {
+          "name": "totalReturn",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "name": "sklay",
+          "type": "uint256"
+        }
+      ],
+      "name": "_estimateAddLiquidity",
+      "outputs": [{
+          "name": "res",
+          "type": "bool"
+        },
+        {
+          "name": "estimatedLP",
+          "type": "uint256"
+        },
+        {
+          "name": "estimatedKlay",
+          "type": "uint256"
+        },
+        {
+          "name": "estimatedSKlay",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "walletImplementation",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "poolContract",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "name": "wallets",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "_getUserStat",
+      "outputs": [{
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "name": "lp",
+          "type": "uint256"
+        },
+        {
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "name": "ksp",
+          "type": "uint256"
+        },
+        {
+          "name": "lastClaimedIndex",
+          "type": "uint256"
+        },
+        {
+          "name": "historyIndex",
+          "type": "uint256"
+        },
+        {
+          "name": "rewardKSPSum",
+          "type": "uint256"
+        },
+        {
+          "name": "lastKSPIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_comparePoolRate",
+      "outputs": [{
+        "name": "",
+        "type": "bool"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "_changeOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "_setApporve",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_newImp",
+        "type": "address"
+      }],
+      "name": "_setImplementation",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "name": "quick",
+          "type": "bool"
+        },
+        {
+          "name": "swapPoolRate",
+          "type": "uint256"
+        },
+        {
+          "name": "minTotalReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "removeLiquidity",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "amount",
+        "type": "uint256"
+      }],
+      "name": "_estimateKlayFromLP",
+      "outputs": [{
+        "name": "klay",
+        "type": "uint256"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factoryContract",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [{
+        "name": "_nextOwner",
+        "type": "address"
+      }],
+      "name": "_changeNextOwner",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimKSP",
+      "outputs": {},
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "klay",
+        "type": "uint256"
+      }],
+      "name": "_calc",
+      "outputs": [{
+          "name": "find",
+          "type": "bool"
+        },
+        {
+          "name": "liquidityKlay",
+          "type": "uint256"
+        },
+        {
+          "name": "delegationKlay",
+          "type": "uint256"
+        },
+        {
+          "name": "swapKlay",
+          "type": "uint256"
+        },
+        {
+          "name": "totalSKlay",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "wallet",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "lp",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddLiquidity",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "lp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "klay",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "sklay",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalReturn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "requestTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "completionTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "quick",
+          "type": "bool"
+        }
+      ],
+      "name": "RemoveLiquidity",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "historyIndex",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "totalReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimKlay",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "hid",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "estTotalReturn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "realTotalReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimCanceledKlay",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [{
+          "indexed": false,
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ClaimKSP",
+      "type": "event"
+    }
+  ],
+  "TREASURY_VIEW": [{
+      "constant": true,
+      "inputs": [{
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "name": "target",
+          "type": "address"
+        }
+      ],
+      "name": "getPoolReward",
+      "outputs": [{
+          "name": "count",
+          "type": "uint256"
+        },
+        {
+          "name": "tokens",
+          "type": "address[]"
+        },
+        {
+          "name": "symbols",
+          "type": "string[]"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [{
+        "name": "user",
+        "type": "address"
+      }],
+      "name": "getTotalReward",
+      "outputs": [{
+          "name": "index",
+          "type": "uint256"
+        },
+        {
+          "name": "pools",
+          "type": "address[]"
+        },
+        {
+          "name": "distributionCounts",
+          "type": "uint256[]"
+        },
+        {
+          "name": "tokens",
+          "type": "address[][]"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[][]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "version",
+      "outputs": [{
+        "name": "",
+        "type": "string"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governance",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "treasury",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getFullData",
+      "outputs": [{
+          "name": "poolCount",
+          "type": "uint256"
+        },
+        {
+          "name": "pools",
+          "type": "address[]"
+        },
+        {
+          "name": "distributionCount",
+          "type": "uint256[]"
+        },
+        {
+          "name": "symbols",
+          "type": "string[][]"
+        },
+        {
+          "name": "addrs",
+          "type": "address[][]"
+        },
+        {
+          "name": "uints",
+          "type": "uint256[][]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "factory",
+      "outputs": [{
+        "name": "",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [{
+        "name": "_governance",
+        "type": "address"
+      }],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ]
+}
