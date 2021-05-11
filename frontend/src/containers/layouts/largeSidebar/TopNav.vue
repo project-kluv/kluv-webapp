@@ -116,15 +116,16 @@
         </div>
       </div>
       <!-- / Mega menu -->
-      <div class="search-bar" @click="toggleSearch">
-        <input type="text" placeholder="Search" />
-        <i class="search-icon text-muted i-Magnifi-Glass1"></i>
-      </div>
+
     </div>
 
     <div style="margin: auto"></div>
 
     <div class="header-part-right">
+     <div class="search-bar" @click="toggleSearch">
+        <input type="text" placeholder="Search Adress" />
+        <i class="search-icon text-muted i-Magnifi-Glass1"></i>
+      </div>
       <!-- Full screen toggle -->
       <i
         class="i-Full-Screen header-icon d-none d-sm-inline-block"
@@ -289,6 +290,7 @@
           </div>
         </b-dropdown>
       </div>
+    <button class="btn btn-warning m-1" type="button"><span class="ul-btn__text">Login</span></button>
     </div>
     <search-component
       :isSearchOpen.sync="isSearchOpen"
