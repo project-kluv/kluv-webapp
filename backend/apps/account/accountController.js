@@ -3,7 +3,7 @@ const accountService = require('./accountService')
 let getAccountInfo = function(req, res){
     var account = req.params.account
 
-    rtn = accountService.getAccountFromExternal(account, function(rslt){
+    rtn = accountService.getAccountBalance(account, function(rslt){
         if(rslt.success){
             res.send(rslt)
         }else{

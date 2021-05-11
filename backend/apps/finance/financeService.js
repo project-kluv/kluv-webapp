@@ -1,10 +1,9 @@
 const axios = require('axios');
 const fs = require('fs');
-const Caver = require('caver-js-ext-kas');
 const contractService = require('../contract/contractService')
 
 const getAllLPPool = function(swapName, callbak){
-  console.log("[service] ------> getTokenPriceAll")
+  console.log("[service] ------> getAllLPPool")
   try {
     if (swapName === 'klayswap') {
       const tokenInfo = JSON.parse(fs.readFileSync("./apps/finance/klayswapTokenInfo.json", 'utf8'));
@@ -58,7 +57,7 @@ const getAllTokenPrice = function(swapName, callbak){
         const tokenInfo = JSON.parse(fs.readFileSync("./apps/finance/klayswapTokenInfo.json", 'utf8'));
         for (const tokenAddress in tokenInfo) {
           if (Object.hasOwnProperty.call(tokenInfo, tokenAddress)) {
-            tokenPriceAll.token[tokenAddress] = tokenAddress == '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167' ? {price:1} : {price:0};
+            tokenPriceAll.token[tokenAddress] = tokenAddress == '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167' ? {price:1, decimals:tokenInfo[tokenAddress].decimals} : {price:0, decimals:tokenInfo[tokenAddress].decimals};
           }
         }
         // 1. get price using USDT pair : 0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167
@@ -79,7 +78,8 @@ const getAllTokenPrice = function(swapName, callbak){
             "tokenB": lpPool.tokenB,
             "tokenAUnint": tokenAUnit,
             "tokenBUnint": tokenBUnit,
-            "price": tokenAUnit*tokenPriceAll.token[lpPool.tokenA].price + tokenBUnit*tokenPriceAll.token[lpPool.tokenB].price
+            "price": tokenAUnit*tokenPriceAll.token[lpPool.tokenA].price + tokenBUnit*tokenPriceAll.token[lpPool.tokenB].price,
+            "decimals": lpPool.decimals
           }
       }
       callbak({success : true , response: tokenPriceAll})

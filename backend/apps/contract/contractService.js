@@ -27,6 +27,7 @@ const callContract = async function(params, callbak){
     const swapName = params.swapName
     const contractName = params.contractName
     const method = params.method
+    const variables = params.variables
     
     const contractAddress = contractModels.getContractAddressList(swapName)[contractName]
     const contractABI = contractModels.getContractABI(swapName)[contractName]
@@ -36,7 +37,10 @@ const callContract = async function(params, callbak){
       const contract = new caver.contract(contractABI, contractAddress)
       if (method == "getFullData") {
         rst = await contract.methods.getFullData().call()
-      }else rst = 0
+      } else if (method == "balanceOf") {
+        if (variables.length > 1) rst = await contract.methods.balanceOf(variables[0], variables[1]).call()
+        else rst = await contract.methods.balanceOf(variables[0]).call()
+      } else rst = 0
     } else throw new Error('parameter input error!')
 
     callbak({success : true , response: rst})
