@@ -25,22 +25,66 @@ const getAccountBalance = function(account, callbak) {
 				contractService.callContract(params, function(callContractRst){
 					const balances = callContractRst['response']
 					if (allAddressList.length === balances.length) {
-						// lpBalance = balances.slice(0, lpAddressList.length)
-						// tokenBalance = balances.slice(lpAddressList.length)
-						result = {address:[], balanceAll:[], balanceAllUSDT:[], balanceToken:[], balanceTokenUSDT:[], totalUSDT:[]}
+						resultAll = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUSDT:0}
+						result = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUSDT:0}
 						for (let i = 0; i < balances.length; i++) {
-							result.address.push(allAddressList[i])
 							if (i < lpAddressList.length) {
-								balance = balances[i] / 10**lpPrice[allAddressList[i]].decimals
-								result.balanceAll.push(balance)
-								result.balanceAllUSDT.push(balance * lpPrice[allAddressList[i]].price)
+								lpPriceInfo = lpPrice[allAddressList[i]]
+								lpBalance = Number(balances[i])
+								resultAll.lpBalance.push({
+									"address": allAddressList[i],
+									"balance": lpBalance / 10**lpPriceInfo.decimals,
+									"tokenA": {
+										"address": lpPriceInfo.tokenA,
+										"balance": lpBalance*lpPriceInfo.tokenAUnit / 10**tokenPrice[lpPriceInfo.tokenA].decimals,
+									},
+									"tokenB": {
+										"address": lpPriceInfo.tokenB,
+										"balance": lpBalance*lpPriceInfo.tokenBUnit / 10**tokenPrice[lpPriceInfo.tokenB].decimals,
+									},
+									"priceUSDT": lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
+								})
+								resultAll.totalUSDT += lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
 							} else {
-								balance = balances[i] / 10**tokenPrice[allAddressList[i]].decimals
-								result.balanceAll.push(balance)
-								result.balanceAllUSDT.push(balance * tokenPrice[allAddressList[i]].price)
+								tokenPriceInfo = tokenPrice[allAddressList[i]]
+								tokenBalance = Number(balances[i])
+								resultAll.tokenBalance.push({
+									"address": allAddressList[i],
+									"name": tokenPriceInfo.name,
+									"symbol": tokenPriceInfo.symbol,
+									"balance": tokenBalance / 10**tokenPriceInfo.decimals,
+									"priceUSDT": tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
+								})
+								resultAll.totalUSDT += tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
+
+								// Balance Detail
+								balanceSum = tokenBalance / 10**tokenPriceInfo.decimals
+								searchTokenInLP = resultAll.lpBalance.filter(function(obj){
+									return (obj.tokenA.address == allAddressList[i]) || (obj.tokenB.address == allAddressList[i]);
+								})
+
+								if (searchTokenInLP.length > 0){
+									for (let j = 0; j < searchTokenInLP.length; j++) {
+										const lpDetail = searchTokenInLP[j];
+										if (lpDetail.tokenA.address == allAddressList[i]) balanceSum += lpDetail.tokenA.balance
+										else balanceSum += lpDetail.tokenB.balance
+									}
+								}
+								resultAll.totalBalance.push({
+									"address": allAddressList[i],
+									"name": tokenPriceInfo.name,
+									"symbol": tokenPriceInfo.symbol,
+									"balance": balanceSum,
+									"priceUSDT": tokenPriceInfo.price * balanceSum
+								})
 							}
 						}
-						result.totalUSDT.push(arrSum(result.balanceAllUSDT))
+
+						result.lpBalance = resultAll.lpBalance.filter(function(obj){ return obj.priceUSDT > 1 })
+						result.tokenBalance = resultAll.tokenBalance.filter(function(obj){ return obj.priceUSDT > 1 })
+						result.totalBalance = resultAll.totalBalance.filter(function(obj){ return obj.priceUSDT > 1 })
+						result.totalUSDT = resultAll.totalUSDT
+
 						callbak({success : true , response: result})
 					} else throw new Error("요청한 건수와 결과 건수가 다릅니다")
 				})
@@ -49,20 +93,7 @@ const getAccountBalance = function(account, callbak) {
   } catch (error) {
     callbak({success : false , message: error.message})
   }
-
-	function arrSum(arr) {
-		return arr.reduce(function (a,b){
-			return a+b
-		}, 0)
-	}
-
-	function calcLPtoToken(lpPrice, lpBalance){
-
-	}
 }
-
-
-
 
 let getAccountFromExternal = function(account, callbak){
 	

@@ -31,8 +31,8 @@ const getAllLPPool = function(swapName, callbak){
               "tokenB": tokenB,
               "tokenAAmount": amountDatas[poolCount+i],
               "tokenBAmount": amountDatas[(2*poolCount+i)], 
-              "tokenADecimals": tokenInfo[fixedDatas[poolCount+i]]['decimals'],
-              "tokenBDecimals": tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals']
+              "tokenADecimals": Number(tokenInfo[fixedDatas[poolCount+i]]['decimals']),
+              "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
             })
           } else {
             console.log(lpToken + " 의 구성 토큰의 정보가 부족합니다.")
@@ -57,10 +57,16 @@ const getAllTokenPrice = function(swapName, callbak){
         const tokenInfo = JSON.parse(fs.readFileSync("./apps/finance/klayswapTokenInfo.json", 'utf8'));
         for (const tokenAddress in tokenInfo) {
           if (Object.hasOwnProperty.call(tokenInfo, tokenAddress)) {
-            tokenPriceAll.token[tokenAddress] = tokenAddress == '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167' ? {price:1, decimals:tokenInfo[tokenAddress].decimals} : {price:0, decimals:tokenInfo[tokenAddress].decimals};
+            tokenPriceAll.token[tokenAddress] = {
+              decimals : tokenInfo[tokenAddress].decimals,
+              name : tokenInfo[tokenAddress].name,
+              symbol : tokenInfo[tokenAddress].symbol,
+              price : 0
+            }
           }
         }
         // 1. get price using USDT pair : 0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167
+        tokenPriceAll.token['0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167'].price = 1
         calcTokenPrice(lpPools, '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167')
         // 2. get pirce using klay pair : 0x0000000000000000000000000000000000000000
         calcTokenPrice(lpPools, '0x0000000000000000000000000000000000000000')
@@ -70,17 +76,18 @@ const getAllTokenPrice = function(swapName, callbak){
       // get LP price
       for (let i = 0; i < lpPools.length; i++) {
         const lpPool = lpPools[i];
-          tokenAUnit = (lpPool.tokenAAmount/10**lpPool.tokenADecimals)/(lpPool.totalSupply/10**lpPool.decimals)
-          tokenBUnit = (lpPool.tokenBAmount/10**lpPool.tokenBDecimals)/(lpPool.totalSupply/10**lpPool.decimals)
-          
-          tokenPriceAll.lp[lpPool.address] = {
-            "tokenA": lpPool.tokenA,
-            "tokenB": lpPool.tokenB,
-            "tokenAUnint": tokenAUnit,
-            "tokenBUnint": tokenBUnit,
-            "price": tokenAUnit*tokenPriceAll.token[lpPool.tokenA].price + tokenBUnit*tokenPriceAll.token[lpPool.tokenB].price,
-            "decimals": lpPool.decimals
-          }
+        tokenAUnit = lpPool.tokenAAmount/lpPool.totalSupply
+        tokenBUnit = lpPool.tokenBAmount/lpPool.totalSupply
+        
+        tokenPriceAll.lp[lpPool.address] = {
+          "tokenA": lpPool.tokenA,
+          "tokenB": lpPool.tokenB,
+          "tokenAUnit": tokenAUnit,
+          "tokenBUnit": tokenBUnit,
+          "price": tokenAUnit*(10**lpPool.decimals/10**lpPool.tokenADecimals)*tokenPriceAll.token[lpPool.tokenA].price + 
+                  tokenBUnit*(10**lpPool.decimals/10**lpPool.tokenBDecimals)*tokenPriceAll.token[lpPool.tokenB].price,
+          "decimals": Number(lpPool.decimals)
+        }
       }
       callbak({success : true , response: tokenPriceAll})
     });
@@ -105,7 +112,7 @@ const getAllTokenPrice = function(swapName, callbak){
         tokenAmount = lp.tokenAAmount/(10**lp.tokenADecimals)
         tokenAddress = lp.tokenA
       }
-      // 계산 로직 작성해야함
+      
       if (standardAddress == '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167'){
         price = standardAmount/tokenAmount
       } else{
