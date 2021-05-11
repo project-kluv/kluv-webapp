@@ -35,7 +35,6 @@ const callContract = async function(params, callbak){
       const caver = this.initCaver()
       const contract = new caver.contract(contractABI, contractAddress)
       if (method == "getFullData") {
-        console.log("getFullData")
         rst = await contract.methods.getFullData().call()
       }else rst = 0
     } else throw new Error('parameter input error!')

@@ -4,7 +4,7 @@ var router = express.Router();
 const controller = require('../apps/finance/financeController');
 
 /* GET users listing. */
-router.get('/getTokenPriceAll/:swapName', controller.getTokenPriceAll)
+router.get('/getAllLPPool/:swapName', controller.getAllLPPool)
 
 
 module.exports = router;

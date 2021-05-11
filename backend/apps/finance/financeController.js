@@ -1,11 +1,11 @@
 const financeService = require('./financeService')
 
 
-const getTokenPriceAll = function(req, res){
+const getAllLPPool = function(req, res){
   console.log("[Controller] ------> getTokenPriceAll")
   const swapName = req.params.swapName
 
-  rtn = financeService.getTokenPriceAll(swapName, function(rslt){
+  rtn = financeService.getAllLPPool(swapName, function(rslt){
       if(rslt.success){
           res.send(rslt)
       }else{
@@ -16,5 +16,5 @@ const getTokenPriceAll = function(req, res){
 };
 
 module.exports = {
-  getTokenPriceAll:getTokenPriceAll
+  getAllLPPool:getAllLPPool
 }

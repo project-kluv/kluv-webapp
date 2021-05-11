@@ -1,0 +1,142 @@
+{
+  "0x0000000000000000000000000000000000000000": {
+    "symbol": "KLAY",
+    "name": "Klaytn",
+    "decimals": 18
+  },
+  "0x5c74070fdea071359b86082bd9f9b3deaafbe32b": {
+    "symbol": "KDAI",
+    "name": "Klaytn Dai",
+    "decimals": 18
+  },
+  "0xa323d7386b671e8799dca3582d6658fdcdcd940a": {
+    "symbol": "SKLAY",
+    "name": "sKlay",
+    "decimals": 18
+  },
+  "0x34d21b1e550d73cee41151c77f3c73359527a396": {
+    "symbol": "KETH",
+    "name": "Orbit Bridge Klaytn Ethereum",
+    "decimals": 18
+  },
+  "0x16d0e1fbd024c600ca0380a4c5d57ee7a2ecbf9c": {
+    "symbol": "KWBTC",
+    "name": "Orbit Bridge Klaytn Wrapped BTC",
+    "decimals": 8
+  },
+  "0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167": {
+    "symbol": "KUSDT",
+    "name": "Orbit Bridge Klaytn USD Tether",
+    "decimals": 6
+  },
+  "0xfe41102f325deaa9f303fdd9484eb5911a7ba557": {
+    "symbol": "KORC",
+    "name": "Orbit Bridge Klaytn Orbit Chain",
+    "decimals": 18
+  },
+  "0x9657fb399847d85a9c1a234ece9ca09d5c00f466": {
+    "symbol": "ISR",
+    "name": "Insureum Token",
+    "decimals": 18
+  },
+  "0x275f942985503d8ce9558f8377cc526a3aba3566": {
+    "symbol": "WIKEN",
+    "name": "ProjectWITH",
+    "decimals": 18
+  },
+  "0xdcd62c57182e780e23d2313c4782709da85b9d6c": {
+    "symbol": "SSX",
+    "name": "Somesing Exchange",
+    "decimals": 18
+  },
+  "0x46f307b58bf05ff089ba23799fae0e518557f87c": {
+    "symbol": "ABL",
+    "name": "Airbloc",
+    "decimals": 18
+  },
+  "0x1cd3828a2b62648dbe98d6f5748a6b1df08ac7bb": {
+    "symbol": "REDi",
+    "name": "REDiToken",
+    "decimals": 18
+  },
+  "0xc6a2ad8cc6e4a7e08fc37cc5954be07d499e7654": {
+    "symbol": "KSP",
+    "name": "KlaySwap Protocol",
+    "decimals": 18
+  },
+  "0x588c62ed9aa7367d7cd9c2a9aaac77e44fe8221b": {
+    "symbol": "AGOV",
+    "name": "Answer Governance",
+    "decimals": 18
+  },
+  "0x4dd402a7d54eaa8147cb6ff252afe5be742bdf40": {
+    "symbol": "HINT",
+    "name": "HINT Token",
+    "decimals": 18
+  },
+  "0xa128e62cfb454ab5b580a7385de2f228ad7b69d1": {
+    "symbol": "BEE",
+    "name": "KLAYFarm Token",
+    "decimals": 18
+  },
+  "0x5096db80b21ef45230c9e423c373f1fc9c0198dd": {
+    "symbol": "WEMIX",
+    "name": "WEMIX TOKEN",
+    "decimals": 18
+  },
+  "0x321bc0b63efb1e4af08ec6d20c85d5e94ddaaa18": {
+    "symbol": "BBC",
+    "name": "BLUEBAIKAL",
+    "decimals": 18
+  },
+  "0x0c1d7ce4982fd63b1bc77044be1da05c995e4463": {
+    "symbol": "KTRIX",
+    "name": "Orbit Bridge Klaytn TriumphX",
+    "decimals": 18
+  },
+  "0xafde910130c335fa5bd5fe991053e3e0a49dce7b": {
+    "symbol": "PIB",
+    "name": "Pibble Token",
+    "decimals": 18
+  },
+  "0xc4407f7dc4b37275c9ce0f839652b393e13ff3d1": {
+    "symbol": "CLBK",
+    "name": "Cloudbric",
+    "decimals": 18
+  },
+  "0xf7689072554d1e85fa9d96151f528764277d7db2": {
+    "symbol": "KSLO",
+    "name": "KSPHOLD",
+    "decimals": 8
+  },
+  "0x065a9ddbbdd48c4189984e2f7aeda3834bd1eac7": {
+    "symbol": "KSVE",
+    "name": "KSPLOVE",
+    "decimals": 8
+  },
+  "0x3f34671fba493ab39fbf4ecac2943ee62b654a88": {
+    "symbol": "KHANDY",
+    "name": "Orbit Bridge Klaytn Handy Token",
+    "decimals": 18
+  },
+  "0x27dcd181459bcddc63c37bab1e404a313c0dfd79": {
+    "symbol": "MNR",
+    "name": "Mineral",
+    "decimals": 6
+  },
+  "0x4b91c67a89d4c4b2a4ed9fcde6130d7495330972": {
+    "symbol": "TRCL",
+    "name": "Treecle",
+    "decimals": 18
+  },
+  "0x9eaefb09fe4aabfbe6b1ca316a3c36afc83a393f": {
+    "symbol": "KXRP",
+    "name": "Orbit Bridge Klaytn Ripple",
+    "decimals": 6
+  },
+  "0x91e0d7b228a33072d9b3209cf507f78a4bd835f2": {
+    "symbol": "KDUCATO",
+    "name": "Orbit Bridge Klaytn DUCATO Protocol Token",
+    "decimals": 18
+  }
+}
