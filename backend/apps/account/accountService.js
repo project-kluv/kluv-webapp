@@ -1,4 +1,14 @@
 const axios = require('axios')
+const financeService = require('../finance/financeService')
+
+const getAccountBalance = function(swapName, callback) {
+    console.log("[service] ------> getAccountBalance")
+    
+
+}
+
+
+
 
 let getAccountFromExternal = function(account, callbak){
     
