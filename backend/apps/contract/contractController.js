@@ -14,7 +14,8 @@ const getAuth = function(req, res){
 
 const callContract = function(req, res){
   console.log("[controller] ------> callContract")
-  rtn = contractService.callContract(req, function(rslt){
+  params = req.query
+  rtn = contractService.callContract(params, function(rslt){
     if(rslt.success){
       res.send(rslt)
     }else{

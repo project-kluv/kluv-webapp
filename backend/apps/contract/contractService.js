@@ -21,13 +21,12 @@ const initCaver = function() {
   return caver
 }
 
-const callContract = async function(req, callbak){
+const callContract = async function(params, callbak){
   console.log("[service] ------> callContract")
-  
   try {
-    const swapName = req.query.swapName
-    const contractName = req.query.contractName
-    const method = req.query.method
+    const swapName = params.swapName
+    const contractName = params.contractName
+    const method = params.method
     
     const contractAddress = contractModels.getContractAddressList(swapName)[contractName]
     const contractABI = contractModels.getContractABI(swapName)[contractName]
