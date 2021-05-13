@@ -46,14 +46,14 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       }
       optims = solver.Solve(model);
 
-      result = {}
+      result = {"portion":{}, "expectedReturn":optims["result"]/callResult["response"]["totalUSDT"]}
       for (const lpAddress in tokenPriceAll['lp']) {
         if (Object.hasOwnProperty.call(tokenPriceAll['lp'], lpAddress)) {
           const lpPool = tokenPriceAll['lp'][lpAddress];
           const optimsLp = optims[lpAddress]
 
           if (optimsLp != null){
-            result[lpAddress] = {
+            result["portion"][lpAddress] = {
               "tokenA": lpPool.tokenA,
               "tokenB": lpPool.tokenB,
               "tokenAName" : tokenPriceAll['token'][lpPool.tokenA].name,
