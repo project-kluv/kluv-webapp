@@ -6,36 +6,45 @@ const poolService = require('../pool/poolService')
 const getExpectedLPReturn = async function (appName, callbak) {
   console.log("[service] ------> getExpectedLPReturn")
   try {
-    KSP_DAILY_AMOUNT = 86400
-    // 1. pool별 KSP 분배율 계산
-    const poolVotingInfoList = await getPoolVotingInfo(appName)
+    poolVotingInfoList = await this.getExpectedLPReturnInApp(appName)
 
-    // 2. pool별 평가금액 계산
-    poolService.getAllTokenPrice(appName, function (callResult) {
-      const lpPrice = callResult['response']['lp']
-      const kspPrice = callResult['response']['token']['0xC6a2Ad8cC6e4A7E08FC37cC5954be07d499E7654']
-
-      for (let i = 0; i < poolVotingInfoList.length; i++) {
-        let poolVotingInfo = poolVotingInfoList[i];
-        totalSupply = lpPrice[poolVotingInfo.pools].totalSupply
-        decimals = lpPrice[poolVotingInfo.pools].decimals
-        unitPrice = lpPrice[poolVotingInfo.pools].price
-        
-        console.log("total price : " + unitPrice*totalSupply/10**decimals)
-        poolVotingInfo['curKSP'] = KSP_DAILY_AMOUNT * poolVotingInfo['curRates']
-      }
-
-
-
-
-
-
-      callbak({ success: true, response: poolVotingInfoList })
-    })
+    callbak({ success: true, response: poolVotingInfoList })
   } catch (error) {
     callbak({success : false , message: error.message})
   }
 }
+
+const getExpectedLPReturnInApp = async function (appName) {
+  const poolVotingInfoList = await getPoolVotingInfo(appName)
+  const lpPools = await poolService.getAllLPPool(appName)
+  const tokenPriceAll = poolService.getTokenPriceInApp(appName, lpPools)
+  const lpPrice = tokenPriceAll['lp']
+  
+  if (appName === "klayswap") {
+    DAILY_DISTRIBUTION = 86400
+    rewardPrice = tokenPriceAll['token']['0xC6a2Ad8cC6e4A7E08FC37cC5954be07d499E7654']['price']
+  } else {
+    DAILY_DISTRIBUTION = 0
+    rewardPrice = 0
+  }
+
+  for (let i = 0; i < poolVotingInfoList.length; i++) {
+    let poolVotingInfo = poolVotingInfoList[i];
+    totalSupply = lpPrice[poolVotingInfo.pools].totalSupply
+    decimals = lpPrice[poolVotingInfo.pools].decimals
+    unitPrice = lpPrice[poolVotingInfo.pools].price
+    totalUSDT = unitPrice*totalSupply/10**decimals
+
+    poolVotingInfo['tokenA'] = lpPrice[poolVotingInfo.pools].tokenA
+    poolVotingInfo['tokenB'] = lpPrice[poolVotingInfo.pools].tokenB
+    poolVotingInfo['totalUSDT'] = totalUSDT
+    poolVotingInfo['curReward'] = DAILY_DISTRIBUTION * poolVotingInfo['curRates']
+    poolVotingInfo['curReward_USDT'] = rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']
+    poolVotingInfo['apr'] = (365*rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']) / totalUSDT
+  }
+  return poolVotingInfoList
+}
+
 
 const getPoolVotingInfo = async function (appName) {
   const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
@@ -58,5 +67,6 @@ const getPoolVotingInfo = async function (appName) {
 }
 
 module.exports = {
-  getExpectedLPReturn: getExpectedLPReturn
+  getExpectedLPReturn: getExpectedLPReturn,
+  getExpectedLPReturnInApp: getExpectedLPReturnInApp
 }
