@@ -23,8 +23,9 @@ const connectLivereload = require("connect-livereload");
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/userRouter');
 var accountRouter = require('./routes/accountRouter');
-var contractRouter = require('./routes/contractRouter');
-var financeRouter = require('./routes/financeRouter');
+var poolRouter = require('./routes/poolRouter');
+var votingRouter = require('./routes/votingRouter');
+
 
 var app = express();
 
@@ -43,8 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/v1/user', userRouter);
 app.use('/web/account', accountRouter);
-app.use('/web/contract', contractRouter);
-app.use('/web/finance', financeRouter);
+app.use('/web/pool', poolRouter);
+app.use('/web/voting', votingRouter);
 app.use('/v1/account', accountRouter);
 
 // catch 404 and forward to error handler

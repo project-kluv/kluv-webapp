@@ -138,5 +138,10 @@
     "symbol": "KDUCATO",
     "name": "Orbit Bridge Klaytn DUCATO Protocol Token",
     "decimals": 18
+  },
+  "0x3B3b30A76d169F72A0A38AE01b0D6e0FbeE3cc2e": {
+    "symbol": "TEMCO",
+    "name": "TEMCO",
+    "decimals": 18
   }
 }
