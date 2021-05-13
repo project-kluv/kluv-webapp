@@ -26,7 +26,7 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       const poolInfo = lpExpectedReturn[i]
       if (tokenPriceAll['lp'][poolInfo.pools].price > 0) {
         model['variables'][poolInfo.pools] = {}
-        model['variables'][poolInfo.pools]["apr"] = poolInfo.apr != null ? poolInfo.apr : 0
+        model['variables'][poolInfo.pools]["apr"] = poolInfo.apr
         model['variables'][poolInfo.pools][poolInfo.tokenA] = 1 / tokenPriceAll['token'][poolInfo.tokenA].price / 2
         model['variables'][poolInfo.pools][poolInfo.tokenB] = 1 / tokenPriceAll['token'][poolInfo.tokenB].price / 2
         model['constraints'][poolInfo.tokenA] = {
@@ -46,7 +46,11 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       }
       optims = solver.Solve(model);
 
-      result = {"portion":{}, "expectedReturn":optims["result"]/callResult["response"]["totalUSDT"]}
+      result = {
+        "portion":{}, 
+        "APY":optims["result"]/callResult["response"]["totalUSDT"],
+        "DailyAPY":optims["result"]/callResult["response"]["totalUSDT"]/365
+      }
       for (const lpAddress in tokenPriceAll['lp']) {
         if (Object.hasOwnProperty.call(tokenPriceAll['lp'], lpAddress)) {
           const lpPool = tokenPriceAll['lp'][lpAddress];
