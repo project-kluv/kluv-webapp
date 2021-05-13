@@ -1,0 +1,38 @@
+[
+    {
+        "name": "KLAY",
+        "kspPrice": 50000,
+        "exchangePrice": 40000,
+        "kPremium": 0.063
+    },
+    {
+        "name": "KSP",
+        "kspPrice": 150000,
+        "exchangePrice": 160000,
+        "kPremium": 0.065
+    },
+    {
+        "name": "SSX",
+        "kspPrice": 500,
+        "exchangePrice": 550,
+        "kPremium": 0.062
+    },
+    {
+        "name": "KETH",
+        "kspPrice": 1500,
+        "exchangePrice": 1550,
+        "kPremium": 0.062
+    },
+    {
+        "name": "KWBTC",
+        "kspPrice": 2124500,
+        "exchangePrice": 2125550,
+        "kPremium": 0.061
+    },
+    {
+        "name": "WEMIX",
+        "kspPrice": 3500,
+        "exchangePrice": 3550,
+        "kPremium": 0.05
+    }
+]

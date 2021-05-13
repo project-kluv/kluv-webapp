@@ -48,6 +48,9 @@
       </b-col>
     </b-row>
     <!-- start::klaytnCoinPrice-->
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button" @click="getData()">새로고침</button>
+    </span>    
     <div class="row">
       <div class="col-md-12">
         <div class="card mb-30">
@@ -77,6 +80,7 @@ export default {
   },
   data() {
     return {
+      bool:true,
       columns: [
         {
           label: "Name",
@@ -110,91 +114,32 @@ export default {
           tdClass: "text-left"
         }
       ],
-      rows: [
-        {
-          id: 1,
-          name:
-            '<img src="https://pbs.twimg.com/profile_images/1047734710242164737/CjbT82vP_400x400.jpg"'+
-            'class="rounded-circle avatar-sm" alt="">'+'KLAY',
-          kspPrice: '$50,000',
-          exchangePrice: '55,000 KRW',
-          kPremium : 0.065,
-          img:'Coinone'+
-            '<img src="' +
-            require("@/assets/images/products/iphone-1.jpg") +
-            '" class="rounded-circle avatar-sm" alt=""> <img src="' +
-            require("@/assets/images/products/iphone-2.jpg") +
-            '" class="rounded-circle avatar-sm" alt="">',
-            
-          span:
-            '<span class="badge badge-pill badge-outline-primary p-2 ">Delivered</span>',
-          createdAt: "2019-10-31 ",
-          score: 0.03343,
-          action:
-            '<button class=" btn btn-outline-primary text-black btn-rounded">View</button>'
-        },
-        {
-          id: 1,
-          name:
-            '<img src="https://pbs.twimg.com/profile_images/1047734710242164737/CjbT82vP_400x400.jpg"'+
-            'class="rounded-circle avatar-sm" alt="">'+'KLAY',
-          kspPrice: '$50,000',
-          exchangePrice: '55,000 KRW',
-          kPremium : 0.065,
-          img:'Coinone'+
-            '<img src="' +
-            require("@/assets/images/products/iphone-1.jpg") +
-            '" class="rounded-circle avatar-sm" alt=""> <img src="' +
-            require("@/assets/images/products/iphone-2.jpg") +
-            '" class="rounded-circle avatar-sm" alt="">',
-            
-          span:
-            '<span class="badge badge-pill badge-outline-primary p-2 ">Delivered</span>',
-          createdAt: "2019-10-31 ",
-          score: 0.03343,
-          action:
-            '<button class=" btn btn-outline-primary text-black btn-rounded">View</button>'
-        },
-        {
-          id: 1,
-          name:
-            '<img src="https://pbs.twimg.com/profile_images/1047734710242164737/CjbT82vP_400x400.jpg"'+
-            'class="rounded-circle avatar-sm" alt="">'+'KLAY',
-          kspPrice: '$50,000',
-          exchangePrice: '55,000 KRW',
-          kPremium : 0.065,
-          img:'Coinone'+
-            '<img src="' +
-            require("@/assets/images/products/iphone-1.jpg") +
-            '" class="rounded-circle avatar-sm" alt=""> <img src="' +
-            require("@/assets/images/products/iphone-2.jpg") +
-            '" class="rounded-circle avatar-sm" alt="">',
-            
-          span:
-            '<span class="badge badge-pill badge-outline-primary p-2 ">Delivered</span>',
-          createdAt: "2019-10-31 ",
-          score: 0.03343,
-          action:
-            '<button class=" btn btn-outline-primary text-black btn-rounded">View</button>'
-        }
-      ]
+      rows:[]
     };
   },
   //axios test
   methods: {
-    fetchData() {
-      axios
-        .get("https://s.belt.fi/status/A_beltTokenList.json")
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err);
-        });
+    getData() {
+      var url = "";
+      if(this.bool){
+        url =  "http://localhost:8080/test.json";
+        this.bool = false;
+      }else{
+        url =  "http://localhost:8080/test2.json";
+        this.bool = true;
+      }
+
+      axios.get(url)
+      .then((res) => {
+        this.rows = res.data;
+      })
+      .catch((error) => {
+        console.log('proxyRequest error', error)
+      })
     }
-  },
+  },  
   created() {
-    this.fetchData();
+    this.getData();
   }
 };
 
