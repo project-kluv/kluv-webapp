@@ -21,7 +21,7 @@
     <br>
     <strong>{{accountInfo}}</strong>
     test11111111111111111111111
-
+    2222
   </div>
 </template>
 <script>
