@@ -1,5 +1,9 @@
 const portfolioService = require('./portfolioService')
 
+/*
+ API : /web/voting/ExpectedLPReturn/klayswap
+ Desc : 뭐하는건지좀
+*/
 const getMaximizeReturn = function(req, res){
   console.log("[Controller] ------> getMaximizeReturn")
   const account = req.query.account
