@@ -6,7 +6,7 @@ services:
     image: kluvme/webapp:front
     restart: always
     ports:
-      - 8080:8080
+      - 80:8080
     networks: 
       - kluv_net
   kluv-back:

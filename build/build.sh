@@ -3,4 +3,4 @@
 sudo docker build --tag kluvme/webapp:front ../front/.
 sudo docker build --tag kluvme/webapp:back ../backend/.
 
-sudo docker-compose up -d .
+sudo docker-compose up -d
