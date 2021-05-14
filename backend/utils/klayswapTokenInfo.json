@@ -143,5 +143,10 @@
     "symbol": "TEMCO",
     "name": "TEMCO",
     "decimals": 18
+  },
+  "0xE06b40df899b9717b4E6B50711E1dc72d08184cF": {
+    "symbol": "HIBS",
+    "name": "HiblocksToken",
+    "decimals": 18
   }
 }
