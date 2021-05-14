@@ -20,7 +20,7 @@
     </div>
     <br>
     <strong>{{accountInfo}}</strong>
-
+<img src="@/assets/images/photo-long-1.jpg" alt />
   </div>
 </template>
 <script>
