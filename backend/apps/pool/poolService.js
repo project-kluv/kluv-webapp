@@ -20,23 +20,37 @@ const getAllLPPool = async function(appName){
         const lpToken = fixedDatas[i]
         const tokenA = fixedDatas[poolCount+i]
         const tokenB = fixedDatas[(2*poolCount+i)]
-        
-        if ((tokenInfo[tokenA] != null) & (tokenInfo[tokenB] != null)) {
-          result.data.push({
-            "address": lpToken,
-            "totalSupply": amountDatas[i],
-            "decimals":decimalDatas[i],
-            "tokenA": tokenA,
-            "tokenB": tokenB,
-            "tokenAAmount": amountDatas[poolCount+i],
-            "tokenBAmount": amountDatas[(2*poolCount+i)], 
-            "tokenADecimals": Number(tokenInfo[fixedDatas[poolCount+i]]['decimals']),
-            "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
-          })
-        } else {
-          console.log(lpToken + " 의 구성 토큰의 정보가 부족합니다(tokenA : "+tokenA+" / "+"tokenB : "+tokenB+")")
-          // 구성 토큰 기본정보 추가 해야함
+
+        // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
+        if (tokenInfo[tokenA] == null){
+          let newTokenInfo = await utils.getNewTokenInfo(tokenA)
+          tokenInfo[tokenA] = {
+            "symbol": newTokenInfo.symbol,
+            "name": newTokenInfo.name,
+            "decimals": newTokenInfo.decimals
+          }
+          poolModel.addTokenInfo(appName, [tokenA, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
+        } else if (tokenInfo[tokenB] == null) {
+          let newTokenInfo = await utils.getNewTokenInfo(tokenB)
+          tokenInfo[tokenB] = {
+            "symbol": newTokenInfo.symbol,
+            "name": newTokenInfo.name,
+            "decimals": newTokenInfo.decimals
+          }
+          poolModel.addTokenInfo(appName, [tokenB, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
         }
+
+        result.data.push({
+          "address": lpToken,
+          "totalSupply": amountDatas[i],
+          "decimals":decimalDatas[i],
+          "tokenA": tokenA,
+          "tokenB": tokenB,
+          "tokenAAmount": amountDatas[poolCount+i],
+          "tokenBAmount": amountDatas[(2*poolCount+i)], 
+          "tokenADecimals": Number(tokenInfo[fixedDatas[poolCount+i]]['decimals']),
+          "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
+        })
       }
       return result
     } else return 0
