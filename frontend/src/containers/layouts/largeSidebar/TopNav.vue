@@ -115,11 +115,6 @@
           </div>
         </div>
       </div>
-      <!-- / Mega menu -->
-      <div class="search-bar" @click="toggleSearch">
-        <input type="text" placeholder="Search" />
-        <i class="search-icon text-muted i-Magnifi-Glass1"></i>
-      </div>
     </div>
 
     <div style="margin: auto"></div>
@@ -169,11 +164,9 @@
           </div>
         </b-dropdown>
       </div>
-      
       <!-- dark mode -->
       <i class="header-icon" @click="changeThemeMode"><b-icon icon="moon"></b-icon></i>
       <!-- dark mode End -->
-
       <!-- Notificaiton -->
       <div class="dropdown">
         <b-dropdown
@@ -375,9 +368,7 @@ export default {
     toggleMegaMenu() {
       this.isMegaMenuOpen = !this.isMegaMenuOpen;
     },
-    toggleSearch() {
-      alert('111')
-    },
+
     searchInputAdress(address) {
       // this.$router.push({path:"/app/pages/account", params: {address:address}});
       this.$router.push({name:"account", query: {address:address}}).catch(()=>{});
