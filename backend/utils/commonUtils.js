@@ -32,8 +32,20 @@ const initCaver = function() {
   }
 }
 
+const getUserDefinedContract = function (contractABI, contractAddress) {
+  console.log("[Utils] ------> getUserDefinedContract")
+  try {
+    const caver = this.initCaver()
+    const contract = new caver.contract(contractABI, contractAddress)
+    return contract
+  } catch (error) {
+    console.log(error.message)
+    return -1
+  }
+}
+
 const getNewTokenInfo = async function(contractAddress){
-  console.log("[Utils] ------> contractABI")
+  console.log("[Utils] ------> getNewTokenInfo")
   try {
     const caver = this.initCaver()
     const contract = new caver.kct.kip7(contractAddress)
@@ -72,7 +84,8 @@ const getContract = function(appName, contractName) {
 
 module.exports = {
     getAuth: getAuth,
-    initCaver:initCaver,
+  initCaver: initCaver,
+    getUserDefinedContract:getUserDefinedContract,
     getNewTokenInfo:getNewTokenInfo,
     getContract:getContract
 };
