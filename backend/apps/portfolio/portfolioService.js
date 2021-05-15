@@ -17,7 +17,7 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
     }
     // 토큰 수익률 가져오기
     const lpExpectedReturn = await rewardService.getExpectedLPReturnInApp(appName)
-    console.log(lpExpectedReturn)
+    // console.log(lpExpectedReturn)
     // 토큰 가격 가져오기
     const lpPools = await poolService.getAllLPPool(appName)
     const tokenPriceAll = poolService.getTokenPriceInApp(appName, lpPools)
@@ -26,7 +26,7 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       const poolInfo = lpExpectedReturn[i]
       if (tokenPriceAll['lp'][poolInfo.pools].price > 0) {
         model['variables'][poolInfo.pools] = {}
-        model['variables'][poolInfo.pools]["apr"] = poolInfo.apr
+        model['variables'][poolInfo.pools]["apr"] = poolInfo.curApr
         model['variables'][poolInfo.pools][poolInfo.tokenA] = 1 / tokenPriceAll['token'][poolInfo.tokenA].price / 2
         model['variables'][poolInfo.pools][poolInfo.tokenB] = 1 / tokenPriceAll['token'][poolInfo.tokenB].price / 2
         model['constraints'][poolInfo.tokenA] = {
@@ -45,7 +45,7 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
         model['constraints'][token.address]["max"] = token.balance
       }
       optims = solver.Solve(model);
-
+      
       result = {
         "portion":{}, 
         "APY":optims["result"]/callResult["response"]["totalUSDT"],
