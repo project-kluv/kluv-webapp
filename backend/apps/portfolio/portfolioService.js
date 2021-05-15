@@ -48,8 +48,8 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       
       result = {
         "portion":{}, 
-        "APY":optims["result"]/callResult["response"]["totalUSDT"],
-        "DailyAPY":optims["result"]/callResult["response"]["totalUSDT"]/365
+        "APY":optims["result"]/callResult["response"]["totalUsdt"],
+        "DailyAPY":optims["result"]/callResult["response"]["totalUsdt"]/365
       }
       for (const lpAddress in tokenPriceAll['lp']) {
         if (Object.hasOwnProperty.call(tokenPriceAll['lp'], lpAddress)) {

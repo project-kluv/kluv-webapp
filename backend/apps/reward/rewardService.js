@@ -34,18 +34,18 @@ const getExpectedLPReturnInApp = async function (appName) {
     totalSupply = lpPrice[poolVotingInfo.pools].totalSupply
     decimals = lpPrice[poolVotingInfo.pools].decimals
     unitPrice = lpPrice[poolVotingInfo.pools].price
-    totalUSDT = unitPrice*totalSupply/10**decimals
+    totalUsdt = unitPrice*totalSupply/10**decimals
 
     poolVotingInfo['tokenA'] = lpPrice[poolVotingInfo.pools].tokenA
     poolVotingInfo['tokenB'] = lpPrice[poolVotingInfo.pools].tokenB
-    poolVotingInfo['totalUSDT'] = totalUSDT
+    poolVotingInfo['totalUsdt'] = totalUsdt
     poolVotingInfo['curReward'] = DAILY_DISTRIBUTION * poolVotingInfo['curRates']
-    poolVotingInfo['curReward_USDT'] = rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']
-    poolVotingInfo['curApr'] = (365 * rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']) / totalUSDT
+    poolVotingInfo['curRewardUsdt'] = rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']
+    poolVotingInfo['curApr'] = (365 * rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['curRates']) / totalUsdt
     
     poolVotingInfo['nextReward'] = DAILY_DISTRIBUTION * poolVotingInfo['nextRates']
-    poolVotingInfo['nextReward_USDT'] = rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['nextRates']
-    poolVotingInfo['nextApr'] = (365 * rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['nextRates']) / totalUSDT
+    poolVotingInfo['nextRewardUsdt'] = rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['nextRates']
+    poolVotingInfo['nextApr'] = (365 * rewardPrice * DAILY_DISTRIBUTION * poolVotingInfo['nextRates']) / totalUsdt
   }
   return poolVotingInfoList
 }

@@ -36,8 +36,8 @@ const getBalance = async function(account, callbak) {
           })
         });
       if (allAddressList.length === balances.length) {
-        resultAll = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUSDT:0}
-        result = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUSDT:0, pendingRewards:{}}
+        resultAll = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUsdt:0}
+        result = {lpBalance:[], tokenBalance:[], totalBalance:[], totalUsdt:0, pendingRewards:{}}
         for (let i = 0; i < balances.length; i++) {
           if (i < lpAddressList.length) {
             lpPriceInfo = lpPrice[allAddressList[i]]
@@ -53,9 +53,9 @@ const getBalance = async function(account, callbak) {
                 "address": lpPriceInfo.tokenB,
                 "balance": lpBalance*lpPriceInfo.tokenBUnit / 10**tokenPrice[lpPriceInfo.tokenB].decimals,
               },
-              "priceUSDT": lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
+              "priceUsdt": lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
             })
-            resultAll.totalUSDT += lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
+            resultAll.totalUsdt += lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
           } else {
             tokenPriceInfo = tokenPrice[allAddressList[i]]
             tokenBalance = Number(balances[i])
@@ -64,9 +64,9 @@ const getBalance = async function(account, callbak) {
               "name": tokenPriceInfo.name,
               "symbol": tokenPriceInfo.symbol,
               "balance": tokenBalance / 10**tokenPriceInfo.decimals,
-              "priceUSDT": tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
+              "priceUsdt": tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
             })
-            resultAll.totalUSDT += tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
+            resultAll.totalUsdt += tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
 
             // Balance Detail
             balanceSum = tokenBalance / 10**tokenPriceInfo.decimals
@@ -86,14 +86,14 @@ const getBalance = async function(account, callbak) {
               "name": tokenPriceInfo.name,
               "symbol": tokenPriceInfo.symbol,
               "balance": balanceSum,
-              "priceUSDT": tokenPriceInfo.price * balanceSum
+              "priceUsdt": tokenPriceInfo.price * balanceSum
             })
           }
         }
-        result.lpBalance = resultAll.lpBalance.filter(function(obj){ return obj.priceUSDT > 1 })
-        result.tokenBalance = resultAll.tokenBalance.filter(function(obj){ return obj.priceUSDT > 1 })
-        result.totalBalance = resultAll.totalBalance.filter(function(obj){ return obj.priceUSDT > 1 })
-        result.totalUSDT = resultAll.totalUSDT
+        result.lpBalance = resultAll.lpBalance.filter(function(obj){ return obj.priceUsdt > 1 })
+        result.tokenBalance = resultAll.tokenBalance.filter(function(obj){ return obj.priceUsdt > 1 })
+        result.totalBalance = resultAll.totalBalance.filter(function(obj){ return obj.priceUsdt > 1 })
+        result.totalUsdt = resultAll.totalUsdt
 
         // 2. KSP Pending Rewards 가져오기 -> 함수화 시켜야함 
         pendingRewards = await this.getPendingRewards(appName, account)
