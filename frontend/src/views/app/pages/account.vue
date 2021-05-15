@@ -136,10 +136,6 @@
                         field: "symbol"
                     },
                     {
-                        label: "Name",
-                        field: "name"
-                    },
-                    {
                         label: "갯수",
                         field: "balance"
                     },
