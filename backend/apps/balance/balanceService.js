@@ -1,12 +1,15 @@
 const axios = require('axios')
+const fs = require('fs')
 const poolService = require('../pool/poolService.js')
 const utils = require('../../utils/commonUtils.js')
+const KLAYSWAP_TOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapTokenInfo.json", 'utf8'));
+
 
 
 const getBalance = async function(account, callbak) {
 	console.log("[service] ------> getAccountBalance")
   try {
-    // 1. KLAYSWAP LP + 토큰 잔고 가져오기 -> 함수화 시켜야함 
+    // 1. KLAYSWAP LP + 토큰 잔고 가져오기
     const exchangeList = ['klayswap'] // 거래소 목록
     const appName = exchangeList[0]
     if (appName === 'klayswap') {
@@ -93,8 +96,8 @@ const getBalance = async function(account, callbak) {
         result.totalUSDT = resultAll.totalUSDT
 
         // 2. KSP Pending Rewards 가져오기 -> 함수화 시켜야함 
-        pendingRewards = await this.getPendingLPRewards(appName, account)
-        if (pendingRewards['KSP'].length > 0) {
+        pendingRewards = await this.getPendingRewards(appName, account)
+        if (pendingRewards['KSP']['LP'].length > 0 || pendingRewards['KSP']['VOTING'].length > 0) {
           result.pendingRewards = pendingRewards
         }
 
@@ -108,20 +111,20 @@ const getBalance = async function(account, callbak) {
   }
 }
 
-const getPendingLPRewards = async function (appName, account) {
-  console.log("[service] ------> getPendingLPRewards")
+const getPendingRewards = async function (appName, account) {
+  console.log("[service] ------> getPendingRewards")
   try {
     if (appName === 'klayswap') {
-      let pendingLPReward = {'KSP':[], "voting":[]}
+      let pendingRewards = {'KSP':{'LP':[], 'STAKING':0, 'VOTING':[]}}
       const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW")
       const fullData = await factoryViewContract.methods.getFullData().call()
       const poolCount = Number(fullData['poolCount'])
       const userData = await factoryViewContract.methods.getUserData(account, 0, poolCount).call()
       for (let index = 0; index < poolCount; index++) {
-        c = fullData['mined'] // s.mined
-        w = fullData['amountDatas'][index] // amountDatas
-        A = fullData['miningDatas'][index] // miningData
-        P = fullData['miningDatas'][poolCount+index] // miningData
+        c = fullData['mined']
+        w = fullData['amountDatas'][index]
+        A = fullData['miningDatas'][index]
+        P = fullData['miningDatas'][poolCount+index]
         C = (fullData['miningDatas'][2+poolCount+index] ) * (100) / 10000
         r = (C * (P - c))/100
         miningIndex = Number(A) + ((r / 10 ** 18) / w)
@@ -129,14 +132,37 @@ const getPendingLPRewards = async function (appName, account) {
         if (userData['0'][index] > 0) {
           balanceOf = userData['0'][index]
           userLastIndex = userData['2'][index]
-          pendingKSP = balanceOf * (miningIndex - userLastIndex) / 10 ** (2 * 18)
-          pendingLPReward['KSP'].push({
+          pendingLPReward = balanceOf * (miningIndex - userLastIndex) / 10 ** (2 * 18)
+          pendingRewards['KSP']['LP'].push({
             "pool": fullData["fixedDatas"][index],
-            "pendingRewards": pendingKSP
+            "amount": pendingLPReward
           })
         }
       }
-      return pendingLPReward
+      // Staking
+      const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
+      const userVKSPStat = await poolVotingViewContract.methods.getUserVKSPStat(account).call()
+      const pendingKSP = Number(userVKSPStat['pendingKSP'])
+      if (pendingKSP > 0) {
+        pendingRewards['KSP']["STAKING"]= pendingKSP / (10**18)
+      }
+      // Voting 
+      const userPoolVogintStat = await poolVotingViewContract.methods.getUserPoolVotingStat(account).call()
+      const votingPoolCount = Number(userPoolVogintStat["poolCount"])
+      if (votingPoolCount > 0) {
+        for (let i = 0; i < votingPoolCount; i++) {
+          pendingRewards['KSP']["VOTING"].push({
+            "pool": userPoolVogintStat['addrs'][i],
+            "tokenA": userPoolVogintStat["tokens"][2 * i],
+            "tokenB": userPoolVogintStat["tokens"][2 * i + 1],
+            "tokenAAmount": userPoolVogintStat["pendingRewards"][2 * i] / 10 ** KLAYSWAP_TOKEN_INFO[userPoolVogintStat["tokens"][2 * i]].decimals,
+            "tokenBAmount": userPoolVogintStat["pendingRewards"][2 * i + 1] / 10 ** KLAYSWAP_TOKEN_INFO[userPoolVogintStat["tokens"][2 * i + 1]].decimals,
+            "tokenASymbol": userPoolVogintStat["symbols"][2 * i],
+            "tokenBSymbol": userPoolVogintStat["symbols"][2 * i + 1],
+          })
+        }
+      }
+      return pendingRewards
     } else throw new Error("거래소 목록 오류")
   } catch (error) {
     console.log(error.message)
@@ -148,5 +174,5 @@ const getPendingLPRewards = async function (appName, account) {
 
 module.exports = {
 	getBalance: getBalance,
-  getPendingLPRewards:getPendingLPRewards
+  getPendingRewards: getPendingRewards
 };
