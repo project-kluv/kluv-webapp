@@ -30,10 +30,13 @@
   body * {
     visibility: hidden;
   }
+
   .main-content-wrap {
     width: 100% !important;
   }
   #print-area,
+  .print-area,
+  .print-area *,
   #print-area * {
     visibility: visible;
   }

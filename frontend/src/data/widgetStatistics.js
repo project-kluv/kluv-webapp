@@ -2,18 +2,18 @@
 export const splineAreaWidget = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'series2',
+      name: "series2",
       data: [11, 32, 45, 32, 34, 52, 41],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -26,22 +26,22 @@ export const splineAreaWidget = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
     legend: {
       show: false,
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
       labels: {
         show: false,
@@ -62,12 +62,12 @@ export const splineAreaWidget = {
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#6ed3cf', '#4caf50'],
+    colors: ["#6ed3cf", "#4caf50"],
     stroke: {
-      curve: 'straight',
+      curve: "straight",
       width: 1,
     },
   },
@@ -76,18 +76,18 @@ export const splineAreaWidget = {
 export const splineAreaWidgetTwo = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [90, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'series2',
+      name: "series2",
       data: [11, 90, 45, 32, 34, 52, 41],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -100,22 +100,22 @@ export const splineAreaWidgetTwo = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
     legend: {
       show: false,
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
       labels: {
         show: false,
@@ -136,12 +136,12 @@ export const splineAreaWidgetTwo = {
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#6ed3cf', '#9068be'],
+    colors: ["#6ed3cf", "#9068be"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -149,18 +149,18 @@ export const splineAreaWidgetTwo = {
 export const splineAreaWidgetThree = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [11, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'series2',
+      name: "series2",
       data: [100, 40, 45, 32, 34, 0, 41],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -173,30 +173,30 @@ export const splineAreaWidgetThree = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#fae596', '#3fb0ac'],
+    colors: ["#fae596", "#3fb0ac"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -204,18 +204,18 @@ export const splineAreaWidgetThree = {
 export const splineAreaWidgetFour = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [11, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'series2',
+      name: "series2",
       data: [100, 40, 45, 32, 34, 0, 41],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -228,30 +228,30 @@ export const splineAreaWidgetFour = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#f44336', '#e05038'],
+    colors: ["#f44336", "#e05038"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -259,14 +259,14 @@ export const splineAreaWidgetFour = {
 export const splineAreaWidgetFive = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [31, 40, 28, 51, 42, 109, 100],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -279,30 +279,30 @@ export const splineAreaWidgetFive = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#8B5CF6', '#e97d23'],
+    colors: ["#A855F7", "#e97d23"],
     stroke: {
-      curve: 'straight',
+      curve: "straight",
       width: 1,
     },
   },
@@ -310,14 +310,14 @@ export const splineAreaWidgetFive = {
 export const splineAreaWidgetSix = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [60, 20, 28, 51, 15, 40, 50],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -330,31 +330,31 @@ export const splineAreaWidgetSix = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
 
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#98dafc'],
+    colors: ["#98dafc"],
     stroke: {
-      curve: 'straight',
+      curve: "straight",
       width: 1,
     },
   },
@@ -362,15 +362,15 @@ export const splineAreaWidgetSix = {
 export const splineAreaWidgetSeven = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [30, 20, 90, 2, 15, 40, 50],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
-      height: '100px',
+      width: "100%",
+      height: "100px",
       toolbar: {
         show: false,
       },
@@ -382,32 +382,32 @@ export const splineAreaWidgetSeven = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
 
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#bcd5d1'],
+    colors: ["#bcd5d1"],
 
     stroke: {
-      curve: 'straight',
+      curve: "straight",
       width: 1,
     },
   },
@@ -415,14 +415,14 @@ export const splineAreaWidgetSeven = {
 export const splineAreaWidgetEight = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [65, 90, 10, 45, 15, 75, 50],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -436,32 +436,32 @@ export const splineAreaWidgetEight = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
     },
 
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#6534ff'],
+    colors: ["#6534ff"],
 
     stroke: {
-      curve: 'straight',
+      curve: "straight",
       width: 1,
     },
   },
@@ -472,7 +472,7 @@ export const splineAreaWidgetEight = {
 export const widgetBarChart = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [60, 20, 28, 51, 15, 40, 50, 60, 20, 28, 51, 15, 40, 50],
     },
   ],
@@ -485,7 +485,7 @@ export const widgetBarChart = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '50%',
+        columnWidth: "50%",
       },
     },
     dataLabels: {
@@ -494,20 +494,20 @@ export const widgetBarChart = {
 
     xaxis: {
       categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
-        'Oct',
-        'Nov',
-        'Dec',
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
       ],
-      position: 'top',
+      position: "top",
       labels: {
         offsetY: -18,
       },
@@ -518,13 +518,13 @@ export const widgetBarChart = {
       },
     },
 
-    colors: ['#98dafc'],
+    colors: ["#98dafc"],
   },
 };
 export const widgetBarChartTwo = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [12, 14, 2, 47, -42, -15, 47, 75, 65, 19, -14, 30, 50],
     },
   ],
@@ -537,13 +537,13 @@ export const widgetBarChartTwo = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '50%',
+        columnWidth: "50%",
       },
     },
     dataLabels: {
       enabled: false,
     },
-    colors: ['#e05038'],
+    colors: ["#e05038"],
   },
 };
 
@@ -551,7 +551,7 @@ export const widgetBarChartTwo = {
 export const widgetLineChart = {
   series: [
     {
-      name: 'Desktops',
+      name: "Desktops",
       data: [25, 66, 41, 89, 63, 25, 44, 12, 36, 9, 54],
     },
   ],
@@ -569,26 +569,26 @@ export const widgetLineChart = {
       enabled: false,
     },
     stroke: {
-      curve: 'straight',
+      curve: "straight",
     },
 
     grid: {
       row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+        colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
         opacity: 0.5,
       },
     },
     xaxis: {
       categories: [
-        'Jan',
-        'Feb',
-        'Mar',
-        'Apr',
-        'May',
-        'Jun',
-        'Jul',
-        'Aug',
-        'Sep',
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
       ],
     },
   },
@@ -597,14 +597,14 @@ export const widgetLineChart = {
 export const widgetBarChartThree = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [5, 15, 25, 35, 55, 75, 100, 75, 55, 35, 25, 15, 5],
     },
   ],
   chartOptions: {
     chart: {
-      type: 'bar',
-      width: '70%',
+      type: "bar",
+      width: "70%",
       height: 100,
       sparkline: {
         enabled: true,
@@ -612,8 +612,8 @@ export const widgetBarChartThree = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '30%',
-        endingShape: 'rounded',
+        columnWidth: "30%",
+        endingShape: "rounded",
       },
     },
     dataLabels: {
@@ -624,21 +624,21 @@ export const widgetBarChartThree = {
         width: 1,
       },
     },
-    colors: ['#8B5CF6'],
+    colors: ["#A855F7"],
   },
 };
 
 export const widgetBarChartFour = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [5, 15, 15, 35, 35, 75, 90, 75, 35, 35, 15, 15, 5],
     },
   ],
   chartOptions: {
     chart: {
-      type: 'bar',
-      width: '70%',
+      type: "bar",
+      width: "70%",
       height: 100,
       sparkline: {
         enabled: true,
@@ -646,8 +646,8 @@ export const widgetBarChartFour = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '30%',
-        endingShape: 'rounded',
+        columnWidth: "30%",
+        endingShape: "rounded",
       },
     },
     dataLabels: {
@@ -659,20 +659,20 @@ export const widgetBarChartFour = {
       },
     },
     // colors: ['#6534ff'],
-    colors: ['#f44336'],
+    colors: ["#f44336"],
   },
 };
 export const widgetBarChartFive = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [5, 15, 25, 35, 25, 15, 5, 10, 20, 30, 45, 65, 45, 30, 20, 10],
     },
   ],
   chartOptions: {
     chart: {
-      type: 'bar',
-      width: '70%',
+      type: "bar",
+      width: "70%",
       height: 100,
       sparkline: {
         enabled: true,
@@ -680,8 +680,8 @@ export const widgetBarChartFive = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '30%',
-        endingShape: 'rounded',
+        columnWidth: "30%",
+        endingShape: "rounded",
       },
     },
     dataLabels: {
@@ -692,20 +692,20 @@ export const widgetBarChartFive = {
         width: 1,
       },
     },
-    colors: ['#7d6cbb'],
+    colors: ["#7d6cbb"],
   },
 };
 export const widgetBarChartSix = {
   series: [
     {
-      name: 'Inflation',
+      name: "Inflation",
       data: [100, 85, 75, 55, 35, 25, 15, 5, 15, 25, 35, 55, 75, 85, 90, 100],
     },
   ],
   chartOptions: {
     chart: {
-      type: 'bar',
-      width: '70%',
+      type: "bar",
+      width: "70%",
       height: 100,
       sparkline: {
         enabled: true,
@@ -713,8 +713,8 @@ export const widgetBarChartSix = {
     },
     plotOptions: {
       bar: {
-        columnWidth: '30%',
-        endingShape: 'rounded',
+        columnWidth: "30%",
+        endingShape: "rounded",
       },
     },
     dataLabels: {
@@ -725,7 +725,7 @@ export const widgetBarChartSix = {
         width: 1,
       },
     },
-    colors: ['#7566b5'],
+    colors: ["#7566b5"],
   },
 };
 
@@ -743,9 +743,9 @@ export const radialBar = {
         endAngle: 225,
         hollow: {
           margin: 0,
-          size: '70%',
-          background: '#fff',
-          position: 'front',
+          size: "70%",
+          background: "#fff",
+          position: "front",
           dropShadow: {
             enabled: true,
             top: 3,
@@ -755,8 +755,8 @@ export const radialBar = {
           },
         },
         track: {
-          background: '#fff',
-          strokeWidth: '67%',
+          background: "#fff",
+          strokeWidth: "67%",
           margin: 0, // margin is in pixels
           dropShadow: {
             enabled: true,
@@ -771,27 +771,27 @@ export const radialBar = {
           name: {
             offsetY: -10,
             show: true,
-            color: '#888',
-            fontSize: '17px',
+            color: "#888",
+            fontSize: "17px",
           },
           value: {
             formatter: function(val) {
               return parseInt(val);
             },
-            color: '#111',
-            fontSize: '20px',
+            color: "#111",
+            fontSize: "20px",
             show: true,
           },
         },
       },
     },
     fill: {
-      type: 'gradient',
+      type: "gradient",
       gradient: {
-        shade: 'dark',
-        type: 'horizontal',
+        shade: "dark",
+        type: "horizontal",
         shadeIntensity: 0.5,
-        gradientToColors: ['#ABE5A1'],
+        gradientToColors: ["#ABE5A1"],
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
@@ -799,9 +799,9 @@ export const radialBar = {
       },
     },
     stroke: {
-      lineCap: 'round',
+      lineCap: "round",
     },
-    labels: ['Choice'],
+    labels: ["Choice"],
   },
 };
 export const radialBarTwo = {
@@ -818,9 +818,9 @@ export const radialBarTwo = {
         endAngle: 225,
         hollow: {
           margin: 0,
-          size: '70%',
-          background: '#fff',
-          position: 'front',
+          size: "70%",
+          background: "#fff",
+          position: "front",
           dropShadow: {
             enabled: true,
             top: 3,
@@ -830,8 +830,8 @@ export const radialBarTwo = {
           },
         },
         track: {
-          background: '#fff',
-          strokeWidth: '67%',
+          background: "#fff",
+          strokeWidth: "67%",
           margin: 0, // margin is in pixels
           dropShadow: {
             enabled: true,
@@ -846,27 +846,27 @@ export const radialBarTwo = {
           name: {
             offsetY: -10,
             show: true,
-            color: '#888',
-            fontSize: '17px',
+            color: "#888",
+            fontSize: "17px",
           },
           value: {
             formatter: function(val) {
               return parseInt(val);
             },
-            color: '#111',
-            fontSize: '20px',
+            color: "#111",
+            fontSize: "20px",
             show: true,
           },
         },
       },
     },
     fill: {
-      type: 'gradient',
+      type: "gradient",
       gradient: {
-        shade: 'dark',
-        type: 'horizontal',
+        shade: "dark",
+        type: "horizontal",
         shadeIntensity: 0.5,
-        gradientToColors: ['#e6af4b'],
+        gradientToColors: ["#e6af4b"],
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
@@ -874,9 +874,9 @@ export const radialBarTwo = {
       },
     },
     stroke: {
-      lineCap: 'round',
+      lineCap: "round",
     },
-    labels: ['Pending'],
+    labels: ["Pending"],
   },
 };
 export const radialBarThree = {
@@ -893,9 +893,9 @@ export const radialBarThree = {
         endAngle: 225,
         hollow: {
           margin: 0,
-          size: '70%',
-          background: '#fff',
-          position: 'front',
+          size: "70%",
+          background: "#fff",
+          position: "front",
           dropShadow: {
             enabled: true,
             top: 3,
@@ -905,8 +905,8 @@ export const radialBarThree = {
           },
         },
         track: {
-          background: '#fff',
-          strokeWidth: '67%',
+          background: "#fff",
+          strokeWidth: "67%",
           margin: 0, // margin is in pixels
           dropShadow: {
             enabled: true,
@@ -921,27 +921,27 @@ export const radialBarThree = {
           name: {
             offsetY: -10,
             show: true,
-            color: '#888',
-            fontSize: '17px',
+            color: "#888",
+            fontSize: "17px",
           },
           value: {
             formatter: function(val) {
               return parseInt(val);
             },
-            color: '#111',
-            fontSize: '20px',
+            color: "#111",
+            fontSize: "20px",
             show: true,
           },
         },
       },
     },
     fill: {
-      type: 'gradient',
+      type: "gradient",
       gradient: {
-        shade: 'dark',
-        type: 'horizontal',
+        shade: "dark",
+        type: "horizontal",
         shadeIntensity: 0.5,
-        gradientToColors: ['#e05038'],
+        gradientToColors: ["#e05038"],
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
@@ -949,9 +949,9 @@ export const radialBarThree = {
       },
     },
     stroke: {
-      lineCap: 'round',
+      lineCap: "round",
     },
-    labels: ['Profit'],
+    labels: ["Profit"],
   },
 };
 export const radialBarFour = {
@@ -968,9 +968,9 @@ export const radialBarFour = {
         endAngle: 225,
         hollow: {
           margin: 0,
-          size: '70%',
-          background: '#fff',
-          position: 'front',
+          size: "70%",
+          background: "#fff",
+          position: "front",
           dropShadow: {
             enabled: true,
             top: 3,
@@ -980,8 +980,8 @@ export const radialBarFour = {
           },
         },
         track: {
-          background: '#fff',
-          strokeWidth: '67%',
+          background: "#fff",
+          strokeWidth: "67%",
           margin: 0, // margin is in pixels
           dropShadow: {
             enabled: true,
@@ -996,27 +996,27 @@ export const radialBarFour = {
           name: {
             offsetY: -10,
             show: true,
-            color: '#888',
-            fontSize: '17px',
+            color: "#888",
+            fontSize: "17px",
           },
           value: {
             formatter: function(val) {
               return parseInt(val);
             },
-            color: '#111',
-            fontSize: '20px',
+            color: "#111",
+            fontSize: "20px",
             show: true,
           },
         },
       },
     },
     fill: {
-      type: 'gradient',
+      type: "gradient",
       gradient: {
-        shade: 'dark',
-        type: 'horizontal',
+        shade: "dark",
+        type: "horizontal",
         shadeIntensity: 0.5,
-        gradientToColors: ['#c0dfd9'],
+        gradientToColors: ["#c0dfd9"],
         inverseColors: true,
         opacityFrom: 1,
         opacityTo: 1,
@@ -1024,23 +1024,23 @@ export const radialBarFour = {
       },
     },
     stroke: {
-      lineCap: 'round',
+      lineCap: "round",
     },
-    labels: ['Revenue'],
+    labels: ["Revenue"],
   },
 };
 
 export const basicArea = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [10, 20, 28, 51, 15, 40, 20],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -1060,15 +1060,15 @@ export const basicArea = {
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
       labels: {
         show: true,
@@ -1092,9 +1092,9 @@ export const basicArea = {
     //     format: 'dd/MM/yy HH:mm'
     //   },
     // },
-    colors: ['#e62739'],
+    colors: ["#e62739"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -1102,14 +1102,14 @@ export const basicArea = {
 export const basicAreaTwo = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [50, 20, 0, 51, 15, 30, 70],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -1122,22 +1122,22 @@ export const basicAreaTwo = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
     legend: {
       show: false,
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
       labels: {
         show: false,
@@ -1158,12 +1158,12 @@ export const basicAreaTwo = {
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#ffeb3b'],
+    colors: ["#ffeb3b"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -1171,14 +1171,14 @@ export const basicAreaTwo = {
 export const basicAreaThree = {
   series: [
     {
-      name: 'series1',
+      name: "series1",
       data: [100, 20, 20, 51, 35, 10, 70],
     },
   ],
 
   chartOptions: {
     chart: {
-      width: '100%',
+      width: "100%",
       height: 100,
       toolbar: {
         show: false,
@@ -1191,22 +1191,22 @@ export const basicAreaThree = {
       enabled: false,
     },
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
     },
     legend: {
       show: false,
     },
 
     xaxis: {
-      type: 'datetime',
+      type: "datetime",
       categories: [
-        '2018-09-19T00:00:00',
-        '2018-09-19T01:30:00',
-        '2018-09-19T02:30:00',
-        '2018-09-19T03:30:00',
-        '2018-09-19T04:30:00',
-        '2018-09-19T05:30:00',
-        '2018-09-19T06:30:00',
+        "2018-09-19T00:00:00",
+        "2018-09-19T01:30:00",
+        "2018-09-19T02:30:00",
+        "2018-09-19T03:30:00",
+        "2018-09-19T04:30:00",
+        "2018-09-19T05:30:00",
+        "2018-09-19T06:30:00",
       ],
       labels: {
         show: false,
@@ -1227,12 +1227,12 @@ export const basicAreaThree = {
     tooltip: {
       enabled: true,
       x: {
-        format: 'dd/MM/yy HH:mm',
+        format: "dd/MM/yy HH:mm",
       },
     },
-    colors: ['#4caf50'],
+    colors: ["#4caf50"],
     stroke: {
-      curve: 'smooth',
+      curve: "smooth",
       width: 1,
     },
   },
@@ -1240,37 +1240,37 @@ export const basicAreaThree = {
 
 // start::widgetBasicLine--echart
 export const widgetBasicLine = {
-  color: ['#4caf50 '],
+  color: ["#4caf50 "],
   xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    type: "category",
+    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     show: false,
   },
   yAxis: {
-    type: 'value',
+    type: "value",
     show: false,
   },
   series: [
     {
       data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: 'line',
+      type: "line",
     },
   ],
 };
 export const widgetBasicLineTwo = {
   xAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    type: "category",
+    data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     show: false,
   },
   yAxis: {
-    type: 'value',
+    type: "value",
     show: false,
   },
   series: [
     {
       data: [820, 932, 901, 934, 1290, 1330, 1320],
-      type: 'line',
+      type: "line",
     },
   ],
 };

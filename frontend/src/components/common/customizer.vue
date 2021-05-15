@@ -9,11 +9,9 @@
         :settings="{ suppressScrollX: true, wheelPropagation: false }"
         class="customizer-body ps rtl-ps-none"
       >
-        <div class="">
+        <div class>
           <div class="card-header" id="headingOne">
-            <p class="mb-0">
-              Sidebar Layout
-            </p>
+            <p class="mb-0">Sidebar Layout</p>
           </div>
 
           <div class="card-body">
@@ -24,20 +22,16 @@
                 @click="changeThemeLayout('compact-sidebar')"
                 :class="{ active: getThemeMode.layout == 'compact-sidebar' }"
               >
-                <img
-                  alt=""
-                  src="@/assets/images/screenshots/02_preview.png"
-                /><i class="i-Eye"></i>
+                <img alt src="@/assets/images/screenshots/02_preview.png" />
+                <i class="i-Eye"></i>
               </div>
               <div
-                class="layout-box "
+                class="layout-box"
                 @click="changeThemeLayout('large-sidebar')"
                 :class="{ active: getThemeMode.layout == 'large-sidebar' }"
               >
-                <img
-                  alt=""
-                  src="@/assets/images/screenshots/04_preview.png"
-                /><i class="i-Eye"></i>
+                <img alt src="@/assets/images/screenshots/04_preview.png" />
+                <i class="i-Eye"></i>
               </div>
               <div
                 class="layout-box mt-30"
@@ -45,11 +39,31 @@
                 :class="{ active: getThemeMode.layout == 'vertical-sidebar' }"
               >
                 <span class="badge badge-danger p-1">New</span>
-                
-                <img
-                  alt=""
-                  src="@/assets/images/screenshots/verticallayout.png"
-                />
+
+                <img alt src="@/assets/images/screenshots/verticallayout.png" />
+
+                <i class="i-Eye"></i>
+              </div>
+              <div
+                class="layout-box mt-30"
+                @click="changeThemeLayout('vertical-sidebar-two')"
+                :class="{ active: getThemeMode.layout == 'vertical-sidebar-two' }"
+              >
+                <span class="badge badge-danger p-1">New</span>
+
+                <img alt src="@/assets/images/screenshots/verticaltwo.png" />
+
+                <i class="i-Eye"></i>
+              </div>
+
+              <div
+                class="layout-box mt-30"
+                @click="changeThemeLayout('horizontal-bar')"
+                :class="{ active: getThemeMode.layout == 'horizontal-bar' }"
+              >
+                <span class="badge badge-danger p-1">New</span>
+
+                <img alt src="@/assets/images/screenshots/horizontal.png" />
 
                 <i class="i-Eye"></i>
               </div>
@@ -58,11 +72,9 @@
           </div>
         </div>
 
-        <div class="" v-if="getThemeMode.layout == 'compact-sidebar'">
+        <div class v-if="getThemeMode.layout == 'compact-sidebar'">
           <div class="card-header" id="headingOne">
-            <p class="mb-0">
-              Sidebar Colors
-            </p>
+            <p class="mb-0">Sidebar Colors</p>
           </div>
 
           <div class="card-body">
@@ -152,7 +164,7 @@
                 <i class="i-Eye"></i>
               </a>
               <a
-                class="color blue "
+                class="color blue"
                 @click="changecompactLeftSideBarBgColor('sidebar-blue')"
                 :class="{
                   active: getcompactLeftSideBarBgColor == 'sidebar-blue'
@@ -199,60 +211,50 @@
             </div>
           </div>
         </div>
-        <div class="" v-if="getThemeMode.layout != 'vertical-sidebar'">
+        <div
+          class
+          v-if="getThemeMode.layout != 'vertical-sidebar' && getThemeMode.layout != 'vertical-sidebar-two'"
+        >
           <div class="card-header" id="headingOne">
-            <p class="mb-0">
-              RTL
-            </p>
+            <p class="mb-0">RTL</p>
           </div>
 
           <div class="card-body">
             <label class="checkbox checkbox-primary">
-              <input
-                type="checkbox"
-                id="rtl-checkbox"
-                @change="changeThemeRtl"
-              />
+              <input type="checkbox" id="rtl-checkbox" @change="changeThemeRtl" />
               <span>Enable RTL</span>
               <span class="checkmark"></span>
             </label>
           </div>
         </div>
 
-        <div class="">
+        <div class>
           <div class="card-header">
-            <p class="mb-0">
-              Dark Mode
-            </p>
+            <p class="mb-0">Dark Mode</p>
           </div>
 
           <div class="card-body">
-            <label
-              class="switch switch-primary mr-3 mt-2"
-              v-b-popover.hover.left="'Dark Mode'"
-            >
+            <label class="switch switch-primary mr-3 mt-2" v-b-popover.hover.left="'Dark Mode'">
               <input type="checkbox" @click="changeThemeMode" />
               <span class="slider"></span>
             </label>
           </div>
         </div>
-        <div class="">
+        <div class>
           <div class="card-header">
-            <p class="mb-0">
-              Language
-            </p>
+            <p class="mb-0">Language</p>
           </div>
 
           <div class="card-body">
-            <b-button variant="default m-1" @click="changeLang('bn')"
-              ><flag iso="BD"
-            /></b-button>
-            <b-button variant="default m-1" @click="changeLang('en')"
-              ><flag iso="US"
-            /></b-button>
+            <b-button variant="default m-1" @click="changeLang('bn')">
+              <flag iso="BD" />
+            </b-button>
+            <b-button variant="default m-1" @click="changeLang('en')">
+              <flag iso="US" />
+            </b-button>
             <b-button variant="default m-1" @click="changeLang('de')">
-              <flag iso="DE"
-            /></b-button>
+              <flag iso="DE" />
+            </b-button>
           </div>
         </div>
       </vue-perfect-scrollbar>
@@ -266,12 +268,12 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      isOpen: false
+      isOpen: false,
     };
   },
 
   computed: {
-    ...mapGetters(["getThemeMode", "getcompactLeftSideBarBgColor"])
+    ...mapGetters(["getThemeMode", "getcompactLeftSideBarBgColor"]),
   },
 
   methods: {
@@ -279,13 +281,13 @@ export default {
       "changeThemeRtl",
       "changeThemeLayout",
       "changeThemeMode",
-      "changecompactLeftSideBarBgColor"
+      "changecompactLeftSideBarBgColor",
     ]),
     changeLang(lang) {
       console.log(lang);
       this.$i18n.locale = lang;
-    }
-  }
+    },
+  },
 };
 </script>
 

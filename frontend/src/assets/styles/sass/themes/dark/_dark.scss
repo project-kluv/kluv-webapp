@@ -1,5 +1,8 @@
 .dark-theme {
   background: $dark-bg;
+  .text-muted {
+    color: $dark-heading !important;
+  }
   .sidebar-left,
   .sidebar-left-secondary,
   .main-header,
@@ -135,6 +138,9 @@
   //   table
   table.vgt-table {
     background: $dark-bg;
+  }
+  .vgt-table thead th {
+    color: $dark-heading !important;
   }
   table.tableOne.vgt-table thead tr th {
     background: $dark-bg;
@@ -382,6 +388,19 @@
       }
     }
   }
+
+  // vertical sidebar layout two
+  .layout-sidebar-vertical-two {
+    .sidebar-panel {
+      box-shadow: 0 1px 15px $dark-forground, 0 1px 6px $dark-forground;
+      background: $dark-bg;
+    }
+    .main-content-wrap {
+      .main-header {
+        background: $dark-bg !important;
+      }
+    }
+  }
   .layout-horizontal-bar {
     .header-topnav {
       background: $dark-bg;
@@ -421,5 +440,92 @@
     color: $dark-heading;
     text-decoration: none;
     background-color: $dark-bg;
+  }
+
+  // subheader
+  .subheader {
+    background-color: $dark-bg;
+    .subheader-navbar {
+      background-color: $dark-bg;
+    }
+    position: fixed;
+    top: 80px;
+    z-index: 50;
+    width: 100%;
+    @media (max-width: 577px) {
+      top: 70px;
+    }
+  }
+
+  // plugins vue-navigation-bar
+  .vnb {
+    background-color: $dark-bg;
+    .tippy-box {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      background-color: $dark-bg !important;
+    }
+    &__menu-options {
+      &__option {
+        &__link {
+          color: $dark-heading;
+          .vnb__menu-options__option__arrow {
+            fill: $dark-heading;
+          }
+          &:focus {
+            outline: none;
+            border: 1px solid none;
+          }
+          &:hover {
+            color: $dark-heading;
+            .vnb__menu-options__option__arrow {
+              fill: $dark-heading;
+            }
+          }
+
+          &__icon {
+            svg {
+              fill: $primary !important;
+            }
+          }
+        }
+      }
+    }
+
+    &__sub-menu-options {
+      background-color: $dark-bg;
+
+      &__option {
+        &__link {
+          border-left: 2px solid #a855f7;
+          color: $dark-heading;
+          &:focus {
+            outline: none;
+            border: 1px solid none;
+          }
+
+          &:hover {
+            background-color: #a855f7;
+            color: $dark-heading !important;
+          }
+        }
+      }
+    }
+  }
+
+  .vnb__popup {
+    height: 80vh !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    .vnb__popup__top__close-button {
+      &:focus {
+        border: 1px solid none;
+        outline: none;
+      }
+      top: 20px;
+      right: -33px;
+      svg {
+        fill: #000 !important;
+      }
+    }
   }
 }

@@ -1,0 +1,34 @@
+.layout-sidebar-vertical-two{
+
+.vertical-header {
+    position: relative!important;
+    .header-part-right {
+        .dropdown-menu {
+          &.show {
+            left: -60px !important;
+          }
+        }
+      }
+}
+.menu-toggle.vertical-toggle {
+    display: none!important;
+}
+.header-part-right{
+.dropdown-toggle.btn {
+    padding: 0px !important;
+}
+}
+header.main-header.vertical-header {
+    border-radius: 5px;
+    height: 64px;
+    z-index: unset;
+    border-radius: 15px !important;
+}
+
+
+}
+
+
+
+
+

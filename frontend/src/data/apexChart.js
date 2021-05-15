@@ -1401,7 +1401,7 @@ export const basicColumnChart = {
         },
       },
     },
-    colors: ["#62549c", "#7566b5", "#7d6cbb"],
+    colors: ["#C4B5FD", "#A78BFA", "#A855F7"],
   },
 };
 
@@ -3452,7 +3452,7 @@ export const spark2 = {
     yaxis: {
       min: 1,
     },
-    colors: ["#8B5CF6"],
+    colors: ["#A855F7"],
   },
 };
 // spark3
@@ -3516,7 +3516,7 @@ export const spark3 = {
     yaxis: {
       min: 0,
     },
-    colors: ["#8B5CF6"],
+    colors: ["#A855F7"],
   },
 };
 // spark4

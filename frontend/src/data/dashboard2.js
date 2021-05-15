@@ -49,7 +49,7 @@ export const echart4 = {
       type: "line",
       showSymbol: true,
       smooth: true,
-      color: "#8B5CF6",
+      color: "#A855F7",
       lineStyle: {
         opacity: 1,
         width: 2,
@@ -65,7 +65,7 @@ export const echart5 = {
     bottom: "3%",
     containLabel: true,
   },
-  color: ["#8B5CF6", "#ced4da"],
+  color: ["#A855F7", "#ced4da"],
   tooltip: {
     show: true,
     trigger: "item",

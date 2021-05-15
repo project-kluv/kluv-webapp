@@ -3,10 +3,10 @@
     <verticalSidebar />
     <main>
       <div
-        class="main-content-wrap mt-0 bg-off-white"
+        class="main-content-wrap mt-0 bg-off-white d-flex flex-column flex-grow-1"
         :class="{
           'vertical-sidebar': getVerticalSidebar.isVerticalSidebar,
-          compact: getVerticalSidebar.isVerticalCompact,
+          compact: getVerticalSidebar.isVerticalCompact
         }"
       >
         <verticalTopbar />
@@ -14,7 +14,7 @@
         <transition name="page" mode="out-in">
           <router-view />
         </transition>
-
+        <div class="flex-grow-1"></div>
         <appFooter />
       </div>
     </main>

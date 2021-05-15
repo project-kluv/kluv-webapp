@@ -7,13 +7,14 @@
     <main>
       <div
         :class="{ 'sidenav-open': getSideBarToggleProperties.isSideNavOpen }"
-        class="main-content-wrap d-flex flex-column"
+        class="main-content-wrap d-flex flex-column flex-grow-1 print-area"
       >
         <transition name="page" mode="out-in">
           <router-view />
         </transition>
 
-        <!-- <appFooter /> -->
+        <div class="flex-grow-1"></div>
+        <appFooter />
       </div>
     </main>
   </div>

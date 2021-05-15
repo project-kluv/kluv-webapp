@@ -5,12 +5,12 @@ const state = {
     semi_dark: false,
     theme_color: "lite-purple",
     layout: "large-sidebar",
-    rtl: false
-  }
+    rtl: false,
+  },
 };
 
 const getters = {
-  getThemeMode: state => state.themeMode
+  getThemeMode: (state) => state.themeMode,
 };
 
 const actions = {
@@ -22,11 +22,11 @@ const actions = {
   },
   changeThemeRtl({commit}) {
     commit("toggleThemeRtl");
-  }
+  },
 };
 
 const mutations = {
-  toggleThemeMode: state => {
+  toggleThemeMode: (state) => {
     state.themeMode.dark = !state.themeMode.dark;
   },
   toggleThemeLayout(state, data) {
@@ -34,12 +34,12 @@ const mutations = {
   },
   toggleThemeRtl(state) {
     state.themeMode.rtl = !state.themeMode.rtl;
-  }
+  },
 };
 
 export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };

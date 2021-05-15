@@ -1,76 +1,76 @@
-var dark_heading = '#c2c6dc';
+var dark_heading = "#c2c6dc";
 export const echart1 = {
   tooltip: {
-    trigger: 'axis',
+    trigger: "axis",
 
     axisPointer: {
       animation: true,
     },
   },
   grid: {
-    left: '0%',
-    top: '0%',
-    right: '0%',
-    bottom: '0%',
+    left: "0%",
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
   },
   xAxis: {
-    type: 'category',
+    type: "category",
     boundaryGap: false,
     data: [],
     axisLabel: {
-      formatter: '{value}',
+      formatter: "{value}",
       color: dark_heading,
       fontSize: 0,
-      fontStyle: 'normal',
+      fontStyle: "normal",
       fontWeight: 400,
     },
     axisLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     axisTick: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     splitLine: {
       show: false,
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
   },
   yAxis: {
-    type: 'value',
+    type: "value",
     min: 0,
     max: 100,
     interval: 50,
     axisLabel: {
-      formatter: '',
+      formatter: "",
       color: dark_heading,
       fontSize: 12,
-      fontStyle: 'normal',
+      fontStyle: "normal",
       fontWeight: 400,
     },
     axisLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     axisTick: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     splitLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
         opacity: 0.5,
       },
@@ -78,8 +78,8 @@ export const echart1 = {
   },
   series: [
     {
-      name: 'Visit',
-      type: 'line',
+      name: "Visit",
+      type: "line",
       smooth: true,
       data: [30, 40, 20, 50, 40, 80, 90],
       symbolSize: 8,
@@ -91,14 +91,14 @@ export const echart1 = {
       },
       itemStyle: {
         show: false,
-        color: '#ff5721',
-        borderColor: '#ff5721',
+        color: "#ff5721",
+        borderColor: "#ff5721",
         borderWidth: 1.5,
       },
       areaStyle: {
         normal: {
           color: {
-            type: 'linear',
+            type: "linear",
             x: 0,
             y: 0,
             x2: 0,
@@ -106,15 +106,15 @@ export const echart1 = {
             colorStops: [
               {
                 offset: 0,
-                color: 'rgba(102, 51, 153, .2)',
+                color: "rgba(102, 51, 153, .2)",
               },
               {
                 offset: 0.3,
-                color: 'rgba(102, 51, 153, .2)',
+                color: "rgba(102, 51, 153, .2)",
               },
               {
                 offset: 1,
-                color: 'rgba(102, 51, 153, .2)',
+                color: "rgba(102, 51, 153, .2)",
               },
             ],
           },
@@ -125,76 +125,76 @@ export const echart1 = {
 };
 export const echart2 = {
   tooltip: {
-    trigger: 'axis',
+    trigger: "axis",
 
     axisPointer: {
       animation: true,
     },
   },
   grid: {
-    left: '0%',
-    top: '0%',
-    right: '0%',
-    bottom: '0%',
+    left: "0%",
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
   },
   xAxis: {
-    type: 'category',
+    type: "category",
     boundaryGap: false,
     data: [],
     axisLabel: {
-      formatter: '{value}',
-      color: '#666',
+      formatter: "{value}",
+      color: "#666",
       fontSize: 0,
-      fontStyle: 'normal',
+      fontStyle: "normal",
       fontWeight: 400,
     },
     axisLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     axisTick: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     splitLine: {
       show: false,
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
   },
   yAxis: {
-    type: 'value',
+    type: "value",
     min: 0,
     max: 100,
     interval: 50,
     axisLabel: {
-      formatter: '',
-      color: '#666',
+      formatter: "",
+      color: "#666",
       fontSize: 12,
-      fontStyle: 'normal',
+      fontStyle: "normal",
       fontWeight: 400,
     },
     axisLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     axisTick: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
       },
     },
     splitLine: {
       lineStyle: {
-        color: '',
+        color: "",
         width: 0,
         opacity: 0.5,
       },
@@ -202,27 +202,27 @@ export const echart2 = {
   },
   series: [
     {
-      name: 'Visit',
-      type: 'line',
+      name: "Visit",
+      type: "line",
       smooth: true,
       data: [30, 10, 40, 10, 40, 20, 90],
       symbolSize: 8,
       showSymbol: false,
       lineStyle: {
-        color: '#FFC107',
+        color: "#FFC107",
         opacity: 1,
         width: 1.5,
       },
       itemStyle: {
         show: false,
-        color: '#ff5721',
-        borderColor: '#ff5721',
+        color: "#ff5721",
+        borderColor: "#ff5721",
         borderWidth: 1.5,
       },
       areaStyle: {
         normal: {
           color: {
-            type: 'linear',
+            type: "linear",
             x: 0,
             y: 0,
             x2: 0,
@@ -230,15 +230,15 @@ export const echart2 = {
             colorStops: [
               {
                 offset: 0,
-                color: 'rgba(255, 193, 7, 0.2)',
+                color: "rgba(255, 193, 7, 0.2)",
               },
               {
                 offset: 0.3,
-                color: 'rgba(255, 193, 7, 0.2)',
+                color: "rgba(255, 193, 7, 0.2)",
               },
               {
                 offset: 1,
-                color: 'rgba(255, 193, 7, 0.2)',
+                color: "rgba(255, 193, 7, 0.2)",
               },
             ],
           },
@@ -252,18 +252,18 @@ export const echart3 = {
     show: true,
     // trigger: "axis",
     axisPointer: {
-      type: 'line',
+      type: "line",
       animation: true,
     },
   },
   grid: {
-    top: '10%',
-    left: '0',
-    right: '0',
-    bottom: '0',
+    top: "10%",
+    left: "0",
+    right: "0",
+    bottom: "0",
   },
   xAxis: {
-    type: 'category',
+    type: "category",
     data: [],
     axisLine: {
       show: false,
@@ -276,7 +276,7 @@ export const echart3 = {
     },
   },
   yAxis: {
-    type: 'value',
+    type: "value",
     axisLine: {
       show: false,
     },
@@ -290,7 +290,7 @@ export const echart3 = {
       show: true,
     },
   },
-  label: { show: false, color: '#212121' },
+  label: {show: false, color: "#212121"},
   series: [
     {
       data: [
@@ -315,12 +315,12 @@ export const echart3 = {
         120,
         140,
       ],
-      type: 'line',
+      type: "line",
       showSymbol: true,
       smooth: true,
-      color: '#8B5CF6',
+      color: "#A855F7",
       lineStyle: {
-        color: 'rgba(102, 51, 153, 0.8)',
+        color: "rgba(102, 51, 153, 0.8)",
         opacity: 1,
         width: 3,
       },

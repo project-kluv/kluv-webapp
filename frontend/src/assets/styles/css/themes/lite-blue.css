@@ -8,7 +8,7 @@
 :root {
   --blue: #003473;
   --indigo: #3F51B5;
-  --purple: #8B5CF6;
+  --purple: #A855F7;
   --pink: #CB3066;
   --red: #f44336;
   --orange: #e97d23;
@@ -21,7 +21,7 @@
   --gray-dark: #0f233b;
   --blue: #003473;
   --indigo: #3F51B5;
-  --purple: #8B5CF6;
+  --purple: #A855F7;
   --pink: #CB3066;
   --red: #f44336;
   --orange: #e97d23;
@@ -7287,55 +7287,55 @@ a.text-gray-900:hover, a.text-gray-900:focus {
 
 .sidebar-gradient-purple-indigo .sidebar-left {
   /* fallback/image non-cover color */
-  background-color: #8B5CF6;
+  background-color: #A855F7;
   /* Firefox 3.6+ */
-  background-image: -moz-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -moz-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-gradient(linear, -154deg, right top, color-stop(0%, #8B5CF6), color-stop(100%, #33214b));
+  background-image: -webkit-gradient(linear, -154deg, right top, color-stop(0%, #A855F7), color-stop(100%, #33214b));
   /* Safari 5.1+, Chrome 10+ */
-  background-image: -webkit-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -webkit-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Opera 11.10+ */
-  background-image: -o-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -o-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* IE10+ */
-  background: -ms-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background: -ms-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Standard */
-  background: linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background: linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* IE6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); }
 
 .gradient-purple-indigo {
   /* fallback/image non-cover color */
-  background-color: #8B5CF6;
+  background-color: #A855F7;
   /* Firefox 3.6+ */
-  background-image: -moz-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -moz-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-gradient(linear, -154deg, right top, color-stop(0%, #8B5CF6), color-stop(100%, #33214b));
+  background-image: -webkit-gradient(linear, -154deg, right top, color-stop(0%, #A855F7), color-stop(100%, #33214b));
   /* Safari 5.1+, Chrome 10+ */
-  background-image: -webkit-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -webkit-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Opera 11.10+ */
-  background-image: -o-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -o-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* IE10+ */
-  background: -ms-linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background: -ms-linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* Standard */
-  background: linear-gradient(-154deg, #8B5CF6 0%, #33214b 100%);
+  background: linear-gradient(-154deg, #A855F7 0%, #33214b 100%);
   /* IE6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); }
 
 .btn.gradient-purple-indigo:active, .btn.gradient-purple-indigo.active {
   /* fallback/image non-cover color */
-  background-color: #8B5CF6;
+  background-color: #A855F7;
   /* Firefox 3.6+ */
-  background-image: -moz-linear-gradient(-90deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -moz-linear-gradient(-90deg, #A855F7 0%, #33214b 100%);
   /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-gradient(linear, -90deg, right top, color-stop(0%, #8B5CF6), color-stop(100%, #33214b));
+  background-image: -webkit-gradient(linear, -90deg, right top, color-stop(0%, #A855F7), color-stop(100%, #33214b));
   /* Safari 5.1+, Chrome 10+ */
-  background-image: -webkit-linear-gradient(-90deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -webkit-linear-gradient(-90deg, #A855F7 0%, #33214b 100%);
   /* Opera 11.10+ */
-  background-image: -o-linear-gradient(-90deg, #8B5CF6 0%, #33214b 100%);
+  background-image: -o-linear-gradient(-90deg, #A855F7 0%, #33214b 100%);
   /* IE10+ */
-  background: -ms-linear-gradient(-90deg, #8B5CF6 0%, #33214b 100%);
+  background: -ms-linear-gradient(-90deg, #A855F7 0%, #33214b 100%);
   /* Standard */
-  background: linear-gradient(-90deg, #8B5CF6 0%, #33214b 100%);
+  background: linear-gradient(-90deg, #A855F7 0%, #33214b 100%);
   /* IE6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 ); }
 
@@ -7526,10 +7526,10 @@ a.text-gray-900:hover, a.text-gray-900:focus {
   background: #322740; }
 
 .sidebar-purple .sidebar-left {
-  background: #8B5CF6; }
+  background: #A855F7; }
 
 .purple {
-  background: #8B5CF6; }
+  background: #A855F7; }
 
 .sidebar-pink .sidebar-left {
   background: #CB3066; }
@@ -7750,7 +7750,7 @@ $full-map: (
   color: black; }
 
 .purple-500 {
-  background-color: #8B5CF6; }
+  background-color: #A855F7; }
 
 .text-purple-500 {
   color: white; }
@@ -8530,7 +8530,7 @@ $full-map: (
   color: black; }
 
 .purple-500 {
-  background-color: #8B5CF6; }
+  background-color: #A855F7; }
 
 .text-purple-500 {
   color: white; }
@@ -21180,7 +21180,7 @@ ngb-rating .half {
           font-size: 18px;
           line-height: 24px;
           width: 32px;
-          color: #ffff#8B5CF6
+          color: #ffff#A855F7
           background: #663399;
           border-radius: 0 0 0 6px; }
         .customizer .customizer-body .layouts .layout-box.active {
@@ -21199,7 +21199,7 @@ ngb-rating .half {
         text-align: center;
         box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03);
         cursor: pointer; }
-        .customizer .c#8B5CF6er-body .colors .color.purple {
+        .customizer .c#A855F7er-body .colors .color.purple {
           background: #663399; }
         .customizer .customizer-body .colors .color.blue {
           background: #2f47c2; }
@@ -23361,7 +23361,7 @@ div.tab-border {
     margin-top: 5px; }
   #task-manager li.nav-item.dropdown {
     padding: 0px; }
-  #task-manager #8B5CF6task-manager-button.navbar-toggler.text-white {
+  #task-manager #A855F7task-manager-button.navbar-toggler.text-white {
     background: #663399; } }
 
 #task-manager-list .ul-task-manager__dropdown-menu.show {
@@ -24630,7 +24630,7 @@ span.ul-contact-detail__followers {
   opacity: 1;
   visibility: visible; }
 
-.ul-widge#8B5CF6icons a i:hover {
+.ul-widge#A855F7icons a i:hover {
   color: #663399; }
 
 .ul-widget-app__comment {
@@ -24688,7 +24688,7 @@ span.ul-widget-app__find-font {
   position: absolute;
   /* left: 0; */
   top: 4px;
-  right: #8B5CF6
+  right: #A855F7
   color: #663399;
   bottom: 0;
   font-size: 20px; }

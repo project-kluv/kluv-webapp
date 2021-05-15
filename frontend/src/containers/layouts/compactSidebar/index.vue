@@ -2,7 +2,7 @@
   <div
     :class="[
       getCompactSideBarToggleProperties.isSideNavOpen ? 'sidenav-open' : '',
-      getcompactLeftSideBarBgColor,
+      getcompactLeftSideBarBgColor
     ]"
     class="app-admin-wrap layout-sidebar-compact clearfix"
   >

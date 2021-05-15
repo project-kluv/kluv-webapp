@@ -4,7 +4,8 @@ import {zoomBarData} from "@/data/echartSeries";
 
 // start::echartPie
 export const echartPie = {
-  color: ["#62549c", "#7566b5", "#7d6cbb", "#8877bd", "#9181bd", "#6957af"],
+  // color: ["#62549c", "#7566b5", "#7d6cbb", "#8877bd", "#9181bd", "#6957af"],
+  color: ["#C4B5FD", " #EDE9FE", "#A78BFA", "#C4B5FD", " #EDE9FE", "#A78BFA"],
   tooltip: {
     show: true,
     backgroundColor: "rgba(0, 0, 0, .8)",
@@ -164,7 +165,7 @@ export const echartBar = {
         35000,
         40050,
       ],
-      label: {show: false, color: "#8B5CF6"},
+      label: {show: false, color: "#A855F7"},
       type: "bar",
       color: "#A78BFA",
       smooth: true,
@@ -297,7 +298,7 @@ export const basicLine = {
       type: "line",
       showSymbol: true,
       smooth: true,
-      color: "#8B5CF6",
+      color: "#A855F7",
       lineStyle: {
         opacity: 1,
         width: 2,
@@ -1707,7 +1708,7 @@ export const solidArea = {
     ],
     axisLabel: {
       show: true,
-      color: "#8B5CF6",
+      color: "#A855F7",
       interval: 5,
       inside: false,
       align: "center",
@@ -1782,17 +1783,17 @@ export const solidArea = {
       smooth: true,
       showSymbol: false,
       itemStyle: {
-        borderColor: "#8B5CF6",
-        color: ["#8B5CF6"],
+        borderColor: "#A855F7",
+        color: ["#A855F7"],
       },
       lineStyle: {
         opacity: 1,
         width: 1,
-        color: ["#8B5CF6"],
+        color: ["#A855F7"],
       },
       areaStyle: {
         opacity: 1,
-        color: ["#8B5CF6"],
+        color: ["#A855F7"],
       },
     },
   ],
@@ -1878,7 +1879,7 @@ export const stackedPie = {
     bottom: "3%",
     containLabel: true,
   },
-  color: ["#8B5CF6", "#63845", "#ebcb37", "#a1b968", "#0d94bc", "#135bba"],
+  color: ["#A855F7", "#63845", "#ebcb37", "#a1b968", "#0d94bc", "#135bba"],
 
   tooltip: {
     trigger: "item",
@@ -1943,7 +1944,7 @@ export const stackedPie = {
       },
       itemStyle: {
         normal: {
-          color: "rgb(102, 51, 153)",
+          color: "#A855F7",
           shadowBlur: 200,
           shadowColor: "rgba(0, 0, 0, 0.0)",
         },
