@@ -122,9 +122,9 @@
     <div style="margin: auto"></div>
 
     <div class="header-part-right">
-     <div class="search-bar" @click="toggleSearch">
-        <input type="text" placeholder="Search Adress" />
-        <i class="search-icon text-muted i-Magnifi-Glass1"></i>
+     <div class="search-bar">
+        <input type="text" placeholder="Search address" @keyup.enter="searchInputAdress(address)" v-model="address"/>
+        <i class="search-icon text-muted i-Magnifi-Glass1" @click="searchInputAdress(address)"></i>
       </div>
       <!-- Full screen toggle -->
       <i
@@ -292,10 +292,10 @@
       </div>
     <button class="btn btn-warning m-1" type="button"><span class="ul-btn__text">Login</span></button>
     </div>
-    <search-component
+    <!-- <search-component
       :isSearchOpen.sync="isSearchOpen"
       @closeSearch="toggleSearch"
-    ></search-component>
+    ></search-component> -->
   </div>
 
   <!-- header top menu end -->
@@ -303,7 +303,7 @@
 <script>
 import Util from "@/utils";
 import Sidebar from "./Sidebar";
-import searchComponent from "../common/search";
+//import searchComponent from "../common/search";
 import { isMobile } from "mobile-device-detect";
 import { mapGetters, mapActions } from "vuex";
 import { mixin as clickaway } from "vue-clickaway";
@@ -311,14 +311,14 @@ import { mixin as clickaway } from "vue-clickaway";
 export default {
   mixins: [clickaway],
   components: {
-    Sidebar,
-    searchComponent
+    //searchComponent,
+    Sidebar
   },
 
   data() {
     return {
+      address:'',
       isDisplay: true,
-
       isStyle: true,
       isSearchOpen: false,
       isMouseOnMegaMenu: true,
@@ -367,8 +367,19 @@ export default {
       this.isMegaMenuOpen = !this.isMegaMenuOpen;
     },
     toggleSearch() {
-      this.isSearchOpen = !this.isSearchOpen;
+      alert('111')
     },
+    searchInputAdress(address) {
+      // this.$router.push({path:"/app/pages/account", params: {address:address}});
+      this.$router.push({name:"account", query: {address:address}}).catch(()=>{});
+      // const router = new VueRouter({
+      //   routes: [
+      //     { path: '/faq', redirect: { adress: address }}
+      //   ]
+      // })
+      // alert(address)
+    },
+
 
     sideBarToggle(el) {
       if (

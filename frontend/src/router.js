@@ -14,7 +14,7 @@ const routes = [
     path: "/",
     component: () => import("./views/app"), //webpackChunkName app
     // beforeEnter: authenticate,
-    redirect: "/app/pages/blank",
+    redirect: "/app/dashboard",
 
     children: [
       // dashboard
@@ -29,6 +29,16 @@ const routes = [
         component: () => import("./views/app/pages"),
         redirect: "/app/pages/profile",
         children: [
+          {
+            name: "test",
+            path: "myTest",
+            component: () => import("./views/app/pages/myTest")
+          },
+          {
+            name: "account",
+            path: "account",
+            component: () => import("./views/app/pages/account")
+          },
           {
             path: "profile",
             component: () => import("./views/app/pages/profile")
