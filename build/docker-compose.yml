@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  kluv-front:
+    container_name: kluv-front
+    image: kluvme/webapp:front
+    restart: always
+    ports:
+      - 80:8080
+    networks: 
+      - kluv_net
+  kluv-back:
+    container_name: kluv-back
+    restart: always
+    image: kluvme/webapp:back
+    ports:
+      - 3000:3000
+    networks: 
+      - kluv_net
+    depends_on:
+      - kluv-front
+networks:
+  kluv_net:
+    driver: bridge

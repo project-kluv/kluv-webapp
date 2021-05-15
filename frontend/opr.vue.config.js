@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/web': {
-          target: 'http://localhost:3000/',
+          target: 'http://kluv-back:3000/',
           changeOrigin: true,
           pathRewrite: {
               '^/': ''
@@ -23,7 +23,7 @@ module.exports = {
         pathRewrite: {
             '^/': ''
         }
-      }  
+      }
     },
     disableHostCheck: true,
     clientLogLevel: "warning",
