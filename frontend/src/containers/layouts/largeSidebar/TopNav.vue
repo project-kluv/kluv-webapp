@@ -155,6 +155,9 @@
               aria-haspopup="true"
               aria-expanded="false"
             ></i>
+            
+
+
           </template>
           <div class="menu-icon-grid">
             <a href="#"> <i class="i-Shop-4"></i> Home </a>
@@ -165,6 +168,13 @@
             <a href="#"> <i class="i-Ambulance"></i> Support </a>
           </div>
         </b-dropdown>
+      </div>
+      <!-- dark -->
+      <div class="card-body">
+        <label class="switch switch-primary mr-3 mt-2" v-b-popover.hover.left="'Dark Mode'">
+          <input type="checkbox" @click="changeThemeMode" />
+          <span class="slider"></span>
+        </label>
       </div>
       <!-- Notificaiton -->
       <div class="dropdown">
@@ -340,7 +350,8 @@ export default {
 
       "changeSidebarProperties",
       "changeThemeMode",
-      "signOut"
+      "signOut",
+      "changeThemeMode",
     ]),
 
     // megaMenuToggle() {
