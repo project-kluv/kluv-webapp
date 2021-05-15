@@ -30,7 +30,7 @@
                                 <div class="col-md-4 col-6">
                                     <div class=" mb-30">
                                         <p class="text-primary mb-1"><i class="i-MaleFemale text-16 mr-1"></i> Klaytn </p>
-                                        <span>{{accountData.response.totalBalance[0].balance}} KLAY</span>  <span>≈ {{accountData.response.totalBalance[0].priceUSDT}} USD </span> 
+                                        <span>{{accountData.response.totalBalance[0].balance}} KLAY</span>  <span>≈ {{accountData.response.totalBalance[0].priceUsdt}} USD </span> 
                                     </div>
                                      <div class=" mb-30">
                                         <p class="text-primary mb-1"><i class="i-Face-Style-4 text-16 mr-1"></i> Total LP Value</p>
@@ -53,19 +53,33 @@
                             <hr>
 
                             <h4>Total Balance</h4>
-
-
-                            {{accountData.response.totalBalance}}
-<br><hr>
+                            <vue-good-table
+                                :columns="totalColumns"
+                                :search-options="{
+                                    enabled: true,
+                                    placeholder: 'Search this table'
+                                }"
+                                styleClass="tableOne vgt-table"
+                                :rows="totalData">
+                            </vue-good-table>
+                            <br><hr>
                             <h4>In wallet</h4>
-                            {{accountData.response.tokenBalance}}
-<br><hr>
+                            <vue-good-table
+                                :columns="totalColumns"
+                                :search-options="{
+                                    enabled: true,
+                                    placeholder: 'Search this table'
+                                }"
+                                styleClass="tableOne vgt-table"
+                                :rows="walletData">
+                            </vue-good-table>
+                            <br><hr>
                             <h4>LP Balance</h4>
                             {{accountData.response.lpBalance}}
-<br><hr>
+                            <br><hr>
                             <h4>Pending Rewards</h4>
                             {{accountData.response.pendingRewards}}
-<br><hr>
+                            <br><hr>
 
                         </b-tab>
                         <b-tab title="Actions">
@@ -106,25 +120,50 @@
 <script>
     import axios from 'axios'
     export default {
+        name: 'Account',
         created() {
             this.accountName = this.$route.query.address
             this.getAccountBalance(this.accountName)
         },
-        name: 'Account',
+
         data() { 
             return { 
                 accountName: null,
-                accountData: [] 
-            }; 
+                accountData: [],
+                totalColumns: [
+                    {
+                        label: "Symbol",
+                        field: "symbol"
+                    },
+                    {
+                        label: "Name",
+                        field: "name"
+                    },
+                    {
+                        label: "갯수",
+                        field: "balance"
+                    },
+                    {
+                        label: "자산(USD)",
+                        field: "priceUsdt"
+                    }
+                 ],
+                totalData: [],
+                walletData: []
+
+                }; 
         },
         methods: {
             getAccountBalance(accountName) {
                 axios.get("/web/account/balance/"+accountName)
                 .then((res) => {
                     if(res.data.success == false){
-                        this.accountData = "The address does not exist."    
+                        alert('잘못된 주소입니다.')
+                        this.$router.go(-1)
                     }else{
                         this.accountData = res.data
+                        this.totalData = res.data.response.totalBalance
+                        this.walletData = res.data.response.tokenBalance
                     }
                     console.log('proxyRequest res', res)
                 })

@@ -70,7 +70,6 @@ export default {
         {
           label: "Percent",
           field: "score",
-          type: "percentage"
         },
         {
           label: "Button",
