@@ -13,6 +13,7 @@
     "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.5.0",
     "bootstrap-vue": "^2.15.0",
     "chart.js": "^2.9.3",
     "core-js": "^3.6.5",
@@ -24,7 +25,7 @@
     "nprogress": "^0.2.0",
     "v-calendar": "^1.0.8",
     "v2-datepicker": "^3.1.1",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
     "vue-apexcharts": "^1.6.0",
     "vue-chartjs": "^3.5.0",
     "vue-clickaway": "^2.2.2",
@@ -67,7 +68,7 @@
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
     "vue-loader": "^15.9.3",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   },
   "eslintConfig": {
     "root": true,

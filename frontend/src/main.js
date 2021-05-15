@@ -18,7 +18,12 @@ import DateRangePicker from 'vue2-daterange-picker'
 import 'vue2-daterange-picker/dist/vue2-daterange-picker.css'
 //import material-icon scss
 import "font-awesome/css/font-awesome.min.css";
- 
+import { BootstrapVueIcons } from 'bootstrap-vue'
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+
+
+
+
 //defined as global component
 Vue.component('VueFontawesome', require('vue-fontawesome-icon/VueFontawesome.vue').default);
 
@@ -36,6 +41,8 @@ firebase.initializeApp(firebaseSettings);
 
 
 Vue.config.productionTip = false;
+
+Vue.use(BootstrapVueIcons);
 
 new Vue({
   store,
