@@ -155,6 +155,9 @@
               aria-haspopup="true"
               aria-expanded="false"
             ></i>
+            
+
+
           </template>
           <div class="menu-icon-grid">
             <a href="#"> <i class="i-Shop-4"></i> Home </a>
@@ -166,6 +169,11 @@
           </div>
         </b-dropdown>
       </div>
+      
+      <!-- dark mode -->
+      <i class="header-icon" @click="changeThemeMode"><b-icon icon="moon"></b-icon></i>
+      <!-- dark mode End -->
+
       <!-- Notificaiton -->
       <div class="dropdown">
         <b-dropdown
@@ -337,10 +345,9 @@ export default {
   methods: {
     ...mapActions([
       "changeSecondarySidebarProperties",
-
       "changeSidebarProperties",
       "changeThemeMode",
-      "signOut"
+      "signOut",
     ]),
 
     // megaMenuToggle() {
