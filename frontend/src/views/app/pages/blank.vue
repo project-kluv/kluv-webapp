@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     proxyRequest(accountName) {
-      axios.get("/web/account/getInfo/"+accountName)
+      axios.get("/web/account/balance/"+accountName)
       .then((res) => {
         this.accountInfo = res.data
         console.log('proxyRequest res', res)

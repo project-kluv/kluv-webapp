@@ -287,6 +287,7 @@
               <i class="i-Lock-User mr-1"></i> Timothy Carlson
             </div>
             <a class="dropdown-item">Account settings</a>
+            <a class="dropdown-item" @click="connectKaikas()">Kaikas Connection</a>
             <a class="dropdown-item">Billing history</a>
             <a class="dropdown-item" href="#" @click.prevent="logoutUser"
               >Sign out</a
@@ -342,6 +343,14 @@ export default {
       "changeThemeMode",
       "signOut",
     ]),
+
+    connectKaikas() {
+      console.log("kaikas connect")
+      window.klaytn.enable().then(response => {
+        this.address = response[0]
+        console.log(this.address)
+      })      
+    },
 
     // megaMenuToggle() {
     //   this.isMegaMenuOpen = false;
