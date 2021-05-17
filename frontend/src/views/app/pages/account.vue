@@ -19,7 +19,7 @@
                                 <div class="col-md-4 col-6">
                                     <div class=" mb-30">
                                         <p class="text-primary mb-1"><i class="i-Calendar text-16 mr-1"></i> Total Balance</p>
-                                        <span>{{accountData.response.totalUsdt}} USD</span>
+                                        <span>{{totalUsdt}} USD</span>
                                     </div>
                                     <div class=" mb-30">
                                         <p class="text-primary mb-1"><i class="i-Calendar text-16 mr-1"></i> Klayswap APY</p>
@@ -122,6 +122,9 @@
         },
         data() { 
             return { 
+                totalUsdt:0,
+                KlayBalance:0,
+                KlayUsdt:0,
                 accountName: null,
                 accountData: [],
                 totalColumns: [
@@ -153,6 +156,7 @@
                         this.accountData = res.data
                         this.totalData = res.data.response.totalBalance
                         this.walletData = res.data.response.tokenBalance
+                        this.totalUsdt = res.data.response.totalUsdt
                     }
                     console.log('proxyRequest res', res)
                 })
