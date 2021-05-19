@@ -44,28 +44,41 @@ const gazuaService = require('../apps/gazua/gazuaService')
 // });
 
 
-// describe('차익거래 후보군- axios async', function () {
-//   this.timeout(5000);
-//   it('차익기회 확인', async function () {
-//     let rtn = await gazuaService.searchOpportunity(0.01);
+describe('차익거래 후보군- axios async', function () {
+  this.timeout(5000);
+  it('차익기회 확인', async function () {
+    let rtn = await gazuaService.searchOpportunity(0.02);
+    console.log(rtn)
+  });
+});
+
+
+/*
+  클레이 스코프 Utils 함수 테스트
+*/
+
+// describe('토큰 홀더 확인 - axios async', function () {
+//   this.timeout(10000);
+//   it('토큰 홀더 확인', async function () {
+//     kspInfo = {
+//       "address": '0xc6a2ad8cc6e4a7e08fc37cc5954be07d499e7654',
+//       "symbol": "KSP",
+//       "name": "KlaySwap Protocol",
+//       "decimals": 18
+//     }
+//     let rtn = await scopeUtils.searchHolders(kspInfo);
 //     console.log(rtn)
 //   });
 // });
 
-
-describe('토큰 홀더 확인 - axios async', function () {
-  this.timeout(10000);
-  it('토큰 홀더 확인', async function () {
-    kspInfo = {
-      "address": '0xc6a2ad8cc6e4a7e08fc37cc5954be07d499e7654',
-      "symbol": "KSP",
-      "name": "KlaySwap Protocol",
-      "decimals": 18
-    }
-    let rtn = await scopeUtils.searchHolders(kspInfo);
-    console.log(rtn)
-  });
-});
+// describe('토큰 정보 확인 - axios async', function () {
+//   this.timeout(20000);
+//   it('토큰 홀더 확인', async function () {
+//     kspAddress = '0xc6a2ad8cc6e4a7e08fc37cc5954be07d499e7654'
+//     let rtn = await scopeUtils.searchTokenInfo(kspAddress);
+//     console.log(rtn)
+//   });
+// });
 
 
 
