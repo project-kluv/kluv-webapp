@@ -46,7 +46,7 @@ const gazuaService = require('../apps/gazua/gazuaService')
 describe('차익거래 후보군- axios async', function () {
   this.timeout(5000);
   it('차익기회 확인', async function () {
-    let rtn = await gazuaService.searchOpportunity(0);
+    let rtn = await gazuaService.searchOpportunity(0.01);
     console.log(rtn)
   });
 });
