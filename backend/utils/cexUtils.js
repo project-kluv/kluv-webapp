@@ -14,6 +14,16 @@ async function getCurrency(currency) {
 		.catch(error => { 
 			rtn = {success: false, message: error.message}
 		});
+	if (!rtn.success) {
+		await axios.get("https://api.manana.kr/exchange/rate.json")
+		.then(response => {
+			rtn = {success : true, data : {price : response.data[1].rate } }
+		})
+		.catch(error => { 
+			rtn = {success: false, message: error.message}
+		});
+		
+	}
 	return rtn;
 }
 
@@ -54,6 +64,10 @@ async function getCexPrice(cex, symbol, payment) {
 	return rtn
 }
 
+function calcSwapKimp(cexPrice, swapPrice) {
+	return cexPrice/swapPrice-1
+}
+
 
 // 3. get CexOrderbook
 async function getCexOrderbook(cex, symbol, payment) {
@@ -73,15 +87,15 @@ async function getCexOrderbook(cex, symbol, payment) {
 			cexOrderbookURL = 'https://api.bithumb.com/public/orderbook/'+symbol+'_'+ payment
 			await axios.get(cexOrderbookURL)
 			.then(response => {
-				rtn.data.sell = response.data.data.asks[0].price
-				rtn.data.buy = response.data.data.bids[0].price
+				rtn.data.sell = parseFloat(response.data.data.asks[0].price)
+				rtn.data.buy = parseFloat(response.data.data.bids[0].price)
 			})
 		} else if (cex === 'coinone') {
 			cexOrderbookURL = 'https://api.coinone.co.kr/orderbook/?currency='+symbol
 			await axios.get(cexOrderbookURL)
 			.then(response => {
-				rtn.data.sell = response.data.ask[0].price
-				rtn.data.buy = response.data.bid[0].price
+				rtn.data.sell = parseFloat(response.data.ask[0].price)
+				rtn.data.buy = parseFloat(response.data.bid[0].price)
 			})
 		} else if (cex === 'binance') {
 			cexOrderbookURL = 'https://api.binance.com/api/v3/ticker/bookTicker?symbol='+symbol+payment
@@ -152,6 +166,7 @@ module.exports = {
 	getCurrency,
 	getCexPrice,
 	getCexOrderbook,
+	calcSwapKimp,
 	getUsdkrw: getUsdkrw,
 	getUsdkrw2: getUsdkrw2,
 	getUsdkrw3: getUsdkrw3,
