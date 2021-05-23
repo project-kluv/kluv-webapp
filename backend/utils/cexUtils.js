@@ -5,25 +5,25 @@ const xmlhttp = require('xmlhttprequest')
 
 // 1. get Currency
 async function getCurrency(currency) {
-	let rtn = '';
-	const currencyURL = "https://earthquake.kr:23490/query/"+currency
-	await axios.get(currencyURL)
-		.then(response => {
-			rtn = {success : true, data : {price : response.data.usdkrw[0] } }
-		})
-		.catch(error => { 
-			rtn = {success: false, message: error.message}
-		});
-	if (!rtn.success) {
-		await axios.get("https://api.manana.kr/exchange/rate.json")
-		.then(response => {
-			rtn = {success : true, data : {price : response.data[1].rate } }
-		})
-		.catch(error => { 
-			rtn = {success: false, message: error.message}
-		});
+	let rtn = {success : true, data : {price : 1130 }}
+	// const currencyURL = "https://earthquake.kr:23490/query/"+currency
+	// await axios.get(currencyURL)
+	// 	.then(response => {
+	// 		rtn = {success : true, data : {price : response.data.usdkrw[0] } }
+	// 	})
+	// 	.catch(error => { 
+	// 		rtn = {success: false, message: error.message}
+	// 	});
+	// if (!rtn.success) {
+	// 	await axios.get("https://api.manana.kr/exchange/rate.json")
+	// 	.then(response => {
+	// 		rtn = {success : true, data : {price : response.data[1].rate } }
+	// 	})
+	// 	.catch(error => { 
+	// 		rtn = {success: false, message: error.message}
+	// 	});
 		
-	}
+	// }
 	return rtn;
 }
 
