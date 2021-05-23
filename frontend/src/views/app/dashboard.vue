@@ -1,66 +1,63 @@
 <template>
   <div class="main-content">
+    <div style="float:right;">
+    <span style="margin-right:20px;">{{resetTime}}</span>
+    <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
+    </div>
     <breadcumb :page="'Dashboard'" :folder="'klaytn status'" />
+
     <b-row>
-      <b-col lg="3" md="6" sm="12">
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
           <i class="i-Bitcoin"></i>
-          <div class="content">
-            <p class="text-muted mt-2 mb-0">Klay Price</p>
-            <p class="text-primary text-24 line-height-1 mb-2">$50,000</p>
+          <div class="content" style="max-width:120px;">
+            <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
+            <p class="text-muted text-20 line-height-1 mb-1">{{klayPriceKrw}}원</p>
+            <p class="text-muted text-16 line-height-1 mb-1">${{klayPriceUsd}}</p>
           </div>
         </b-card>
       </b-col>
-      <b-col lg="3" md="6" sm="12">
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
           <i class="i-Financial"></i>
-          <div class="content">
-            <p class="text-muted mt-2 mb-0">Ksp Price</p>
-            <p class="text-primary text-24 line-height-1 mb-2">$150,000</p>
+          <div class="content" style="max-width:120px;">
+            <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KSP</p>
+            <p class="text-muted text-20 line-height-1 mb-1">{{kspPriceKrw}}원</p>
+            <p class="text-muted text-16 line-height-1 mb-1">${{kspPriceUsd}}</p>
           </div>
         </b-card>
       </b-col>
-      <b-col lg="3" md="6" sm="12">
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
           <i class="i-Cloud-Weather"></i>
-          <div class="content">
-            <p class="text-muted mt-2 mb-0">K-Premium</p>
-            <p class="text-primary text-24 line-height-1 mb-2">6.5%</p>
-          </div>
-        </b-card>
-      </b-col>
-      <b-col lg="3" md="6" sm="12">
-        <b-card
-          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
-        >
-          <i class="i-Money-2"></i>
-          <div class="content">
-            <p class="text-muted mt-2 mb-0">Krw</p>
-            <p class="text-primary text-24 line-height-1 mb-2">1,200</p>
+          <div class="content" style="max-width:120px;">
+            <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">K-Premium</p>
+            <p class="text-muted text-22 line-height-1.1 mb-2">{{kPremium}}%</p>
           </div>
         </b-card>
       </b-col>
     </b-row>
     <!-- start::klaytnCoinPrice-->
-    <span class="input-group-btn">
-      <button class="btn btn-default" type="button" @click="getData()">새로고침</button>
-    </span>    
     <div class="row">
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
             <h5 class="card-title border-bottom p-3 mb-2">Klaytn Coin Price</h5>
             <vue-good-table
-              :columns="columns"
+              :columns="priceColumns"
+              :search-options="{
+                enabled: true,
+                placeholder: '검색'
+              }"
               :line-numbers="false"
               styleClass="order-table vgt-table"
-              :rows="rows"
+              :rows="priceData"
             >
             </vue-good-table>
           </div>
@@ -73,75 +70,122 @@
 <script>
 import axios from "axios";
 
-export default {  
+export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: "klaytnCoinPrice"
   },
   data() {
     return {
-      bool:true,
-      columns: [
+      //cards
+      klayPriceUsd: 0,
+      klayPriceKrw: 0,
+      kspPriceKrw: 0,
+      kspPriceUsd: 0,
+      kPremium: 0,
+      //resetTime
+      resetTime: "",
+      //priceTableColumns
+      priceColumns: [
         {
-          label: "Name",
+          label: "코인명",
           field: "name",
           html: true,
           thClass: "text-left",
           tdClass: "text-left"
         },
         {
-          label: "price(ksp)",
-          field: "kspPrice",
+          label: "가격(KRW)",
+          field: "priceKrw",
           html: true,
           thClass: "text-left",
           tdClass: "text-left"
         },
         {
-          label: "price(exchange)",
-          field: "exchangePrice",
+          label: "가격(USD)",
+          field: "priceUsd",
           html: true,
           thClass: "text-left",
           tdClass: "text-left"
         },
-
-        {
-          label: "K-premium",
-          field: "kPremium",
-
-          // html:true,
-          type: "percentage",
-          thClass: "text-left",
-          tdClass: "text-left"
-        }
+        // {
+        //   label: "K-premium",
+        //   field: "kPremium",
+        //   // html:true,
+        //   type: "percentage",
+        //   thClass: "text-left",
+        //   tdClass: "text-left"
+        // }
       ],
-      rows:[]
+      //priceTable data
+      priceData: []
     };
   },
-  //axios test
   methods: {
-    getData() {
-      var url = "";
-      if(this.bool){
-        url =  "http://localhost:8080/test.json";
-        this.bool = false;
-      }else{
-        url =  "http://localhost:8080/test2.json";
-        this.bool = true;
-      }
+      /**
+       * testFunction
+       */
+      getTestData() {
+        var url = "http://localhost:8080/test.json"
+        axios.get(url)
+          .then((res) => {
+            this.priceData = res.data
+          })
+          .catch((error) => {
+            console.log('proxyRequest error', error)
+          })
+      },
+      /**
+       * klayswap의 모든 토큰가격을 조회
+       * return objetArray(name,price)
+       */
+      getKlaySwapAllTokenPrice() {
+        var arr = []
+        return axios.get("/web/pool/getAllTokenPrice/klayswap")
+          .then((res) => {
+            if (res.data.success == false) {
+              this.$router.go(-1)
+            } else {
+              var tokenPrice = res.data.response.token
+              var tokenKeys = Object.keys(tokenPrice)
 
-      axios.get(url)
-      .then((res) => {
-        this.rows = res.data;
-      })
-      .catch((error) => {
-        console.log('proxyRequest error', error)
-      })
+              tokenKeys.forEach(key => {
+                var symbol = tokenPrice[key].symbol
+                var priceUsd = (tokenPrice[key].price).toFixed(5)
+                var priceKrw = (tokenPrice[key].price*1227).toFixed(2)
+                var obj = {name:symbol, priceKrw:priceKrw, priceUsd:priceUsd}
+                arr.push(obj)
+              });
+              return arr
+            }
+          })
+          .catch((error) => {
+            console.log('proxyRequest error', error)
+            return false
+          })
+      },
+      /**
+       * 새로고침
+       * 대시보드상의 모든 klayswap토큰가격을 불러온다.
+       */
+      async resetTokenPrice() {
+        var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
+        //cards
+        this.klayPriceUsd = klaySwapPriceArr[0].priceUsd
+        this.klayPriceKrw = Math.round(klaySwapPriceArr[0].priceKrw)
+        this.kspPriceUsd = klaySwapPriceArr[12].priceUsd
+        this.kspPriceKrw = Math.round(klaySwapPriceArr[12].priceKrw)
+        this.kPremium = 3.2
+        //tokenPriceTable
+        this.priceData = klaySwapPriceArr
+        //resetTime
+        this.resetTime = new Date().toLocaleString()
+      }
+    },
+    created() {
+      this.resetTokenPrice()
     }
-  },  
-  created() {
-    this.getData();
   }
-};
 
 </script>
 <style>
