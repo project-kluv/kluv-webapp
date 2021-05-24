@@ -1,8 +1,8 @@
 <template>
   <div class="main-content">
-    <div style="float:right;">
-    <span style="margin-right:20px;">{{resetTime}}</span>
-    <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
+    <div class="breadcrumb" style="float:right;">
+      <span style="margin-right:20px;">{{resetTime}}</span>
+      <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
     </div>
     <breadcumb :page="'Dashboard'" :folder="'klaytn status'" />
 
@@ -71,6 +71,7 @@
 import axios from "axios";
 
 export default {
+  name: "Apps",
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: "klaytnCoinPrice"
@@ -120,6 +121,7 @@ export default {
       //priceTable data
       priceData: []
     };
+    
   },
   methods: {
       /**
@@ -152,7 +154,7 @@ export default {
               tokenKeys.forEach(key => {
                 var symbol = tokenPrice[key].symbol
                 var priceUsd = (tokenPrice[key].price).toFixed(5)
-                var priceKrw = (tokenPrice[key].price*1227).toFixed(2)
+                var priceKrw = (tokenPrice[key].price*1127).toFixed(2)
                 var obj = {name:symbol, priceKrw:priceKrw, priceUsd:priceUsd}
                 arr.push(obj)
               });
@@ -169,18 +171,18 @@ export default {
        * 대시보드상의 모든 klayswap토큰가격을 불러온다.
        */
       async resetTokenPrice() {
-        var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
-        //cards
-        this.klayPriceUsd = klaySwapPriceArr[0].priceUsd
-        this.klayPriceKrw = Math.round(klaySwapPriceArr[0].priceKrw)
-        this.kspPriceUsd = klaySwapPriceArr[12].priceUsd
-        this.kspPriceKrw = Math.round(klaySwapPriceArr[12].priceKrw)
-        this.kPremium = 3.2
-        //tokenPriceTable
-        this.priceData = klaySwapPriceArr
-        //resetTime
-        this.resetTime = new Date().toLocaleString()
-      }
+          var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
+          //cards
+          this.klayPriceUsd = klaySwapPriceArr[0].priceUsd
+          this.klayPriceKrw = Math.round(klaySwapPriceArr[0].priceKrw)
+          this.kspPriceUsd = klaySwapPriceArr[12].priceUsd
+          this.kspPriceKrw = Math.round(klaySwapPriceArr[12].priceKrw)
+          this.kPremium = 3.2
+          //tokenPriceTable
+          this.priceData = klaySwapPriceArr
+          //resetTime
+          this.resetTime = new Date().toLocaleString()
+       }
     },
     created() {
       this.resetTokenPrice()
