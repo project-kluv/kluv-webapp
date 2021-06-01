@@ -14,8 +14,8 @@
           <i class="i-Bitcoin"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
-            <p class="text-muted text-20 line-height-1 mb-1">{{klayPriceKrw}}원</p>
-            <p class="text-muted text-16 line-height-1 mb-1">${{klayPriceUsd}}</p>
+            <p class="text-muted text-20 line-height-1 mb-1">{{swapKlayPriceKrw}}원</p>
+            <p class="text-muted text-16 line-height-1 mb-1">${{swapKlayPriceUsd}}</p>
           </div>
         </b-card>
       </b-col>
@@ -26,8 +26,8 @@
           <i class="i-Financial"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KSP</p>
-            <p class="text-muted text-20 line-height-1 mb-1">{{kspPriceKrw}}원</p>
-            <p class="text-muted text-16 line-height-1 mb-1">${{kspPriceUsd}}</p>
+            <p class="text-muted text-20 line-height-1 mb-1">{{swapKspPriceKrw}}원</p>
+            <p class="text-muted text-16 line-height-1 mb-1">${{swapKspPriceUsd}}</p>
           </div>
         </b-card>
       </b-col>
@@ -38,7 +38,7 @@
           <i class="i-Cloud-Weather"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">K-Premium</p>
-            <p class="text-muted text-22 line-height-1.1 mb-2">{{kPremium}}%</p>
+            <p class="text-muted text-22 line-height-1.1 mb-2">{{kPremium*100}}%</p>
           </div>
         </b-card>
       </b-col>
@@ -79,13 +79,14 @@ export default {
   data() {
     return {
       //cards
-      klayPriceUsd: 0,
-      klayPriceKrw: 0,
-      kspPriceKrw: 0,
-      kspPriceUsd: 0,
-      kPremium: 0,
+      swapKlayPriceUsd: 0,
+      swapKlayPriceKrw: 0,
+      swapKspPriceKrw: 0,
+      swapKspPriceUsd: 0,
+      kPremium: 0.08,
       //resetTime
       resetTime: "",
+      usdKrw: 1110,
       //priceTableColumns
       priceColumns: [
         {
@@ -96,27 +97,28 @@ export default {
           tdClass: "text-left"
         },
         {
-          label: "가격(KRW)",
-          field: "priceKrw",
-          html: true,
+          label: "가격(거래소)",
+          field: "exPrice",
+          type: "decimal",
           thClass: "text-left",
           tdClass: "text-left"
         },
         {
-          label: "가격(USD)",
-          field: "priceUsd",
+          label: "가격(DEX)",
+          field: "swapPrice",
           html: true,
+          //type: "decimal",
           thClass: "text-left",
           tdClass: "text-left"
         },
-        // {
-        //   label: "K-premium",
-        //   field: "kPremium",
-        //   // html:true,
-        //   type: "percentage",
-        //   thClass: "text-left",
-        //   tdClass: "text-left"
-        // }
+        {
+          label: "K-프리미엄",
+          field: "kPremium",
+          // html:true,
+          type: "percentage",
+          thClass: "text-left",
+          tdClass: "text-left"
+        }
       ],
       //priceTable data
       priceData: []
@@ -153,9 +155,15 @@ export default {
 
               tokenKeys.forEach(key => {
                 var symbol = tokenPrice[key].symbol
-                var priceUsd = (tokenPrice[key].price).toFixed(5)
-                var priceKrw = (tokenPrice[key].price*1127).toFixed(2)
-                var obj = {name:symbol, priceKrw:priceKrw, priceUsd:priceUsd}
+                var swapPriceUsd = (tokenPrice[key].price).toFixed(3)
+                var swapPriceKrwOrigin = tokenPrice[key].price*this.usdKrw
+                var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(2) );
+                
+                var exPrice = swapPriceKrw * (1+this.kPremium); //거래소가격(개발중), 임시로 swap가격*프리미엄 으로 대체
+
+                var kPremium = (exPrice-swapPriceKrw)/swapPriceKrw
+                var swapPrice = '<span class="text-15">'+swapPriceKrw +'원</span><span class="text-12 font-weight-light"> ($'+ swapPriceUsd +')</span>'
+                var obj = {name:symbol, swapPriceUsd:swapPriceUsd, swapPriceKrw:swapPriceKrw, exPrice:exPrice, swapPrice:swapPrice, kPremium:kPremium}
                 arr.push(obj)
               });
               return arr
@@ -173,11 +181,11 @@ export default {
       async resetTokenPrice() {
           var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
           //cards
-          this.klayPriceUsd = klaySwapPriceArr[0].priceUsd
-          this.klayPriceKrw = Math.round(klaySwapPriceArr[0].priceKrw)
-          this.kspPriceUsd = klaySwapPriceArr[12].priceUsd
-          this.kspPriceKrw = Math.round(klaySwapPriceArr[12].priceKrw)
-          this.kPremium = 3.2
+          this.swapKlayPriceUsd = klaySwapPriceArr[0].swapPriceUsd 
+          this.swapKlayPriceKrw = Math.round(klaySwapPriceArr[0].swapPriceKrw)
+          this.swapKspPriceUsd = klaySwapPriceArr[12].swapPriceUsd
+          this.swapKspPriceKrw = Math.round(klaySwapPriceArr[12].swapPriceKrw)
+          //this.kPremium = 3.2
           //tokenPriceTable
           this.priceData = klaySwapPriceArr
           //resetTime
