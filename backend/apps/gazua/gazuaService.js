@@ -28,7 +28,7 @@ const getOpportunity = async function() {
   const targetToken = {
     swap:['KLAY', 'SSX', 'KXRP'], 
     upbit:['SSX', 'XRP'],
-    bithumb:['KLAY', 'SSX', 'XRP'],
+    bithumb:['KLAY', 'XRP'],
     coinone:['KLAY', 'XRP'],
   }
   const cexList = ['upbit','bithumb','coinone']
