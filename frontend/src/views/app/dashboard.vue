@@ -4,10 +4,10 @@
       <span style="margin-right:20px;">{{resetTime}}</span>
       <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
     </div>
-    <breadcumb :page="'Dashboard'" :folder="'klaytn status'" />
+    <breadcumb :page="'대시보드'" :folder="'klaytn'" />
 
     <b-row>
-      <b-col lg="4" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -19,7 +19,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="4" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -31,7 +31,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="4" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -42,13 +42,24 @@
           </div>
         </b-card>
       </b-col>
+      <b-col lg="3" md="6" sm="12">
+        <b-card
+          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
+        >
+          <i class="i-Dollar"></i>
+          <div class="content" style="max-width:120px;">
+            <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">환율(USD)</p>
+            <p class="text-muted text-22 line-height-1.1 mb-2">${{usdKrw}}</p>
+          </div>
+        </b-card>
+      </b-col>
     </b-row>
     <!-- start::klaytnCoinPrice-->
     <div class="row">
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-            <h5 class="card-title border-bottom p-3 mb-2">Klaytn Coin Price</h5>
+            <h5 class="card-title border-bottom p-3 mb-2">클레이튼 기반 토큰</h5>
             <vue-good-table
               :columns="priceColumns"
               :search-options="{
@@ -84,9 +95,9 @@ export default {
       swapKspPriceKrw: 0,
       swapKspPriceUsd: 0,
       kPremium: 0.08,
+      usdKrw: 1110,
       //resetTime
       resetTime: "",
-      usdKrw: 1110,
       //priceTableColumns
       priceColumns: [
         {
