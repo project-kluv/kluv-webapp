@@ -12,7 +12,7 @@
       class="sidebar-left rtl-ps-none ps scroll"
     >
       <div>
-        <ul class="navigation-left">          
+        <ul class="navigation-left">
           <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
@@ -22,36 +22,25 @@
           >
             <router-link tag="a" class="nav-item-hold" to="/app/dashboard">
               <i class="nav-icon i-Bar-Chart"></i>
-                <span class="nav-text">{{ $t("dashboard") }}</span>
+                <span class="nav-text">{{ $t("대시보드") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li>          
+          </li>
+
           <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
-            data-item="pages"
-            :class="{ active: selectedParentMenu == 'pages' }"
-            :data-submenu="true"
+            data-item="myAsset"
+            :class="{ active: selectedParentMenu == 'myAsset' }"
+            :data-submenu="false"
           >
-            <a class="nav-item-hold" href="#">
-              <i class="nav-icon i-Double-Tap"></i>
-              <span class="nav-text">Pages</span>
-            </a>
-            <div class="triangle"></div>
+            <router-link tag="a" class="nav-item-hold" to="/app/myAsset">
+              <i class="nav-icon i-Wallet"></i>
+                <span class="nav-text">{{ $t("내자산") }}</span>
+              <div class="triangle"></div>
+            </router-link>
           </li>
-          <li
-            @mouseenter="toggleSubMenu"
-            class="nav-item"
-            data-item="sessions"
-            :class="{ active: selectedParentMenu == 'sessions' }"
-            :data-submenu="true"
-          >
-            <a class="nav-item-hold" href="#">
-              <i class="nav-icon i-Administrator"></i>
-              <span class="nav-text">Sessions</span>
-            </a>
-            <div class="triangle"></div>
-          </li>
+          
         </ul>
       </div>
     </vue-perfect-scrollbar>
