@@ -16,6 +16,7 @@ const getExpectedLPReturn = async function (appName, callbak) {
 }
 
 const getExpectedLPReturnInApp = async function (appName) {
+  console.log("[service] ------> getExpectedLPReturnInApp")
   const poolVotingInfoList = await votingService.getPoolVotingInfo(appName)
   const lpPools = await poolService.getAllLPPool(appName)
   const tokenPriceAll = poolService.getTokenPriceInApp(appName, lpPools)
@@ -28,7 +29,7 @@ const getExpectedLPReturnInApp = async function (appName) {
     DAILY_DISTRIBUTION = 0
     rewardPrice = 0
   }
-
+  
   for (let i = 0; i < poolVotingInfoList.length; i++) {
     let poolVotingInfo = poolVotingInfoList[i];
     totalSupply = lpPrice[poolVotingInfo.pools].totalSupply
