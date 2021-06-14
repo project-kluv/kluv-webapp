@@ -7,6 +7,8 @@ const getAllLPPool = async function(appName){
   try {
     if (appName === 'klayswap') {
       const tokenInfo = poolModel.getTokenInfo(appName)
+      const lpTokenInfo = poolModel.getLPTokenInfo(appName)
+
       const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW")
       const fullData = await factoryViewContract.methods.getFullData().call()
       
@@ -14,34 +16,43 @@ const getAllLPPool = async function(appName){
       const fixedDatas = fullData['fixedDatas']
       const amountDatas = fullData['amountDatas']
       const decimalDatas = fullData['decimalDatas']
-      
+
+      for (let index = 0; index < fixedDatas.length; index++) {
+        const element = fixedDatas[index];
+        // LP토큰 정보가 없는 경우 업데이트 해줌
+        if (index < poolCount) {
+          if (lpTokenInfo[element] == null){
+            let newTokenInfo = await utils.getNewTokenInfo(element)
+            lpTokenInfo[element] = {
+              "symbol": newTokenInfo.symbol,
+              "name": newTokenInfo.name,
+              "decimals": newTokenInfo.decimals
+            }
+            poolModel.addLPTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
+          }
+        // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
+        } else {
+          if (tokenInfo[element] == null){
+            let newTokenInfo = await utils.getNewTokenInfo(element)
+            tokenInfo[element] = {
+              "symbol": newTokenInfo.symbol,
+              "name": newTokenInfo.name,
+              "decimals": newTokenInfo.decimals
+            }
+            poolModel.addTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
+          }
+        }
+      }
+
       result = {data: []};
       for (let i = 0; i < poolCount; i++) {        
         const lpToken = fixedDatas[i]
         const tokenA = fixedDatas[poolCount+i]
         const tokenB = fixedDatas[(2*poolCount+i)]
 
-        // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
-        if (tokenInfo[tokenA] == null){
-          let newTokenInfo = await utils.getNewTokenInfo(tokenA)
-          tokenInfo[tokenA] = {
-            "symbol": newTokenInfo.symbol,
-            "name": newTokenInfo.name,
-            "decimals": newTokenInfo.decimals
-          }
-          poolModel.addTokenInfo(appName, [tokenA, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
-        } else if (tokenInfo[tokenB] == null) {
-          let newTokenInfo = await utils.getNewTokenInfo(tokenB)
-          tokenInfo[tokenB] = {
-            "symbol": newTokenInfo.symbol,
-            "name": newTokenInfo.name,
-            "decimals": newTokenInfo.decimals
-          }
-          poolModel.addTokenInfo(appName, [tokenB, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
-        }
-
         result.data.push({
           "address": lpToken,
+          "name": lpTokenInfo[fixedDatas[i]]['name'],
           "totalSupply": amountDatas[i],
           "decimals":decimalDatas[i],
           "tokenA": tokenA,
@@ -104,6 +115,7 @@ const getTokenPriceInApp = function (appName, lpPools) {
       
       allTokenPriceInApp.lp[lpPool.address] = {
         "totalSupply": lpPool.totalSupply,
+        "name": lpPool.name,
         "tokenA": lpPool.tokenA,
         "tokenB": lpPool.tokenB,
         "tokenAName": lpPool.tokenAName,

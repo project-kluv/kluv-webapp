@@ -2,8 +2,9 @@ const axios = require('axios')
 const fs = require('fs')
 const poolService = require('../pool/poolService.js')
 const utils = require('../../utils/commonUtils.js')
-const KLAYSWAP_TOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapTokenInfo.json", 'utf8'));
 
+const KLAYSWAP_TOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapTokenInfo.json", 'utf8'));
+const KLAYSWAP_LPTOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapLPTokenInfo.json", 'utf8'));
 
 
 const getBalance = async function(account, callbak) {
@@ -44,6 +45,7 @@ const getBalance = async function(account, callbak) {
             lpBalance = Number(balances[i])
             resultAll.lpBalance.push({
               "address": allAddressList[i],
+              "name": lpPriceInfo.name,
               "balance": lpBalance / 10**lpPriceInfo.decimals,
               "tokenA": {
                 "address": lpPriceInfo.tokenA,
@@ -139,6 +141,7 @@ const getPendingRewards = async function (appName, account) {
           pendingLPReward = balanceOf * (miningIndex - userLastIndex) / 10 ** (2 * 18)
           pendingRewards['KSP']['LP'].push({
             "pool": fullData["fixedDatas"][index],
+            "name": KLAYSWAP_LPTOKEN_INFO[fullData["fixedDatas"][index]].name,
             "amount": pendingLPReward
           })
         }
@@ -146,7 +149,6 @@ const getPendingRewards = async function (appName, account) {
       // Staking
       const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
       const userVKSPStat = await poolVotingViewContract.methods.getUserVKSPStat(account).call()
-      console.log(userVKSPStat)
       if (Number(userVKSPStat['balance']) > 0) {
         pendingRewards['KSP']["LOCKED_KSP"]= Number(userVKSPStat["lockedKSP"]) / (10**18)
         pendingRewards['KSP']["PENDING_KSP"]= Number(userVKSPStat['pendingKSP']) / (10**18)
@@ -158,6 +160,7 @@ const getPendingRewards = async function (appName, account) {
         for (let i = 0; i < votingPoolCount; i++) {
           pendingRewards['KSP']["VOTING"].push({
             "pool": userPoolVogintStat['addrs'][i],
+            "name": KLAYSWAP_LPTOKEN_INFO[userPoolVogintStat['addrs'][i]].name,
             "tokenA": userPoolVogintStat["tokens"][2 * i],
             "tokenB": userPoolVogintStat["tokens"][2 * i + 1],
             "tokenAAmount": userPoolVogintStat["pendingRewards"][2 * i] / 10 ** KLAYSWAP_TOKEN_INFO[userPoolVogintStat["tokens"][2 * i]].decimals,
