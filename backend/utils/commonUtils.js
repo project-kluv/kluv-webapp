@@ -83,9 +83,9 @@ const getContract = function(appName, contractName) {
 }
 
 module.exports = {
-    getAuth: getAuth,
+  getAuth: getAuth,
   initCaver: initCaver,
-    getUserDefinedContract:getUserDefinedContract,
-    getNewTokenInfo:getNewTokenInfo,
-    getContract:getContract
+  getUserDefinedContract:getUserDefinedContract,
+  getNewTokenInfo:getNewTokenInfo,
+  getContract:getContract
 };

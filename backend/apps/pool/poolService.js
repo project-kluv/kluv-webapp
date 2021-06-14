@@ -48,6 +48,10 @@ const getAllLPPool = async function(appName){
           "tokenB": tokenB,
           "tokenAAmount": amountDatas[poolCount+i],
           "tokenBAmount": amountDatas[(2*poolCount+i)], 
+          "tokenAName": tokenInfo[fixedDatas[poolCount+i]]['name'],
+          "tokenBName": tokenInfo[fixedDatas[(2 * poolCount) + i]]['name'],
+          "tokenASymbol": tokenInfo[fixedDatas[poolCount+i]]['symbol'],
+          "tokenBSymbol": tokenInfo[fixedDatas[(2*poolCount)+i]]['symbol'],
           "tokenADecimals": Number(tokenInfo[fixedDatas[poolCount+i]]['decimals']),
           "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
         })
@@ -102,6 +106,10 @@ const getTokenPriceInApp = function (appName, lpPools) {
         "totalSupply": lpPool.totalSupply,
         "tokenA": lpPool.tokenA,
         "tokenB": lpPool.tokenB,
+        "tokenAName": lpPool.tokenAName,
+        "tokenBName": lpPool.tokenBName,
+        "tokenASymbol": lpPool.tokenASymbol,
+        "tokenBSymbol": lpPool.tokenBSymbol,
         "tokenAUnit": tokenAUnit,
         "tokenBUnit": tokenBUnit,
         "price": tokenAUnit*(10**lpPool.decimals/10**lpPool.tokenADecimals)*allTokenPriceInApp.token[lpPool.tokenA].price + 

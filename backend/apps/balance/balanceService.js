@@ -47,10 +47,14 @@ const getBalance = async function(account, callbak) {
               "balance": lpBalance / 10**lpPriceInfo.decimals,
               "tokenA": {
                 "address": lpPriceInfo.tokenA,
+                "symbol": lpPriceInfo.tokenASymbol,
+                "name": lpPriceInfo.tokenAName,
                 "balance": lpBalance*lpPriceInfo.tokenAUnit / 10**tokenPrice[lpPriceInfo.tokenA].decimals,
               },
               "tokenB": {
                 "address": lpPriceInfo.tokenB,
+                "symbol": lpPriceInfo.tokenBSymbol,
+                "name": lpPriceInfo.tokenBName,
                 "balance": lpBalance*lpPriceInfo.tokenBUnit / 10**tokenPrice[lpPriceInfo.tokenB].decimals,
               },
               "priceUsdt": lpPriceInfo.price * lpBalance / 10**lpPriceInfo.decimals
@@ -61,8 +65,8 @@ const getBalance = async function(account, callbak) {
             tokenBalance = Number(balances[i])
             resultAll.tokenBalance.push({
               "address": allAddressList[i],
-              "name": tokenPriceInfo.name,
               "symbol": tokenPriceInfo.symbol,
+              "name": tokenPriceInfo.name,
               "balance": tokenBalance / 10**tokenPriceInfo.decimals,
               "priceUsdt": tokenPriceInfo.price * tokenBalance / 10**tokenPriceInfo.decimals
             })
@@ -115,7 +119,7 @@ const getPendingRewards = async function (appName, account) {
   console.log("[service] ------> getPendingRewards")
   try {
     if (appName === 'klayswap') {
-      let pendingRewards = {'KSP':{'LP':[], 'STAKING':0, 'VOTING':[]}}
+      let pendingRewards = {'KSP':{'LP':[], 'PENDING_KSP':0, 'LOCKED_KSP':0, 'VOTING':[]}}
       const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW")
       const fullData = await factoryViewContract.methods.getFullData().call()
       const poolCount = Number(fullData['poolCount'])
@@ -142,9 +146,10 @@ const getPendingRewards = async function (appName, account) {
       // Staking
       const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
       const userVKSPStat = await poolVotingViewContract.methods.getUserVKSPStat(account).call()
-      const pendingKSP = Number(userVKSPStat['pendingKSP'])
-      if (pendingKSP > 0) {
-        pendingRewards['KSP']["STAKING"]= pendingKSP / (10**18)
+
+      if (Number(pendingKSP['balance']) > 0) {
+        pendingRewards['KSP']["LOCKED_KSP"]= Number(userVKSPStat["lockedKSP"]) / (10**18)
+        pendingRewards['KSP']["PENDING_KSP"]= Number(userVKSPStat['pendingKSP']) / (10**18)
       }
       // Voting 
       const userPoolVogintStat = await poolVotingViewContract.methods.getUserPoolVotingStat(account).call()
