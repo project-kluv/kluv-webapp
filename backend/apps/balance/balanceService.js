@@ -146,8 +146,8 @@ const getPendingRewards = async function (appName, account) {
       // Staking
       const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
       const userVKSPStat = await poolVotingViewContract.methods.getUserVKSPStat(account).call()
-
-      if (Number(pendingKSP['balance']) > 0) {
+      console.log(userVKSPStat)
+      if (Number(userVKSPStat['balance']) > 0) {
         pendingRewards['KSP']["LOCKED_KSP"]= Number(userVKSPStat["lockedKSP"]) / (10**18)
         pendingRewards['KSP']["PENDING_KSP"]= Number(userVKSPStat['pendingKSP']) / (10**18)
       }
