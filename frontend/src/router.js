@@ -23,6 +23,14 @@ const routes = [
         component: () => import("./views/app/dashboard")
       },
       
+
+      // myAsset
+      {
+        path: "/app/myAsset",
+        component: () => import("./views/app/myAsset")
+      },
+
+
       // pages
       {
         path: "/app/pages",
