@@ -1,7 +1,8 @@
 <template>
   <div class="main-header">
-    <div class="logo">
-      <img src="@/assets/images/logo1.png" style="width:45%; height:45%;" alt />
+    <div style="font-size:20px;" class="logo">
+      <center>KLUV.me</center>
+      <!-- <img src="@/assets/images/logo1.png" style="width:45%; height:45%;" alt /> -->
     </div>
 
     <div @click="sideBarToggle" class="menu-toggle">
