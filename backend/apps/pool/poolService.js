@@ -104,8 +104,11 @@ const getTokenPriceInApp = function (appName, lpPools) {
     calcTokenPrice(lpPools['data'], '0xceE8FAF64bB97a73bb51E115Aa89C17FfA8dD167')
     // 2. get pirce using klay pair : 0x0000000000000000000000000000000000000000
     calcTokenPrice(lpPools['data'], '0x0000000000000000000000000000000000000000')
-    // 3. get price using others.
-    calcTokenPrice(lpPools['data'], '0x588C62eD9aa7367d7cd9C2A9aaAc77e44fe8221B'); // Agov
+      // 3. get price using others.
+    calcTokenPrice(lpPools['data'], '0x588C62eD9aa7367d7cd9C2A9aaAc77e44fe8221B'); // Agov -> HINT
+    calcTokenPrice(lpPools['data'], '0x34d21b1e550D73cee41151c77F3c73359527a396'); // KETH -> KICX
+    calcTokenPrice(lpPools['data'], '0x158BeFF8C8cDEbD64654ADD5F6A1d9937e73536c'); // HOUSE -> WOOD
+    
 
     // get LP price
     for (let i = 0; i < lpPools['data'].length; i++) {
