@@ -9,6 +9,8 @@ var logger = require('morgan');
 const livereload = require("livereload");
 const connectLivereload = require("connect-livereload");
 
+const db = require('./utils/db.js'); // db 불러오기
+db(); // 실행
 // 라이브 서버 설정
 // const liveReloadServer = livereload.createServer();
 // liveReloadServer.watch(path.join(__dirname, 'public'));
