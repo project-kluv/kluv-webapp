@@ -1,7 +1,13 @@
 const mongoose = require('mongoose');
 module.exports = () => {
   function connect() {
-    mongoose.connect('mongodb://root:fomo123%23@kluv.me:5003',{ useNewUrlParser: true}, function(err) {
+    mongoose.connect('mongodb://kluv.me:5003/admin', 
+    { "user" :"root",
+    "pass":"fomo123#",
+    dbName: 'kluv',
+      useNewUrlParser: true,
+       useUnifiedTopology: true }, 
+    function(err) {
       if (err) {
         console.error('mongodb connection error', err);
       }

@@ -28,6 +28,7 @@ var accountRouter = require('./routes/accountRouter');
 var poolRouter = require('./routes/poolRouter');
 var votingRouter = require('./routes/votingRouter');
 
+var testRouter  = require('./routes/testRouter');
 
 var app = express();
 
@@ -48,6 +49,7 @@ app.use('/v1/user', userRouter);
 app.use('/web/account', accountRouter);
 app.use('/web/pool', poolRouter);
 app.use('/web/voting', votingRouter);
+app.use('/web/test', testRouter);
 app.use('/v1/account', accountRouter);
 
 // catch 404 and forward to error handler
