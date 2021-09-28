@@ -11,14 +11,14 @@ const getTokenInfo = function (appName){
 }
 
 const getLPTokenInfo = function (appName){
-  console.log("[Models] ------> getTokenInfo")
+  console.log("[Models] ------> getLPTokenInfo")
   if (appName === "klayswap") {
     return KLAYSWAP_LPTOKEN_INFO
   }
 }
 
 const addTokenInfo = function (appName, params) {
-  console.log("[Models] ------> getTokenInfo")
+  console.log("[Models] ------> addTokenInfo")
   if (appName === "klayswap") {
     console.log(params[0]+"/"+ params[1]+"/"+params[2]+"/"+params[3])
 

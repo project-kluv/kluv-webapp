@@ -1,5 +1,14 @@
 
+var cron = require('node-cron');
+const tokenService = require('./apps/token/tokenService')
 
+
+process.env.NODE_ENV = ( process.env.NODE_ENV && ( process.env.NODE_ENV ).trim().toLowerCase() == 'production' ) ? 'production' : 'development';
+if (process.env.NODE_ENV == 'production') {
+  console.log("Production Mode Started");
+} else if (process.env.NODE_ENV == 'development') {
+  console.log("Development Mode Started");
+}
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -19,6 +28,8 @@ db(); // 실행
 // liveReloadServer.server.once("connection", () => {
 //   setTimeout(() => {
 //     liveReloadServer.refresh("/");
+
+
 //   }, 100);
 // });
 
@@ -27,6 +38,7 @@ var userRouter = require('./routes/userRouter');
 var accountRouter = require('./routes/accountRouter');
 var poolRouter = require('./routes/poolRouter');
 var votingRouter = require('./routes/votingRouter');
+var tokenRouter = require('./routes/tokenRouter');
 
 var testRouter  = require('./routes/testRouter');
 
@@ -50,6 +62,7 @@ app.use('/web/account', accountRouter);
 app.use('/web/pool', poolRouter);
 app.use('/web/voting', votingRouter);
 app.use('/web/test', testRouter);
+app.use('/web/token', tokenRouter);
 app.use('/v1/account', accountRouter);
 
 // catch 404 and forward to error handler
@@ -67,5 +80,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//production 에서만 데이터 insert
+if (process.env.NODE_ENV == 'production') {
+  cron.schedule('0 */10 * * * *', function(){
+    tokenService.insertTokenInfo()
+  });
+}
 
 module.exports = app;
