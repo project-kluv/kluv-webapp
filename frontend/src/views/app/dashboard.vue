@@ -54,6 +54,14 @@
         </b-card>
       </b-col>
     </b-row>
+    
+    <!-- start::chart-->
+    <div id="chartArea">
+    <h5 class="mb-2">{{chartTitle}} - 실시간 차트</h5>
+    </div>
+    <br>
+    <!-- end::chart-->
+    
     <!-- start::klaytnCoinPrice-->
     <div class="row">
       <div class="col-md-12">
@@ -69,19 +77,25 @@
               :line-numbers="false"
               styleClass="order-table vgt-table"
               :rows="priceData"
-            >
+              @on-row-click="onRowClick">
             </vue-good-table>
           </div>
         </div>
       </div>  
     </div>
-      <!-- end::klaytnCoinPrice -->
+    <!-- end::klaytnCoinPrice -->
   </div>
 </template>
 <script>
 import axios from "axios";
+import { createChart } from 'lightweight-charts';
+
+
+
+
 
 export default {
+  
   name: "Apps",
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
@@ -89,6 +103,11 @@ export default {
   },
   data() {
     return {
+      
+      //chart
+      lineSeries: '',
+      chartTitle: '',
+
       //cards
       swapKlayPriceUsd: 0,
       swapKlayPriceKrw: 0,
@@ -132,7 +151,8 @@ export default {
         }
       ],
       //priceTable data
-      priceData: []
+      priceData: [],
+      chartData: []
     };
     
   },
@@ -156,8 +176,7 @@ export default {
        */
       getKlaySwapAllTokenPrice() {
         var arr = []
-        return axios.get("/web/pool/getAllTokenPrice/klayswap")
-          .then((res) => {
+        return axios.get("/web/pool/getAllTokenPrice/klayswap").then((res) => {
             if (res.data.success == false) {
               this.$router.go(-1)
             } else {
@@ -168,13 +187,11 @@ export default {
                 var symbol = tokenPrice[key].symbol
                 var swapPriceUsd = (tokenPrice[key].price).toFixed(3)
                 var swapPriceKrwOrigin = tokenPrice[key].price*this.usdKrw
-                var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(2) );
-                
+                var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(2) );                
                 var exPrice = swapPriceKrw * (1+this.kPremium); //거래소가격(개발중), 임시로 swap가격*프리미엄 으로 대체
-
                 var kPremium = (exPrice-swapPriceKrw)/swapPriceKrw
                 var swapPrice = '<span class="text-15">'+swapPriceKrw +'원</span><span class="text-12 font-weight-light"> ($'+ swapPriceUsd +')</span>'
-                var obj = {name:symbol, swapPriceUsd:swapPriceUsd, swapPriceKrw:swapPriceKrw, exPrice:exPrice, swapPrice:swapPrice, kPremium:kPremium}
+                var obj = {key:key, name:symbol, swapPriceUsd:swapPriceUsd, swapPriceKrw:swapPriceKrw, exPrice:exPrice, swapPrice:swapPrice, kPremium:kPremium}
                 arr.push(obj)
               });
               return arr
@@ -201,10 +218,98 @@ export default {
           this.priceData = klaySwapPriceArr
           //resetTime
           this.resetTime = new Date().toLocaleString()
+      },
+
+      /**
+       * 차트데이터 update
+       * @param name 선택한 토큰 name(심볼)
+       * @param key 선택한 토큰의 key(주소값)
+       */
+      updateChart(name, key) {
+
+        var url = "/web/token/getChartData/"+key
+
+        axios.get(url).then((res) => {
+          var resArr = res.data.response.tokens
+          var dataArr = []
+
+          //날짜값 형식에 맞게 가공 (timestamp)
+          for (let i = 0; i < resArr.length; i++) {
+              var a= {}
+              var dateTime = resArr[i].dateTime
+              var time = Math.floor(new Date(dateTime).getTime()/1000)
+
+              a.time = time
+              a.value = resArr[i].price
+              dataArr[i] = a
+          }
+
+          this.lineSeries.setData(dataArr)
+          this.chartTitle = name
+
+        }).catch((error) => {
+          console.log('proxyRequest error', error)
+        })          
+       },
+
+       /**
+        * datatable row클릭시 이벤트
+        * params : 해당 row 정보
+        */
+       onRowClick(params) {
+         var name = params.row.name
+         var key = params.row.key
+
+         this.updateChart(name, key)
        }
-    },
+
+
+  },
+    
     created() {
       this.resetTokenPrice()
+    },
+
+    //Vue Instance 데이터가 마운트된 후 호출
+    mounted() {
+        //차트
+        const chart = createChart(document.getElementById('chartArea'), {
+          width: 1000,
+          height: 300,
+          localization: {
+            dateFormat: 'yyyy-MM-dd',
+          },
+          grid: {
+            vertLines: {
+              color: 'rgba(197, 203, 206, 0.7)',
+            },
+            horzLines: {
+              color: 'rgba(197, 203, 206, 0.7)',
+            },
+          },
+          timeScale: {
+            timeVisible: true,
+            secondsVisible: false,
+          },
+          // localization: {
+          //   timeFormatter: businessDayOrTimestamp => {
+          //     // console.log(businessDayOrTimestamp);
+
+          //     if (LightweightCharts.isBusinessDay(businessDayOrTimestamp)) {
+          //       return 'Format for business day';
+          //     }
+
+          //     return 'Format for timestamp';
+          //   },
+          // },
+        });
+      const lineSeries = chart.addLineSeries();
+      this.lineSeries = lineSeries //차트 데이터 컨트롤가능 객체, 전역으로 사용
+      
+      //차트 초기값 klay
+      this.updateChart('KLAY','0x0000000000000000000000000000000000000000')
+      
+
     }
   }
 
