@@ -1,6 +1,7 @@
 
 var cron = require('node-cron');
 const tokenService = require('./apps/token/tokenService')
+const commonService = require('./apps/common/commonService')
 
 
 process.env.NODE_ENV = ( process.env.NODE_ENV && ( process.env.NODE_ENV ).trim().toLowerCase() == 'production' ) ? 'production' : 'development';
@@ -39,6 +40,7 @@ var accountRouter = require('./routes/accountRouter');
 var poolRouter = require('./routes/poolRouter');
 var votingRouter = require('./routes/votingRouter');
 var tokenRouter = require('./routes/tokenRouter');
+var commonRouter  = require('./routes/commonRouter');
 
 var testRouter  = require('./routes/testRouter');
 
@@ -63,6 +65,7 @@ app.use('/web/pool', poolRouter);
 app.use('/web/voting', votingRouter);
 app.use('/web/test', testRouter);
 app.use('/web/token', tokenRouter);
+app.use('/web/common', commonRouter);
 app.use('/v1/account', accountRouter);
 
 // catch 404 and forward to error handler
@@ -81,10 +84,14 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 //production 에서만 데이터 insert
 if (process.env.NODE_ENV == 'production') {
   cron.schedule('0 */10 * * * *', function(){
     tokenService.insertTokenInfo()
+  });
+  cron.schedule('0 */30 * * * *', function(){
+    commonService.getRateFromThirdParty()
   });
 }
 
