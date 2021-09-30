@@ -5,6 +5,7 @@ const CONSTS = require('../../utils/consts.js');
 
 const insertTokenInfo = function(isInsertChartData){
 	const swapName = "klayswap"
+	const now = Date.now()
 	rtn = poolService.getAllTokenPrice(swapName, CONSTS.AUTH_NAME.BATCH_JOB, function(rslt){
 	  if(rslt.success){
 		  const tokenPrice = rslt.response.token
@@ -17,7 +18,7 @@ const insertTokenInfo = function(isInsertChartData){
 				  symbol:tokenPrice[key].symbol,
 				  price:tokenPrice[key].price,
 				  exPrice:tokenPrice[key].price,
-				  dateTime:tokenPrice[key].dateTime
+				  dateTime:now
 				}}, {upsert:true}, function (err, docs) {
 				  if (err){
 					  console.log(err)

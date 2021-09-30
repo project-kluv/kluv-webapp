@@ -86,7 +86,7 @@ app.use(function(err, req, res, next) {
 
 //production 에서만 데이터 insert
 if (process.env.NODE_ENV == 'production') {
-
+  
   //토큰정보 입력/업데이트
   var cnt = 1
   cron.schedule('*/30 * * * * *', function(){
