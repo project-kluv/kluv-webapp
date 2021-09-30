@@ -6,7 +6,7 @@ const balanceService = require('../apps/balance/balanceService')
 describe('- axios async', function () {
   this.timeout(5000);
   it(' ', async function () {
-    let rtn = await poolService.getAllLPPool('klayswap');
+    let rtn = await poolService.getAllLPPool('klayswap','KAS');
     console.log(rtn)
   });
 });

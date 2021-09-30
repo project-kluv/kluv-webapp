@@ -22,8 +22,10 @@ const routes = [
         path: "/app/dashboard",
         component: () => import("./views/app/dashboard")
       },
-      
-
+      {
+        path: "/app/hidden",
+        component: () => import("./views/app/dashboard2")
+      },
       // myAsset
       {
         path: "/app/myAsset",

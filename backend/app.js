@@ -84,12 +84,23 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
 //production 에서만 데이터 insert
 if (process.env.NODE_ENV == 'production') {
-  cron.schedule('0 */10 * * * *', function(){
-    tokenService.insertTokenInfo()
+
+  //토큰정보 입력/업데이트
+  var cnt = 1
+  cron.schedule('*/30 * * * * *', function(){
+    if(cnt == 10){
+      //cnt가 10이면 chart 데이터까지 insert
+      tokenService.insertTokenInfo(true)
+      cnt = 1
+    }else{
+      tokenService.insertTokenInfo(false)
+      cnt ++ 
+    }
   });
+
+  //환율데이터 업데이트
   cron.schedule('0 */30 * * * *', function(){
     commonService.getRateFromThirdParty()
   });

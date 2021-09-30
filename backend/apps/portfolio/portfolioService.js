@@ -6,7 +6,7 @@ const rewardService = require('../reward/rewardService')
 const balanceService = require('../balance/balanceService')
 
 
-const getMaximizeReturn = async function ([account, appName], callbak) {
+const getMaximizeReturn = async function ([account, appName], authName, callbak) {
   console.log("[service] ------> getExpectedLPReturn")
   try {
     model = {
@@ -16,10 +16,10 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       "variables": {}
     }
     // 토큰 수익률 가져오기
-    const lpExpectedReturn = await rewardService.getExpectedLPReturnInApp(appName)
+    const lpExpectedReturn = await rewardService.getExpectedLPReturnInApp(appName, authName)
     // console.log(lpExpectedReturn)
     // 토큰 가격 가져오기
-    const lpPools = await poolService.getAllLPPool(appName)
+    const lpPools = await poolService.getAllLPPool(appName, authName)
     const tokenPriceAll = poolService.getTokenPriceInApp(appName, lpPools)
 
     for (let i = 0; i < lpExpectedReturn.length; i++) {
@@ -38,7 +38,7 @@ const getMaximizeReturn = async function ([account, appName], callbak) {
       }
     }
     // 현재 잔고
-    balanceService.getBalance(account, function (callResult) {
+    balanceService.getBalance(account, authName, function (callResult) {
       const totalBalance = callResult["response"]["totalBalance"]
       for (let index = 0; index < totalBalance.length; index++) {
         const token = totalBalance[index];

@@ -1,4 +1,5 @@
 const portfolioService = require('./portfolioService')
+const CONSTS = require('../../utils/consts.js');
 
 /*
  API : /web/voting/ExpectedLPReturn/klayswap
@@ -9,7 +10,7 @@ const getMaximizeReturn = function(req, res){
   const account = req.query.account
   const appName = req.query.appName
 
-  rtn = portfolioService.getMaximizeReturn([account, appName], function(rslt){
+  rtn = portfolioService.getMaximizeReturn([account, appName], CONSTS.AUTH_NAME.DEFAULT,  function(rslt){
       if(rslt.success){
           res.send(rslt)
       }else{

@@ -17,10 +17,10 @@ const getAuth = function(enName){
   }
 };
   
-const initCaver = function() {
+const initCaver = function(authName) {
   console.log("[Utils] ------> initCaver")
   try {
-    const AUTH = this.getAuth('KAS')
+    const AUTH = this.getAuth(authName)
     const accessKeyId = AUTH["ACCESS_KEY"]
     const secretAccessKey = AUTH["SECRET_KEY"]
     const chainId = 8217
@@ -32,10 +32,10 @@ const initCaver = function() {
   }
 }
 
-const getUserDefinedContract = function (contractABI, contractAddress) {
+const getUserDefinedContract = function (contractABI, contractAddress, authName) {
   console.log("[Utils] ------> getUserDefinedContract")
   try {
-    const caver = this.initCaver()
+    const caver = this.initCaver(authName)
     const contract = new caver.contract(contractABI, contractAddress)
     return contract
   } catch (error) {
@@ -44,10 +44,10 @@ const getUserDefinedContract = function (contractABI, contractAddress) {
   }
 }
 
-const getNewTokenInfo = async function(contractAddress){
+const getNewTokenInfo = async function(contractAddress, authName){
   console.log("[Utils] ------> getNewTokenInfo")
   try {
-    const caver = this.initCaver()
+    const caver = this.initCaver(authName)
     const contract = new caver.kct.kip7(contractAddress)
     const tokenName = await contract.methods.name().call()
     const tokenSymbol = await contract.methods.symbol().call()
@@ -64,10 +64,10 @@ const getNewTokenInfo = async function(contractAddress){
   }
 }
 
-const getContract = function(appName, contractName) {
+const getContract = function(appName, contractName, authName) {
   console.log("[Utils] ------> getContract")
   try {
-    const caver = this.initCaver()
+    const caver = this.initCaver(authName)
     if (appName == "klayswap") {
       const contractAddress = KSP_CONTRACT_ADDRESS[contractName]
       const contractABI = KSP_CONTRACT_ABI[contractName]

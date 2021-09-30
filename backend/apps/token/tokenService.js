@@ -1,26 +1,44 @@
 const poolService = require('../pool/poolService')
 const Token = require('./tokens')
+const Current = require('./currentData')
+const CONSTS = require('../../utils/consts.js');
 
-const insertTokenInfo = function(){
-	console.log("insert!")
+const insertTokenInfo = function(isInsertChartData){
 	const swapName = "klayswap"
-	rtn = poolService.getAllTokenPrice(swapName, function(rslt){
+	rtn = poolService.getAllTokenPrice(swapName, CONSTS.AUTH_NAME.BATCH_JOB, function(rslt){
 	  if(rslt.success){
-		const tokenPrice = rslt.response.token
-		var tokenKeys = Object.keys(tokenPrice)
-		var arr = []
-		tokenKeys.forEach(key => {
-		  var address = key
-		  var symbol = tokenPrice[key].symbol
-		  var swapPriceUsd = (tokenPrice[key].price).toFixed(3)
-		  var token = new Token({
-			address:address,
-			name:symbol,
-			price:swapPriceUsd,
-		  })
-		  arr.push(token)
-		});
-	    Token.insertMany(arr)
+		  const tokenPrice = rslt.response.token
+		  var tokenKeys = Object.keys(tokenPrice)
+		  tokenKeys.forEach(key => {
+			  var address = key
+			  Current.updateOne({address:address},{$set:{
+				  address:address,
+				  name:tokenPrice[key].name,
+				  symbol:tokenPrice[key].symbol,
+				  price:tokenPrice[key].price,
+				  exPrice:tokenPrice[key].price,
+				  dateTime:tokenPrice[key].dateTime
+				}}, {upsert:true}, function (err, docs) {
+				  if (err){
+					  console.log(err)
+					  console.log("Error update currency rate data")
+				  }
+			  })
+			});
+		if(isInsertChartData){
+			var arr = []
+			tokenKeys.forEach(key => {
+			  var address = key
+			  var token = new Token({
+				address:address,
+				name:tokenPrice[key].symbol,
+				price:tokenPrice[key].price
+			  })
+			  arr.push(token)
+			});
+			Token.insertMany(arr)
+		}	
+
 	  }else{
 		  console.log("ERROR!!!")
 	  }

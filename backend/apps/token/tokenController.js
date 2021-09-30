@@ -1,5 +1,6 @@
 const Token = require('./tokens')
 const poolService = require('../pool/poolService')
+const Current = require('./currentData')
 
 const insert = function(req, res){
   console.log("[Controller] ------> insert")
@@ -22,13 +23,18 @@ const insert = function(req, res){
   
 }
 
-const get = function(req, res){
+const getChartData = function(req, res){
   console.log("[Controller] ------> get")
-  
   const address = req.params.address
-  var result
-
   Token.find({ address : address }, (err, tokens) => {
+    res.send({sucess:true, response:{tokens:tokens}})
+  });
+}
+
+const getCurrentTokenPrice = function(req, res){
+  console.log("[Controller] ------> get")
+  const address = req.params.address
+  Current.find({}, (err, tokens) => {
     res.send({sucess:true, response:{tokens:tokens}})
   });
 }
@@ -44,7 +50,7 @@ const test = function(req, res){
       tokenKeys.forEach(key => {
         var address = key
         var symbol = tokenPrice[key].symbol
-        var swapPriceUsd = (tokenPrice[key].price).toFixed(3)
+        var swapPriceUsd = (tokenPrice[key].price)
         var token = new Token({
           address:address,
           name:symbol,
@@ -64,6 +70,7 @@ const test = function(req, res){
 
 module.exports = {
   insert:insert,
-  get:get,
+  getChartData:getChartData,
+  getCurrentTokenPrice:getCurrentTokenPrice,
   test:test
 }

@@ -3,11 +3,12 @@ const fs = require('fs')
 const poolService = require('../pool/poolService.js')
 const utils = require('../../utils/commonUtils.js')
 
+
 const KLAYSWAP_TOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapTokenInfo.json", 'utf8'));
 const KLAYSWAP_LPTOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapLPTokenInfo.json", 'utf8'));
 
 
-const getBalance = async function(account, callbak) {
+const getBalance = async function(account, authName, callbak) {
 	console.log("[service] ------> getAccountBalance")
   try {
     // 1. KLAYSWAP LP + 토큰 잔고 가져오기
@@ -15,7 +16,7 @@ const getBalance = async function(account, callbak) {
 
 
     // 가격 정보를 미리 받아옴 (Klayswap 기준)
-    const lpPools = await poolService.getAllLPPool('klayswap')
+    const lpPools = await poolService.getAllLPPool('klayswap', authName)
     const tokenPriceAll = poolService.getTokenPriceInApp('klayswap', lpPools)
 
     const lpPrice = tokenPriceAll['lp']
@@ -37,7 +38,7 @@ const getBalance = async function(account, callbak) {
         const tokenAddressList = Object.keys(tokenPrice)
         const allAddressList = lpAddressList.concat(tokenAddressList)
   
-        const balanceBookContract = utils.getContract(appName , "BALANCE_BOOK")
+        const balanceBookContract = utils.getContract(appName , "BALANCE_BOOK", authName)
         let balances
         await balanceBookContract.methods.balanceOf(account, allAddressList).call()
           .then(response => {
@@ -113,7 +114,7 @@ const getBalance = async function(account, callbak) {
           // result.totalUsdt = resultAll.totalUsdt
   
           // 2. KSP Pending Rewards 가져오기 -> 함수화 시켜야함 
-          pendingRewards = await this.getPendingRewards(appName, account)
+          pendingRewards = await this.getPendingRewards(appName, account, authName)
           if (pendingRewards['KSP']['LP'].length > 0 || pendingRewards['KSP']['VOTING'].length > 0) {
             result.pendingRewards = pendingRewards
           }
@@ -232,12 +233,12 @@ const getBalance = async function(account, callbak) {
   }
 }
 
-const getPendingRewards = async function (appName, account) {
+const getPendingRewards = async function (appName, account, authName) {
   console.log("[service] ------> getPendingRewards")
   try {
     if (appName === 'klayswap') {
       let pendingRewards = { 'KSP': { 'LP': [], 'PENDING_KSP': 0, 'LOCKED_KSP': 0, 'VOTING': [] } }
-      const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW")
+      const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW", authName)
       const fullData = await factoryViewContract.methods.getFullData().call()
       const poolCount = Number(fullData['poolCount'])
       const userData = await factoryViewContract.methods.getUserData(account, 0, poolCount).call()
@@ -262,7 +263,7 @@ const getPendingRewards = async function (appName, account) {
         }
       }
       // Staking
-      const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
+      const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW", authName)
       const userVKSPStat = await poolVotingViewContract.methods.getUserVKSPStat(account).call()
       if (Number(userVKSPStat['balance']) > 0) {
         pendingRewards['KSP']["LOCKED_KSP"] = Number(userVKSPStat["lockedKSP"]) / (10 ** 18)

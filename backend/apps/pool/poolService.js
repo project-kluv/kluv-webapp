@@ -2,14 +2,15 @@ const axios = require('axios');
 const poolModel = require('./poolModels.js')
 const utils = require('../../utils/commonUtils.js')
 
-const getAllLPPool = async function(appName){
+
+const getAllLPPool = async function(appName, authName){
   console.log("[service] ------> getAllLPPool")
   try {
     if (appName === 'klayswap') {
       const tokenInfo = poolModel.getTokenInfo(appName)
       const lpTokenInfo = poolModel.getLPTokenInfo(appName)
 
-      const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW")
+      const factoryViewContract = utils.getContract(appName, "FACTORY_VIEW", authName)
       const fullData = await factoryViewContract.methods.getFullData().call()
       
       const poolCount = Number(fullData['poolCount'])
@@ -22,7 +23,7 @@ const getAllLPPool = async function(appName){
         // LP토큰 정보가 없는 경우 업데이트 해줌
         if (index < poolCount) {
           if (lpTokenInfo[element] == null){
-            let newTokenInfo = await utils.getNewTokenInfo(element)
+            let newTokenInfo = await utils.getNewTokenInfo(element, authName)
             lpTokenInfo[element] = {
               "symbol": newTokenInfo.symbol,
               "name": newTokenInfo.name,
@@ -33,7 +34,7 @@ const getAllLPPool = async function(appName){
         // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
         } else {
           if (tokenInfo[element] == null){
-            let newTokenInfo = await utils.getNewTokenInfo(element)
+            let newTokenInfo = await utils.getNewTokenInfo(element, authName)
             tokenInfo[element] = {
               "symbol": newTokenInfo.symbol,
               "name": newTokenInfo.name,
@@ -74,10 +75,10 @@ const getAllLPPool = async function(appName){
   }
 };
 
-const getAllTokenPrice = async function (appName, callbak){
+const getAllTokenPrice = async function (appName, authName, callbak){
   console.log("[service] ------> getAllTokenPrice")
   try{
-    const lpPools = await this.getAllLPPool(appName)
+    const lpPools = await this.getAllLPPool(appName, authName)
     const tokenPriceAll = this.getTokenPriceInApp(appName, lpPools)
     
     callbak({success : true , response: tokenPriceAll})

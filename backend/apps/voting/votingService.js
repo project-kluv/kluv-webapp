@@ -1,9 +1,9 @@
 const axios = require('axios');
 const utils = require('../../utils/commonUtils.js')
 
-const getPoolVotingInfo = async function (appName) {
+const getPoolVotingInfo = async function (appName, authName) {
   console.log("[service] ------> getPoolVotingInfo")
-  const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW")
+  const poolVotingViewContract = utils.getContract(appName, "POOL_VOTING_VIEW", authName)
   const poolVotingData = await poolVotingViewContract.methods.getPoolVotingData().call()
   result = []
   const poolCount = poolVotingData.pools.length

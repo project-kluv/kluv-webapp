@@ -1,5 +1,6 @@
 const cexUtils = require('../../utils/cexUtils')
 const poolService = require('../pool/poolService')
+const CONSTS = require('../../utils/consts.js');
 
 
 const searchOpportunity = async function(threshold=0.02) {
@@ -35,7 +36,7 @@ const getOpportunity = async function() {
   let currency = await cexUtils.getCurrency('usdkrw') // 환율 가져오기
   // 클레이스왑 기준가격 
   let klayswapPrice = []
-  await poolService.getAllTokenPrice('klayswap', function(appPrice) {
+  await poolService.getAllTokenPrice('klayswap', CONSTS.AUTH_NAME.DEFAULT, function(appPrice) {
     tokenPrice = appPrice.response.token
     for (const address in tokenPrice) {
       if (Object.hasOwnProperty.call(tokenPrice, address)) {
