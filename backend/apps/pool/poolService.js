@@ -18,32 +18,54 @@ const getAllLPPool = async function(appName, authName){
       const amountDatas = fullData['amountDatas']
       const decimalDatas = fullData['decimalDatas']
 
+      let newLPAddress = []
+      let newLPSymbol = []
+      let newLPName = []
+      let newLPDecimals = []
+
+      let newTokenAddress = []
+      let newTokenSymbol = []
+      let newTokenName = []
+      let newTokenDecimals = []
+      
       for (let index = 0; index < fixedDatas.length; index++) {
         const element = fixedDatas[index];
         // LP토큰 정보가 없는 경우 업데이트 해줌
         if (index < poolCount) {
-          if (lpTokenInfo[element] == null){
+          if (lpTokenInfo[element] == null) {
             let newTokenInfo = await utils.getNewTokenInfo(element, authName)
+
+            newLPAddress.push(element)
+            newLPSymbol.push(newTokenInfo.symbol)
+            newLPName.push(newTokenInfo.name)
+            newLPDecimals.push(newTokenInfo.decimals)
             lpTokenInfo[element] = {
               "symbol": newTokenInfo.symbol,
               "name": newTokenInfo.name,
               "decimals": newTokenInfo.decimals
             }
-            poolModel.addLPTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
+            // poolModel.addLPTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
           }
-        // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
+          // LP를 구성하는 토큰 정보가 없는 경우 업데이트 해줌
         } else {
-          if (tokenInfo[element] == null){
+          if (tokenInfo[element] == null) {
             let newTokenInfo = await utils.getNewTokenInfo(element, authName)
+
+            newTokenAddress.push(element)
+            newTokenSymbol.push(newTokenInfo.symbol)
+            newTokenName.push(newTokenInfo.name)
+            newTokenDecimals.push(newTokenInfo.decimals)
             tokenInfo[element] = {
               "symbol": newTokenInfo.symbol,
               "name": newTokenInfo.name,
               "decimals": newTokenInfo.decimals
             }
-            poolModel.addTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
+            // poolModel.addTokenInfo(appName, [element, newTokenInfo.symbol, newTokenInfo.name, newTokenInfo.decimals])
           }
         }
       }
+      if ( newLPAddress.length > 0 ) poolModel.addLPTokenInfo(appName, [newLPAddress, newLPSymbol, newLPName, newLPDecimals])
+      if ( newTokenAddress.length > 0 ) poolModel.addTokenInfo(appName, [newTokenAddress, newTokenSymbol, newTokenName, newTokenDecimals])
 
       result = {data: []};
       for (let i = 0; i < poolCount; i++) {        
@@ -68,6 +90,7 @@ const getAllLPPool = async function(appName, authName){
           "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
         })
       }
+      console.log(result)
       return result
     } else return 0
   } catch (error) {
