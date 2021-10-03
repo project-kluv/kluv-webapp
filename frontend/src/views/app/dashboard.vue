@@ -4,10 +4,10 @@
       <span style="margin-right:20px;">{{resetTime}}</span>
       <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
     </div>
-    <breadcumb :page="'대시보드'" :folder="'klaytn'" />
+    <breadcumb :page="'대시보드'" :folder="'klayswap'" />
 
     <b-row>
-      <b-col lg="3" md="6" sm="12">
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -19,7 +19,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="3" md="6" sm="12">
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -31,7 +31,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="3" md="6" sm="12">
+      <!-- <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -41,8 +41,8 @@
             <p class="text-muted text-22 line-height-1.1 mb-2">{{(kPremium*100).toFixed(2)}}%</p>
           </div>
         </b-card>
-      </b-col>
-      <b-col lg="3" md="6" sm="12">
+      </b-col> -->
+      <b-col lg="4" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -62,8 +62,8 @@
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-            <h5 class="card-title border-bottom p-3 mb-2">{{chartTitle}} - 실시간 차트</h5>
-            <div  style="overflow:auto;" id="chartArea"></div>
+            <h5 id="area" class="card-title border-bottom p-3 mb-2">{{chartTitle}} - 실시간 차트</h5>
+            <div  style="overflow:auto; width: 100%;" id="chartArea"></div>
           </div>
         </div>
       </div>
@@ -113,6 +113,7 @@ export default {
     return {
       
       //chart
+      chart:'',
       lineSeries: '',
       chartTitle: '',
       test:'test',
@@ -139,21 +140,25 @@ export default {
           field: "name",
           html: true,
           thClass: "text-left",
-          tdClass: "text-left"
+          tdClass: "text-left",
+          formatFn: this.formatFnName
         },
         {
           label: "가격(USD)",
           field: "swapPriceUsd",
           type: "number",
           thClass: "text-left",
-          tdClass: "text-left"
+          tdClass: "text-left",
+          //sortFn: this.sortFnSwapPriceUsd, //sort이슈 formatFn으로 해결
+          formatFn: this.formatFnSwapPriceUsd
         },
         {
           label: "가격(KRW)",
           field: "swapPriceKrw",
           type: "number",
           thClass: "text-left",
-          tdClass: "text-left"
+          tdClass: "text-left",
+          formatFn: this.formatFnSwapPriceKrw
         },
         // {
         //   label: "가격(거래소)",
@@ -171,10 +176,29 @@ export default {
   },
   methods: {
       /**
+       * name data format
+       */
+      formatFnName: function(value) {
+        return value;
+      },
+      /**
+       * usd column data format
+       */
+      formatFnSwapPriceUsd: function(value) {
+        value = this.setCommaSwapPrice(value)
+        return '$ ' + value;
+      },
+      /**
+       * krw column data format 설정
+       */
+      formatFnSwapPriceKrw: function(value) {
+        value = this.setCommaSwapPrice(value)
+        return value + ' 원';
+      },
+      /**
        * 테스트용
        */
       getTestData() {
-        
         var url = "https://api.bithumb.com/public/ticker/KLAY"
 
         axios.get(url)
@@ -224,20 +248,20 @@ export default {
               tokenKeys.forEach(key => {
                 var address = tokenPrice[key].address 
                 var symbol = tokenPrice[key].symbol
-                var swapPriceUsd = (tokenPrice[key].price).toFixed(4)
-                var swapPriceKrwOrigin = tokenPrice[key].price*this.usdKrw
-                var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(4) );                
-                
+                var swapPriceUsd = tokenPrice[key].price
+                var swapPriceKrw = tokenPrice[key].price*this.usdKrw
+                //var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(4) );
+
                 if(symbol=='KLAY') {
-                  this.swapKlayPriceUsd = swapPriceUsd
-                  this.swapKlayPriceKrw = swapPriceKrw
+                  this.swapKlayPriceUsd = this.setCommaSwapPrice(swapPriceUsd)
+                  this.swapKlayPriceKrw = this.setCommaSwapPrice(swapPriceKrw)
 
                   //klay만 가져옴
                   var exPrice = this.klayKrwPriceExchange
                   var kPremium = this.kPremium
                 }else if(symbol == 'KSP'){
-                  this.swapKspPriceUsd = swapPriceUsd
-                  this.swapKspPriceKrw = swapPriceKrw
+                  this.swapKspPriceUsd = this.setCommaSwapPrice(swapPriceUsd)
+                  this.swapKspPriceKrw = this.setCommaSwapPrice(swapPriceKrw)
                 }
 
                 if(symbol=='KLAY'){
@@ -258,23 +282,61 @@ export default {
       },
 
       /**
+       * swapPriceUsd
+       * 데이터가공
+       * 소숫점정리, 콤마추가
+       */
+      setCommaSwapPrice(price) {
+        //소숫점정리
+        if(price < 1) {
+          price = price.toFixed(5)
+        }else if(price < 10) {
+          price = price.toFixed(4)
+        }else if(price < 100) {
+          price = price.toFixed(3)
+        }else if(price > 100000) {
+          price = price.toFixed(0)
+        }else{
+          price = price.toFixed(2)
+        }
+
+        //콤마추가
+        const priceComma = price.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        return priceComma
+      },
+
+      /**
        * 새로고침
        * 대시보드상의 모든 klayswap토큰가격을 불러온다.
        */
-      async resetTokenPrice() {
-          this.getUsdKrw()
-          this.getKlayPrice()
-        
-          var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
-          //cards
+      async resetTokenPrice(param) {
 
-          //this.kPremium = 3.2
-          //tokenPriceTable
-          this.priceData = klaySwapPriceArr
-          //resetTime
-          this.resetTime = new Date().toLocaleString()
+        //cards
+        this.getUsdKrw()
+        this.getKlayPrice()
 
-          this.updateChart(this.selectedSymbol, this.selectedKey)
+        //초기값일경우 제외(임시처리)
+        if(param != 'c') {
+          debugger;
+            //chart width reset
+            //초기 차트영역 div width 
+            var chartArea = document.getElementById('chartArea');
+            var chartAreaWidth = chartArea.clientWidth
+            this.chart.resize(chartAreaWidth, 300);
+        }
+
+
+        //tokenPriceTable
+        var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
+
+
+        //this.kPremium = 3.2
+
+        this.priceData = klaySwapPriceArr
+        //resetTime
+        this.resetTime = new Date().toLocaleString()
+
+        this.updateChart(this.selectedSymbol, this.selectedKey)
       },
 
       /**
@@ -343,10 +405,15 @@ export default {
 
     //Vue Instance 데이터가 마운트된 후 호출
     mounted() {
-        this.resetTokenPrice()
-        //차트
+        this.resetTokenPrice('c')
+
+        //초기 차트영역 div width 
+        var chartArea = document.getElementById('chartArea');
+        var chartAreaWidth = chartArea.clientWidth
+
+        //차트생성
         const chart = createChart(document.getElementById('chartArea'), {
-          width: 1000,
+          width: chartAreaWidth,
           height: 300,
           localization: {
             dateFormat: 'yyyy-MM-dd',
@@ -415,7 +482,10 @@ export default {
 },
         });
       const lineSeries = chart.addLineSeries();
-      this.lineSeries = lineSeries //차트 데이터 컨트롤가능 객체, 전역으로 사용
+
+      //차트 데이터 컨트롤가능 객체, 전역으로 사용
+      this.chart = chart;
+      this.lineSeries = lineSeries 
       
     }
   }
