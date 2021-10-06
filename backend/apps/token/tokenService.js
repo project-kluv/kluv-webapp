@@ -2,6 +2,13 @@ const poolService = require('../pool/poolService')
 const Token = require('./tokens')
 const Current = require('./currentData')
 const CONSTS = require('../../utils/consts.js');
+const SwapTokenInfo = require('./klayswapTokenInfo')
+
+const getKlayswapTokenInfo = function(callback){
+	SwapTokenInfo.find({ Type : "tk" }, (err, tokens) => {
+		callback({success: true,tokenInfo: tokens})
+	  });
+}
 
 const insertTokenInfo = function(isInsertChartData){
 	const swapName = "klayswap"
@@ -47,6 +54,8 @@ const insertTokenInfo = function(isInsertChartData){
 	
   }
   
+  
   module.exports = {
-	insertTokenInfo:insertTokenInfo
+	insertTokenInfo:insertTokenInfo,
+	getKlayswapTokenInfo:getKlayswapTokenInfo
   }

@@ -1,6 +1,7 @@
 const Token = require('./tokens')
-const poolService = require('../pool/poolService')
 const Current = require('./currentData')
+const SwapTokenInfo = require('./klayswapTokenInfo')
+const tokenService = require('./tokenService')
 
 const insert = function(req, res){
   console.log("[Controller] ------> insert")
@@ -33,7 +34,6 @@ const getChartData = function(req, res){
 
 const getCurrentTokenPrice = function(req, res){
   console.log("[Controller] ------> get")
-  const address = req.params.address
   Current.find({}, (err, tokens) => {
     res.send({sucess:true, response:{tokens:tokens}})
   });
@@ -41,31 +41,42 @@ const getCurrentTokenPrice = function(req, res){
 
 const test = function(req, res){
   console.log("[Controller] ------> test")
-  const swapName = "klayswap"
-  rtn = poolService.getAllTokenPrice(swapName, function(rslt){
+
+  var tokenInfo = {}
+  tokenService.getKlayswapTokenInfo(function(rslt){
     if(rslt.success){
-      const tokenPrice = rslt.response.token
-      var tokenKeys = Object.keys(tokenPrice)
-      var arr = []
-      tokenKeys.forEach(key => {
-        var address = key
-        var symbol = tokenPrice[key].symbol
-        var swapPriceUsd = (tokenPrice[key].price)
-        var token = new Token({
-          address:address,
-          name:symbol,
-          price:swapPriceUsd,
-        })
-        arr.push(token)
-      });
-      //console.log(process.env.TEST)
-   //   Token.insertMany(arr)
-      res.send(arr)
+      tokenInfo = rslt.tokenInfo
+      res.send(rslt)
     }else{
-        res.send(arr)
+        //TODO Error Handling
+        res.send(rslt)
     }
-});
+    console.log(tokenInfo)
+  })
+
+  // const KLAYSWAP_TOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapTokenInfo.json", 'utf8'));
+  // const KLAYSWAP_LPTOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapLPTokenInfo.json", 'utf8'));
+
+  // var tokenKeys = Object.keys(KLAYSWAP_LPTOKEN_INFO)
+  // var arr = []
   
+  // tokenKeys.forEach(key => {
+  //     var address = key
+  //     var tokenInfo = new SwapTokenInfo({
+  //       type:"lp",
+  //       address:address,
+  //       symbol:KLAYSWAP_LPTOKEN_INFO[key].symbol,
+  //       name:KLAYSWAP_LPTOKEN_INFO[key].name,
+  //       decimals:KLAYSWAP_LPTOKEN_INFO[key].decimals
+  //     })
+  //     arr.push(tokenInfo)
+  //   });
+  //  SwapTokenInfo.insertMany(arr)
+   //console.log(arr)
+
+
+
+
 }
 
 module.exports = {
