@@ -1,7 +1,9 @@
 <template>
   <div class="main-header">
     <div style="font-size:20px;" class="logo">
-      <center>KLUV.me</center>
+      <center>
+        <a href="/app/dashboard">KLUV.me</a>
+      </center>
       <!-- <img src="@/assets/images/logo1.png" style="width:45%; height:45%;" alt /> -->
     </div>
 
@@ -35,7 +37,7 @@
       <!-- dark mode End -->
 
       <!-- User avatar dropdown -->
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <b-dropdown
           id="dropdown-1"
           text="Dropdown Button"
@@ -65,7 +67,7 @@
             >
           </div>
         </b-dropdown>
-      </div>
+      </div> -->
     </div>
     <!-- <search-component
       :isSearchOpen.sync="isSearchOpen"
