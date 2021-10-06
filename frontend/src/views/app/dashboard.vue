@@ -11,7 +11,7 @@
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
-          <i class="i-Bitcoin"></i>
+          <i class="i-Coin"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
             <p class="text-muted text-20 line-height-1 mb-1">{{klayKrwPriceExchange}}</p>
@@ -115,7 +115,7 @@ export default {
   name: "Apps",
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "klaytnCoinPrice"
+    title: "klaySwapPrice"
   },
   data() {
     return {
