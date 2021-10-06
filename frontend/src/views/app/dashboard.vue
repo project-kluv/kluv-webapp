@@ -1,8 +1,8 @@
 <template>
   <div class="main-content">
     <div class="breadcrumb" style="float:right;">
-      <span style="margin-right:20px;">{{resetTime}}</span>
-      <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
+      <!-- <span style="margin-right:20px;">{{resetTime}}</span> -->
+      <!-- <b-button variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button> -->
     </div>
     <breadcumb :page="'대시보드'" :folder="'klayswap'" />
 
@@ -75,7 +75,15 @@
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-            <h5 class="card-title border-bottom p-3 mb-2">Klayswap 토큰 가격 (기준시 : {{tokenInfoDatetime}})</h5>
+            <div class="card-title border-bottom p-3 mb-2">Klayswap 토큰 가격
+              <div style="float:right; margin-bottom:40px;">
+                <span style="margin-right:20px; font-size:12px;">{{resetTime}}</span>
+                <b-button size="sm" variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
+              </div>
+            </div>
+      
+
+             <!-- (기준시 : {{tokenInfoDatetime}}) -->
             <vue-good-table
               :columns="priceColumns"
               :search-options="{
@@ -111,7 +119,9 @@ export default {
   },
   data() {
     return {
-      
+      //boolean
+      isEnd:true,
+
       //chart
       chart:'',
       lineSeries: '',
@@ -175,6 +185,30 @@ export default {
     
   },
   methods: {
+
+      /*
+      * resize event
+      * 브라우저 사이즈 조절시 발생 event
+      * 특정상황에 충돌발생하여 setTimeout사용,
+      * 사이즈관련 다른 동작들이 끝난 후 사이즈 조절
+      */
+      handleResize(e) {
+        if(this.isEnd){
+          this.isEnd = false
+          setTimeout(this.resizeChart, 400);
+        }
+        
+      },
+
+      /**
+       * resizeChart
+       */
+      resizeChart: function (){
+        var chartArea = document.getElementById('chartArea').clientWidth
+        this.chart.resize(chartArea, 300);
+        this.isEnd = true
+      },
+
       /**
        * name data format
        */
@@ -317,12 +351,13 @@ export default {
 
         //초기값일경우 제외(임시처리)
         if(param != 'c') {
-          debugger;
+          //debugger;
             //chart width reset
             //초기 차트영역 div width 
             var chartArea = document.getElementById('chartArea');
             var chartAreaWidth = chartArea.clientWidth
             this.chart.resize(chartAreaWidth, 300);
+            console.log('reset size, '+ chartAreaWidth)
         }
 
 
@@ -405,6 +440,10 @@ export default {
 
     //Vue Instance 데이터가 마운트된 후 호출
     mounted() {
+
+        //resize 이벤트리스너 추가 
+        window.addEventListener('resize', this.handleResize)
+
         this.resetTokenPrice('c')
 
         //초기 차트영역 div width 
