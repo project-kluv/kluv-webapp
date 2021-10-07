@@ -27,7 +27,7 @@
             </router-link>
           </li>
 
-          <li
+          <!-- <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
             data-item="myAsset"
@@ -39,7 +39,7 @@
                 <span class="nav-text">{{ $t("내자산") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li>
+          </li> -->
           
         </ul>
       </div>

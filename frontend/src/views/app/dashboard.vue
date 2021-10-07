@@ -14,7 +14,7 @@
           <i class="i-Coin"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
-            <p class="text-muted text-20 line-height-1 mb-1">{{klayKrwPriceExchange}}</p>
+            <p class="text-muted text-20 line-height-1 mb-1">{{klayKrwPriceExchange}}원</p>
             <p class="text-muted text-16 line-height-1 mb-1">${{swapKlayPriceUsd}}</p>
           </div>
         </b-card>
@@ -49,7 +49,7 @@
           <i class="i-Dollar"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">환율(USD)</p>
-            <p class="text-muted text-22 line-height-1.1 mb-2">${{usdKrw}}</p>
+            <p class="text-muted text-22 line-height-1.1 mb-2">{{usdKrw}}원</p>
           </div>
         </b-card>
       </b-col>
@@ -75,13 +75,49 @@
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-            <div class="card-title border-bottom p-3 mb-2">Klayswap 토큰 가격
-              <div style="float:right; margin-bottom:40px;">
+
+
+
+<!--  -->
+    <!-- <b-row>
+      <b-col lg="7" md="6" sm="12">
+        <b-card class="card-title border-bottom p-3 mb-3">
+        Klayswap 토큰 가격
+        </b-card>
+      </b-col>
+      <b-col lg="5" md="6" sm="12">
+        <b-card
+          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
+        >
                 <span style="margin-right:20px; font-size:12px;">{{resetTime}}</span>
                 <b-button size="sm" variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
-              </div>
+
+        </b-card>
+      </b-col>
+    </b-row> -->
+
+
+<!--  -->
+
+            
+            <div class="card-title border-bottom">
+              <b-row>
+                <!-- 타이틀 -->
+                <b-col xs="12" md="6" lg="6">
+                  <div class ="p-4 mb-2">
+                    Klayswap 토큰 가격
+                  </div>
+                </b-col>
+                <!-- 새로고침(우측영역) -->
+                <b-col xs="12" md="6" lg="6">
+                  <div class ="p-3 mb-2" style="float:right;">
+                      <span style="margin-right:20px; font-size:12px;">{{resetTime}}</span>
+                      <b-button size="sm" variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
+                  </div>
+                </b-col>
+              </b-row>
             </div>
-      
+
 
              <!-- (기준시 : {{tokenInfoDatetime}}) -->
             <vue-good-table
@@ -93,6 +129,7 @@
               :line-numbers="false"
               styleClass="order-table vgt-table"
               :rows="priceData"
+              compactMode
               @on-row-click="onRowClick">
             </vue-good-table>
           </div>
@@ -295,7 +332,7 @@ export default {
                   var kPremium = this.kPremium
                 }else if(symbol == 'KSP'){
                   this.swapKspPriceUsd = this.setCommaSwapPrice(swapPriceUsd)
-                  this.swapKspPriceKrw = this.setCommaSwapPrice(swapPriceKrw)
+                  this.swapKspPriceKrw = Math.round(swapPriceKrw)
                 }
 
                 if(symbol=='KLAY'){

@@ -13,7 +13,7 @@
           <router-view />
         </transition>
 
-        <!-- <appFooter /> -->
+        <appFooter />
       </div>
     </main>
   </div>

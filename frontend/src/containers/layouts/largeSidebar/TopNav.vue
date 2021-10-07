@@ -25,15 +25,15 @@
       </div> -->
       <!-- search bar end -->
       <!-- Full screen toggle -->
-      <i
+      <!-- <i
         class="i-Full-Screen header-icon d-none d-sm-inline-block"
         @click="handleFullScreen"
-      ></i>
+      ></i> -->
       <!-- <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i> -->
       <!-- Grid menu Dropdown -->
 
       <!-- dark mode -->
-      <i class="header-icon" @click="changeThemeMode"><b-icon icon="moon"></b-icon></i>
+      <!-- <i class="header-icon" @click="changeThemeMode"><b-icon icon="moon"></b-icon></i> -->
       <!-- dark mode End -->
 
       <!-- User avatar dropdown -->
@@ -118,7 +118,7 @@ export default {
     ]),
 
     connectKaikas() {
-      console.log("kaikas connect")
+      //console.log("kaikas connect")
       window.klaytn.enable().then(response => {
         this.address = response[0]
         console.log(this.address)

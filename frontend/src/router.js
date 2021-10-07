@@ -27,10 +27,10 @@ const routes = [
         component: () => import("./views/app/dashboard2")
       },
       // myAsset
-      {
-        path: "/app/myAsset",
-        component: () => import("./views/app/myAsset")
-      },
+      // {
+      //   path: "/app/myAsset",
+      //   component: () => import("./views/app/myAsset")
+      // },
 
 
       // pages
