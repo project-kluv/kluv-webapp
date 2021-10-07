@@ -473,13 +473,13 @@ export default {
           //날짜값 형식에 맞게 가공 (timestamp)
           for (let i = 0; i < resArr.length; i++) {
               var a= {}
-              a.time = Math.floor(new Date(resArr[i].dateTime).getTime()/1000-this.TIMEZONE)
+              a.time = Math.floor(new Date(resArr[i].dateTime).getTime()/1000+this.TIMEZONE)
               a.value = resArr[i].price
               dataArr[i] = a
           }
 
           var now = {}
-          now.time = Math.floor(new Date().getTime()/1000-this.TIMEZONE)
+          now.time = Math.floor(new Date().getTime()/1000+this.TIMEZONE)
           now.value = price
           dataArr[resArr.length] = now
 
