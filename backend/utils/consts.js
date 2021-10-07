@@ -6,3 +6,4 @@ function define(name, value) {
 }
 
 define("AUTH_NAME", {"DEFAULT": "KAS", "OLD":"KAS_OLD", "BATCH_JOB":"KAS_HS"});
+define("CEX", {"UPBIT": "UPBIT", "BITHUMB":"BITHUMB", "COINONE":"COINONE"});

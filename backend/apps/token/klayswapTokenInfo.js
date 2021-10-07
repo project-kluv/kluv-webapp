@@ -10,5 +10,5 @@ module.exports = mongoose.model('SwapTokenInfo', new Schema({
     decimals: { type: Number},
 }, {
   versionKey: false,
-  collection :"klayswapTokenInfo"
+  collection :"KLAYSWAP_TOKEN_INFO"
 }))

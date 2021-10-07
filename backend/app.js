@@ -83,9 +83,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 //production 에서만 데이터 insert
 if (process.env.NODE_ENV == 'production') {
+  
+  //CEX klay, ksp 가격 업데이트
+  cron.schedule('*/10 * * * * *', function(){
+    tokenService.insertCexPrice()
+  });
   
   //토큰정보 입력/업데이트
   var cnt = 1

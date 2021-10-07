@@ -14,8 +14,8 @@
           <i class="i-Coin"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
-            <p class="text-muted text-20 line-height-1 mb-1">{{klayKrwPriceExchange}}원</p>
-            <p class="text-muted text-16 line-height-1 mb-1">${{swapKlayPriceUsd}}</p>
+            <p class="text-muted text-15 line-height-1 mb-1">&#8361;{{klayKrwPriceExchange}}(Bithumb)</p>
+            <p class="text-muted text-15 line-height-1 mb-1">${{swapKlayPriceUsd}}(Klayswap)</p>
           </div>
         </b-card>
       </b-col>
@@ -26,8 +26,8 @@
           <i class="i-Financial"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KSP</p>
-            <p class="text-muted text-20 line-height-1 mb-1">{{swapKspPriceKrw}}원</p>
-            <p class="text-muted text-16 line-height-1 mb-1">${{swapKspPriceUsd}}</p>
+            <p class="text-muted text-15 line-height-1 mb-1">&#8361;{{kspKrwPriceExchange}}(Coinone)</p>
+            <p class="text-muted text-15 line-height-1 mb-1">${{swapKspPriceUsd}}(Klayswap)</p>
           </div>
         </b-card>
       </b-col>
@@ -159,6 +159,8 @@ export default {
       //boolean
       isEnd:true,
 
+      TIMEZONE : -(new Date().getTimezoneOffset() / 60 * 3600),
+
       //chart
       chart:'',
       lineSeries: '',
@@ -172,8 +174,14 @@ export default {
 
       //cards
       klayKrwPriceExchange: 0,
+      kspKrwPriceExchange: 0,
+      
       swapKlayPriceUsd: 0,
       swapKlayPriceKrw: 0,
+      
+      KlayKPremium : 0,
+      KspKPremium : 0,
+
       swapKspPriceKrw: 0,
       swapKspPriceUsd: 0,
       kPremium: 0,
@@ -222,6 +230,16 @@ export default {
     
   },
   methods: {
+
+      convertUTCDateToLocalDate(date) {
+          var newDate = new Date(date.getTime()+date.getTimezoneOffset()*60*1000);
+          var offset = date.getTimezoneOffset() / 60;
+          var hours = date.getHours();
+
+          newDate.setHours(hours - offset);
+
+          return newDate;
+      },
 
       /*
       * resize event
@@ -282,10 +300,6 @@ export default {
           })
       },
 
-      /**
-       * 클레이가격조회 (임시)
-       * TODO : 서버단에서 조회 (CORS문제)
-       */
       getKlayPrice() {
         
         var url = "https://api.bithumb.com/public/ticker/KLAY"
@@ -294,6 +308,24 @@ export default {
           .then((res) => {
             var a = res.data.data.closing_price;
             this.klayKrwPriceExchange = a
+          })
+          .catch((error) => {
+            console.log('proxyRequest error', error)
+          })
+      },
+
+      getCexPrice() {
+        axios.get("/web/token/getAllCexPrice")
+          .then((res) => {
+            var cexPrice = res.data.response.cexPrice;
+            for (let i = 0; i < cexPrice.length; i++) {
+              if(cexPrice[i].ticker == "KLAY"){
+                this.klayKrwPriceExchange = cexPrice[i].price
+              }else if(cexPrice[i].ticker == "KSP"){
+                this.kspKrwPriceExchange = cexPrice[i].price
+              }
+              
+            }
           })
           .catch((error) => {
             console.log('proxyRequest error', error)
@@ -315,7 +347,6 @@ export default {
               var tokenKeys = Object.keys(tokenPrice)
 
               this.tokenInfoDatetime = tokenPrice[0].dateTime
-              console.log(this.tokenInfoDatetime)
               tokenKeys.forEach(key => {
                 var address = tokenPrice[key].address 
                 var symbol = tokenPrice[key].symbol
@@ -383,8 +414,8 @@ export default {
       async resetTokenPrice(param) {
 
         //cards
-        this.getUsdKrw()
-        this.getKlayPrice()
+        await this.getUsdKrw()
+        await this.getCexPrice()
 
         //초기값일경우 제외(임시처리)
         if(param != 'c') {
@@ -394,7 +425,6 @@ export default {
             var chartArea = document.getElementById('chartArea');
             var chartAreaWidth = chartArea.clientWidth
             this.chart.resize(chartAreaWidth, 300);
-            console.log('reset size, '+ chartAreaWidth)
         }
 
 
@@ -408,7 +438,7 @@ export default {
         //resetTime
         this.resetTime = new Date().toLocaleString()
 
-        this.updateChart(this.selectedSymbol, this.selectedKey)
+        this.updateChart(this.selectedSymbol, this.selectedKey, this.swapKlayPriceUsd)
       },
 
       /**
@@ -432,7 +462,7 @@ export default {
        * @param name 선택한 토큰 name(심볼)
        * @param key 선택한 토큰의 key(주소값)
        */
-      updateChart(name, key) {
+      updateChart(name, key, price) {
 
         var url = "/web/token/getChartData/"+key
 
@@ -443,10 +473,15 @@ export default {
           //날짜값 형식에 맞게 가공 (timestamp)
           for (let i = 0; i < resArr.length; i++) {
               var a= {}
-              a.time = Math.floor(new Date(resArr[i].dateTime).getTime()/1000)
+              a.time = Math.floor(new Date(resArr[i].dateTime).getTime()/1000-this.TIMEZONE)
               a.value = resArr[i].price
               dataArr[i] = a
           }
+
+          var now = {}
+          now.time = Math.floor(new Date().getTime()/1000-this.TIMEZONE)
+          now.value = price
+          dataArr[resArr.length] = now
 
           this.lineSeries.setData(dataArr)
           this.chartTitle = name
@@ -461,12 +496,7 @@ export default {
         * params : 해당 row 정보
         */
        onRowClick(params) {
-         var name = params.row.name
-         var key = params.row.address
-         this.selectedSymbol = name
-         this.selectedKey = key
-
-         this.updateChart(name, key)
+         this.updateChart(params.row.name, params.row.address, params.row.swapPriceUsd)
        }
 
 

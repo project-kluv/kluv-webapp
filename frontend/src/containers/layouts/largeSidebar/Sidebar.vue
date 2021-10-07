@@ -27,20 +27,33 @@
             </router-link>
           </li>
 
-          <!-- <li
-            @mouseenter="toggleSubMenu"
+           <li
+            @click="clip()"
+            class="nav-item"
+            :data-submenu="false"
+          >
+            <router-link class="nav-item-hold" to="/app/dashboard">
+              <i class="nav-icon i-Safe-Box1"></i>
+                <span class="nav-text">{{ $t("Donation") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
+
+         <li
+            @click="commingSoon()"
             class="nav-item"
             data-item="myAsset"
             :class="{ active: selectedParentMenu == 'myAsset' }"
             :data-submenu="false"
           >
-            <router-link tag="a" class="nav-item-hold" to="/app/myAsset">
+            <router-link tag="a" class="nav-item-hold" to="">
               <i class="nav-icon i-Wallet"></i>
                 <span class="nav-text">{{ $t("내자산") }}</span>
+                <span class="nav-text">{{ $t("(Comming soon)") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li> -->
-          
+          </li> 
+
         </ul>
       </div>
     </vue-perfect-scrollbar>
@@ -220,6 +233,27 @@ export default {
         this.selectedParentMenu = parent;
         this.changeSecondarySidebarPropertiesViaMenuItem(false);
       }
+    },
+    commingSoon(){
+      alert("Comming soon")
+    },
+        makeToast(variant = null, msg) {
+      this.$bvToast.toast(msg, {
+        title: ` ${variant || "default"}`,
+        variant: variant,
+        solid: true
+      });
+    },
+
+    clip(){
+      const t = document.createElement("textarea")
+      document.body.appendChild(t)
+      t.value = '0xB55d37D4D42437E72E9D55e3Ac37ae6c1bfcF444'
+      t.select()
+      document.execCommand('copy')
+      document.body.removeChild(t)
+
+      this.makeToast("success", "Klaytn 주소를 복사하였습니다. 소중한 서버비로 사용하겠습니다.");
     },
     removeOverlay() {
       this.changeSecondarySidebarPropertiesViaOverlay();

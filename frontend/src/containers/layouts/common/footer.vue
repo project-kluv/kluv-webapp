@@ -14,7 +14,7 @@
         class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center"
       >
         <div class="d-flex align-items-center">
-          <div>
+          <div style="">
               <!-- <p class="m-0">All rights reserved</p> -->
               <strong> &copy; Kluv.me 2021. All rights reserved</strong>
           </div>
