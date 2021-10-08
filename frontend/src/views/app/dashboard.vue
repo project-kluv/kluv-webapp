@@ -7,7 +7,7 @@
     <breadcumb :page="'대시보드'" :folder="'klayswap'" />
 
     <b-row>
-      <b-col lg="4" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -19,7 +19,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="4" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -31,7 +31,7 @@
           </div>
         </b-card>
       </b-col>
-      <!-- <b-col lg="3" md="6" sm="12">
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -41,15 +41,15 @@
             <p class="text-muted text-22 line-height-1.1 mb-2">{{(kPremium*100).toFixed(2)}}%</p>
           </div>
         </b-card>
-      </b-col> -->
-      <b-col lg="4" md="6" sm="12">
+      </b-col>
+      <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
           <i class="i-Dollar"></i>
           <div class="content" style="max-width:120px;">
             <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">환율(USD)</p>
-            <p class="text-muted text-22 line-height-1.1 mb-2">{{usdKrw}}원</p>
+            <p class="text-muted text-22 line-height-1.1 mb-2">&#8361;{{usdKrw}}</p>
           </div>
         </b-card>
       </b-col>
@@ -62,7 +62,7 @@
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-            <h5 id="area" class="card-title border-bottom p-3 mb-2">{{chartTitle}} - 실시간 차트</h5>
+            <h5 id="area" class="card-title border-bottom p-3 mb-2"><b>{{chartTitle}} - USDT</b> (5min)</h5>
             <div  style="overflow:auto; width: 100%;" id="chartArea"></div>
           </div>
         </div>
@@ -75,31 +75,6 @@
       <div class="col-md-12">
         <div class="card mb-30">
           <div class="card-body p-0 ">
-
-
-
-<!--  -->
-    <!-- <b-row>
-      <b-col lg="7" md="6" sm="12">
-        <b-card class="card-title border-bottom p-3 mb-3">
-        Klayswap 토큰 가격
-        </b-card>
-      </b-col>
-      <b-col lg="5" md="6" sm="12">
-        <b-card
-          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
-        >
-                <span style="margin-right:20px; font-size:12px;">{{resetTime}}</span>
-                <b-button size="sm" variant="primary ripple m-1" @click="resetTokenPrice()">새로고침</b-button>
-
-        </b-card>
-      </b-col>
-    </b-row> -->
-
-
-<!--  -->
-
-            
             <div class="card-title border-bottom">
               <b-row>
                 <!-- 타이틀 -->
@@ -284,36 +259,11 @@ export default {
         value = this.setCommaSwapPrice(value)
         return value + ' 원';
       },
+
       /**
-       * 테스트용
+       * 거래소가격 조회
+       * klay, ksp
        */
-      getTestData() {
-        var url = "https://api.bithumb.com/public/ticker/KLAY"
-
-        axios.get(url)
-          .then((res) => {
-            var a = res.data.data.closing_price;
-            this.test = a
-          })
-          .catch((error) => {
-            console.log('proxyRequest error', error)
-          })
-      },
-
-      getKlayPrice() {
-        
-        var url = "https://api.bithumb.com/public/ticker/KLAY"
-
-        axios.get(url)
-          .then((res) => {
-            var a = res.data.data.closing_price;
-            this.klayKrwPriceExchange = a
-          })
-          .catch((error) => {
-            console.log('proxyRequest error', error)
-          })
-      },
-
       getCexPrice() {
         axios.get("/web/token/getAllCexPrice")
           .then((res) => {
@@ -334,6 +284,7 @@ export default {
 
       /**
        * klayswap의 모든 토큰가격을 조회
+       * 현재 선택중인(차트) 토큰가격 저장
        * return objetArray(name,price)
        */
       getKlaySwapAllTokenPrice() {
@@ -353,7 +304,14 @@ export default {
                 var swapPriceUsd = tokenPrice[key].price
                 var swapPriceKrw = tokenPrice[key].price*this.usdKrw
                 //var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(4) );
+                
+                //현재 선택중인(차트) 토큰값 저장
+                if(symbol==this.selectedSymbol){
+                  console.log('test// symbol : ' + symbol +' value '+ swapPriceUsd);
+                  this.selectedValue = swapPriceUsd
+                }
 
+                //klay일경우 값 저장
                 if(symbol=='KLAY') {
                   this.swapKlayPriceUsd = this.setCommaSwapPrice(swapPriceUsd)
                   this.swapKlayPriceKrw = this.setCommaSwapPrice(swapPriceKrw)
@@ -419,7 +377,6 @@ export default {
 
         //초기값일경우 제외(임시처리)
         if(param != 'c') {
-          //debugger;
             //chart width reset
             //초기 차트영역 div width 
             var chartArea = document.getElementById('chartArea');
@@ -427,18 +384,19 @@ export default {
             this.chart.resize(chartAreaWidth, 300);
         }
 
-
         //tokenPriceTable
         var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
 
-
-        //this.kPremium = 3.2
+        var kp =  (this.klayKrwPriceExchange - (this.swapKlayPriceUsd*this.usdKrw))/(this.swapKlayPriceUsd*this.usdKrw)
+        this.kPremium = kp
 
         this.priceData = klaySwapPriceArr
         //resetTime
         this.resetTime = new Date().toLocaleString()
-
-        this.updateChart(this.selectedSymbol, this.selectedKey, this.swapKlayPriceUsd)
+        //update chart
+        
+        console.log(this.selectedSymbol, this.selectedKey, this.selectedValue);
+        this.updateChart(this.selectedSymbol, this.selectedKey, this.selectedValue)
       },
 
       /**
@@ -461,8 +419,9 @@ export default {
        * 차트데이터 update
        * @param name 선택한 토큰 name(심볼)
        * @param key 선택한 토큰의 key(주소값)
+       * @param recentPrice 선택중인 토큰의 최신 가격 (append하기위함, 차트데이터는 느리므로)
        */
-      updateChart(name, key, price) {
+      updateChart(name, key, recentPrice) {
 
         var url = "/web/token/getChartData/"+key
 
@@ -478,10 +437,14 @@ export default {
               dataArr[i] = a
           }
 
-          var now = {}
-          now.time = Math.floor(new Date().getTime()/1000+this.TIMEZONE)
-          now.value = price
-          dataArr[resArr.length] = now
+          //새로고침시 append
+          if(recentPrice) {
+            var now = {}
+            now.time = Math.floor(new Date().getTime()/1000+this.TIMEZONE)
+            now.value = recentPrice
+            dataArr[resArr.length] = now
+          }
+
 
           this.lineSeries.setData(dataArr)
           this.chartTitle = name
@@ -494,9 +457,16 @@ export default {
        /**
         * datatable row클릭시 이벤트
         * params : 해당 row 정보
+        * 클릭한 정보 저장후 update
         */
        onRowClick(params) {
-         this.updateChart(params.row.name, params.row.address, params.row.swapPriceUsd)
+         //선택한 값 저장
+         this.selectedSymbol = params.row.name
+         this.selectedKey = params.row.address
+         
+         //차트update (선택한 심볼, 주소값, 가격)
+         this.updateChart(params.row.name, params.row.address)
+
        }
 
 
