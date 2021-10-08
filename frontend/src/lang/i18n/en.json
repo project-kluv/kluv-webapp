@@ -1,9 +1,5 @@
 {
   "dashboard": "Dashboard",
-  "dashboardItems": {
-    "versionOne": "Version One",
-    "versionTwo": "Version Two",
-    "versionThree": "Version Three",
-    "versionFour": "Version Four"
-  }
+  "myAsset": "MyAsset",
+  "donation": "Donation"
 }

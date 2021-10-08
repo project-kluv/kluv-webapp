@@ -22,7 +22,7 @@
           >
             <router-link tag="a" class="nav-item-hold" to="/app/dashboard">
               <i class="nav-icon i-Bar-Chart"></i>
-                <span class="nav-text">{{ $t("대시보드") }}</span>
+                <span class="nav-text">{{ $t("dashboard") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>
@@ -37,8 +37,8 @@
           >
             <router-link tag="a" class="nav-item-hold" to="">
               <i class="nav-icon i-Wallet"></i>
-                <span class="nav-text">{{ $t("내자산") }}</span>
-                <span class="nav-text">{{ $t("(Comming soon)") }}</span>
+                <span class="nav-text">{{ $t("myAsset") }}</span>
+                <span class="nav-text">(Comming soon)</span>
               <div class="triangle"></div>
             </router-link>
           </li> 
@@ -51,9 +51,9 @@
             :class="{ active: selectedParentMenu == 'donation' }"
             :data-submenu="false"
           >
-            <router-link class="nav-item-hold" to="/app/dashboard">
+            <router-link class="nav-item-hold" to="">
               <i class="nav-icon i-Safe-Box1"></i>
-                <span class="nav-text">{{ $t("Donation") }}</span>
+                <span class="nav-text">{{ $t("donation") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>
