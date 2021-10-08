@@ -306,8 +306,7 @@ export default {
                 //var swapPriceKrw = (swapPriceKrwOrigin >= 100 ? Math.round(swapPriceKrwOrigin) : (swapPriceKrwOrigin).toFixed(4) );
                 
                 //현재 선택중인(차트) 토큰값 저장
-                if(symbol==this.selectedSymbol){
-                  console.log('test// symbol : ' + symbol +' value '+ swapPriceUsd);
+                if(symbol==this.selectedSymbol) {
                   this.selectedValue = swapPriceUsd
                 }
 
@@ -322,10 +321,6 @@ export default {
                 }else if(symbol == 'KSP'){
                   this.swapKspPriceUsd = this.setCommaSwapPrice(swapPriceUsd)
                   this.swapKspPriceKrw = Math.round(swapPriceKrw)
-                }
-
-                if(symbol=='KLAY'){
-                  this.kPremium = kPremium
                 }
 
                 //var swapPrice = '<span class="text-15">'+swapPriceKrw +'원</span><span class="text-12 font-weight-light"> ($'+ swapPriceUsd +')</span>'
@@ -387,15 +382,14 @@ export default {
         //tokenPriceTable
         var klaySwapPriceArr = await this.getKlaySwapAllTokenPrice()
 
-        var kp =  (this.klayKrwPriceExchange - (this.swapKlayPriceUsd*this.usdKrw))/(this.swapKlayPriceUsd*this.usdKrw)
-        this.kPremium = kp
+        //kPremium
+        this.calKimp()
 
         this.priceData = klaySwapPriceArr
         //resetTime
         this.resetTime = new Date().toLocaleString()
         //update chart
         
-        console.log(this.selectedSymbol, this.selectedKey, this.selectedValue);
         this.updateChart(this.selectedSymbol, this.selectedKey, this.selectedValue)
       },
 
@@ -414,6 +408,23 @@ export default {
           console.log('proxyRequest error', error)
         })
 
+      },
+
+      /**
+       * 김프계산 klay(klayswap - bithumb)
+       */
+      calKimp() {
+        axios.get("/web/token/getAllCexPrice")
+          .then((res) => {
+            var bitKlayPrice = res.data.response.cexPrice[0].price
+            var klayKrw = this.swapKlayPriceUsd * this.usdKrw
+            var klayKimp = ((bitKlayPrice - klayKrw) / klayKrw)
+
+            this.kPremium = klayKimp
+          })
+          .catch((error) => {
+            console.log('proxyRequest error', error)
+          })
       },
       /**
        * 차트데이터 update
