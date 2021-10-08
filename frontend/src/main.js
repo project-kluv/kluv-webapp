@@ -20,6 +20,7 @@ import 'vue2-daterange-picker/dist/vue2-daterange-picker.css'
 import "font-awesome/css/font-awesome.min.css";
 import { BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import VueAnalytics from 'vue-analytics'
 
 
 
@@ -32,7 +33,10 @@ import InstantSearch from 'vue-instantsearch';
 // Vue.use(VueRouter);
  
 
-
+Vue.use(VueAnalytics,{
+  id: 'G-VX1TCGQR4H', // 콘솔에서 본인의 키를 확인하세요!
+  router // 원활한 트래킹을 위해 router를 꼭 바인드 해 주어야 합니다!
+})
 Vue.use(InstantSearch);
 Vue.use(GullKit);
 
