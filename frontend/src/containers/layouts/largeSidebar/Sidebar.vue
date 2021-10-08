@@ -27,19 +27,8 @@
             </router-link>
           </li>
 
-           <li
-            @click="clip()"
-            class="nav-item"
-            :data-submenu="false"
-          >
-            <router-link class="nav-item-hold" to="/app/dashboard">
-              <i class="nav-icon i-Safe-Box1"></i>
-                <span class="nav-text">{{ $t("Donation") }}</span>
-              <div class="triangle"></div>
-            </router-link>
-          </li>
-
          <li
+            @mouseenter="toggleSubMenu"
             @click="commingSoon()"
             class="nav-item"
             data-item="myAsset"
@@ -53,6 +42,21 @@
               <div class="triangle"></div>
             </router-link>
           </li> 
+
+          <li
+            @mouseenter="toggleSubMenu"
+            @click="clip()"
+            class="nav-item"
+            data-item="donation"
+            :class="{ active: selectedParentMenu == 'donation' }"
+            :data-submenu="false"
+          >
+            <router-link class="nav-item-hold" to="/app/dashboard">
+              <i class="nav-icon i-Safe-Box1"></i>
+                <span class="nav-text">{{ $t("Donation") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
 
         </ul>
       </div>
@@ -253,7 +257,7 @@ export default {
       document.execCommand('copy')
       document.body.removeChild(t)
 
-      this.makeToast("success", "Klaytn 주소를 복사하였습니다. 소중한 서버비로 사용하겠습니다.");
+      this.makeToast("success", "클레이튼 도네이션 주소가 복사되었습니다.　　　　　소중한 지원 감사합니다.");
     },
     removeOverlay() {
       this.changeSecondarySidebarPropertiesViaOverlay();
