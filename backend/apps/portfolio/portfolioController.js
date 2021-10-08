@@ -6,7 +6,7 @@ const CONSTS = require('../../utils/consts.js');
  Desc : 뭐하는건지좀
 */
 const getMaximizeReturn = function(req, res){
-  console.log("[Controller] ------> getMaximizeReturn")
+  // console.log("[Controller] ------> getMaximizeReturn")
   const account = req.query.account
   const appName = req.query.appName
 

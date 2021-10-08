@@ -2,7 +2,7 @@ const axios = require('axios')
 
 let getAccountFromExternal = function(account, callbak){
 	
-	console.log("[service] ------> getAccountInfo")
+	// console.log("[service] ------> getAccountInfo")
 
 	axios.get("https://api-cypress.scope.klaytn.com/v1/accounts/"+ account)
 		.then(response => {

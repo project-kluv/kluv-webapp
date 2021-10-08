@@ -7,7 +7,7 @@ const balanceService = require('../balance/balanceService')
 
 
 const getMaximizeReturn = async function ([account, appName], authName, callbak) {
-  console.log("[service] ------> getExpectedLPReturn")
+  // console.log("[service] ------> getExpectedLPReturn")
   try {
     model = {
       "optimize": "apr",

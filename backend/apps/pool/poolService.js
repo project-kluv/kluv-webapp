@@ -4,7 +4,7 @@ const utils = require('../../utils/commonUtils.js')
 
 
 const getAllLPPool = async function(appName, authName){
-  console.log("[service] ------> getAllLPPool")
+  // console.log("[service] ------> getAllLPPool")
   try {
     if (appName === 'klayswap') {
       const tokenInfo = poolModel.getTokenInfo(appName)
@@ -90,7 +90,6 @@ const getAllLPPool = async function(appName, authName){
           "tokenBDecimals": Number(tokenInfo[fixedDatas[(2*poolCount)+i]]['decimals'])
         })
       }
-      console.log(result)
       return result
     } else return 0
   } catch (error) {
@@ -99,7 +98,7 @@ const getAllLPPool = async function(appName, authName){
 };
 
 const getAllTokenPrice = async function (appName, authName, callbak){
-  console.log("[service] ------> getAllTokenPrice")
+  // console.log("[service] ------> getAllTokenPrice")
   try{
     const lpPools = await this.getAllLPPool(appName, authName)
     const tokenPriceAll = this.getTokenPriceInApp(appName, lpPools)

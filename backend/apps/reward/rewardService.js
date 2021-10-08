@@ -4,7 +4,7 @@ const votingService = require('../voting/votingService')
 
 
 const getExpectedLPReturn = async function (appName, authName, callbak) {
-  console.log("[service] ------> getExpectedLPReturn")
+  // console.log("[service] ------> getExpectedLPReturn")
   try {
     poolVotingInfoList = await this.getExpectedLPReturnInApp(appName, authName)
 
@@ -15,7 +15,7 @@ const getExpectedLPReturn = async function (appName, authName, callbak) {
 }
 
 const getExpectedLPReturnInApp = async function (appName, authName) {
-  console.log("[service] ------> getExpectedLPReturnInApp")
+  // console.log("[service] ------> getExpectedLPReturnInApp")
   const poolVotingInfoList = await votingService.getPoolVotingInfo(appName, authName)
   const lpPools = await poolService.getAllLPPool(appName, authName)
   const tokenPriceAll = poolService.getTokenPriceInApp(appName, lpPools)

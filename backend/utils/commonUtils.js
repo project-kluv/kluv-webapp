@@ -7,7 +7,7 @@ const KSP_CONTRACT_ADDRESS = JSON.parse(fs.readFileSync("./utils//kspContractAdd
 const KSP_CONTRACT_ABI = JSON.parse(fs.readFileSync("./utils//kspContractABI.json", 'utf8'));
 
 const getAuth = function(enName){
-  console.log("[Utils] ------> getAuth")
+  // console.log("[Utils] ------> getAuth")
   try {
     auth = AUTH[enName]
     return auth
@@ -18,7 +18,7 @@ const getAuth = function(enName){
 };
   
 const initCaver = function(authName) {
-  console.log("[Utils] ------> initCaver")
+  // console.log("[Utils] ------> initCaver")
   try {
     const AUTH = this.getAuth(authName)
     const accessKeyId = AUTH["ACCESS_KEY"]
@@ -33,7 +33,7 @@ const initCaver = function(authName) {
 }
 
 const getUserDefinedContract = function (contractABI, contractAddress, authName) {
-  console.log("[Utils] ------> getUserDefinedContract")
+  // console.log("[Utils] ------> getUserDefinedContract")
   try {
     const caver = this.initCaver(authName)
     const contract = new caver.contract(contractABI, contractAddress)
@@ -45,7 +45,7 @@ const getUserDefinedContract = function (contractABI, contractAddress, authName)
 }
 
 const getNewTokenInfo = async function(contractAddress, authName){
-  console.log("[Utils] ------> getNewTokenInfo")
+  // console.log("[Utils] ------> getNewTokenInfo")
   try {
     const caver = this.initCaver(authName)
     const contract = new caver.kct.kip7(contractAddress)
@@ -65,7 +65,7 @@ const getNewTokenInfo = async function(contractAddress, authName){
 }
 
 const getContract = function(appName, contractName, authName) {
-  console.log("[Utils] ------> getContract")
+  // console.log("[Utils] ------> getContract")
   try {
     const caver = this.initCaver(authName)
     if (appName == "klayswap") {

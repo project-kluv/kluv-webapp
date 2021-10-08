@@ -12,7 +12,7 @@ const getRateFromThirdParty =  function (){
                 console.log("Error update currency rate data")
             }
             else{
-                console.log("Update currency rate data");
+                // console.log("Update currency rate data");
             }
         })
     })

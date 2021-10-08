@@ -10,11 +10,9 @@ const axios = require('axios')
 // const fs = require('fs')
 
 const insert = function(req, res){
-  console.log("[Controller] ------> insert")
+  // console.log("[Controller] ------> insert")
   const address = req.params.address
   const price = req.params.price
-
-  console.log(address + "," + price)
 
   const token = new Token({
     address:address,
@@ -31,7 +29,7 @@ const insert = function(req, res){
 }
 
 const getChartData = function(req, res){
-  console.log("[Controller] ------> get")
+  // console.log("[Controller] ------> get")
   const address = req.params.address
   Token.find({ address : address }, (err, tokens) => {
     res.send({sucess:true, response:{tokens:tokens}})
@@ -39,14 +37,14 @@ const getChartData = function(req, res){
 }
 
 const getCurrentTokenPrice = function(req, res){
-  console.log("[Controller] ------> get")
+  // console.log("[Controller] ------> get")
   Current.find({}, (err, tokens) => {
     res.send({sucess:true, response:{tokens:tokens}})
   });
 }
 
 const getAllCexPrice = function(req, res){
-  console.log("[Controller] ------> get")
+  // console.log("[Controller] ------> get")
   CexPrice.find({}, (err, cexPrice) => {
     res.send({sucess:true, response:{cexPrice:cexPrice}})
   });

@@ -9,7 +9,7 @@ const KLAYSWAP_LPTOKEN_INFO = JSON.parse(fs.readFileSync("./utils/klayswapLPToke
 
 
 const getBalance = async function(account, authName, callbak) {
-	console.log("[service] ------> getAccountBalance")
+	// console.log("[service] ------> getAccountBalance")
   try {
     // 1. KLAYSWAP LP + 토큰 잔고 가져오기
     const exchangeList = ['klayswap', 'klaymore'] // 거래소 목록
@@ -234,7 +234,7 @@ const getBalance = async function(account, authName, callbak) {
 }
 
 const getPendingRewards = async function (appName, account, authName) {
-  console.log("[service] ------> getPendingRewards")
+  // console.log("[service] ------> getPendingRewards")
   try {
     if (appName === 'klayswap') {
       let pendingRewards = { 'KSP': { 'LP': [], 'PENDING_KSP': 0, 'LOCKED_KSP': 0, 'VOTING': [] } }
