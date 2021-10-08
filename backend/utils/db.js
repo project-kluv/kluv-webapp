@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 module.exports = () => {
   function connect() {
-    mongoose.connect('mongodb://kluv.me:5003/admin', 
+    mongoose.connect('mongodb://34.64.153.180:5003/admin', 
     { "user" :"root",
     "pass":"fomo123#",
     dbName: 'kluv',
