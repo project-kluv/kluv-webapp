@@ -93,8 +93,8 @@ if (process.env.NODE_ENV == 'production') {
   
   //토큰정보 입력/업데이트
   var cnt = 1
-  cron.schedule('*/30 * * * * *', function(){
-    if(cnt == 10){
+  cron.schedule('*/10 * * * * *', function(){
+    if(cnt == 30){
       //cnt가 10이면 chart 데이터까지 insert
       tokenService.insertTokenInfo(true)
       cnt = 1

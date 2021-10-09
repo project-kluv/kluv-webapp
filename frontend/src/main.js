@@ -9,9 +9,9 @@ import GullKit from "./plugins/gull.kit";
 // es6Promise.polyfill();
 import store from "./store";
 import Breadcumb from "./components/breadcumb";
-import firebase from "firebase/app";
-import "firebase/auth";
-import {firebaseSettings} from "@/data/config";
+// import firebase from "firebase/app";
+// import "firebase/auth";
+// import {firebaseSettings} from "@/data/config";
 import i18n from "./lang/lang";
 //you need to import the CSS manually (in case you want to override it)
 import 'vue2-daterange-picker/dist/vue2-daterange-picker.css'
@@ -40,7 +40,7 @@ Vue.use(VueGtag, {
 Vue.use(InstantSearch);
 Vue.use(GullKit);
 
-firebase.initializeApp(firebaseSettings);
+// firebase.initializeApp(firebaseSettings);
 
 
 
