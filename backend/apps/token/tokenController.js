@@ -46,8 +46,6 @@ const getCurrentTokenPrice = function(req, res){
 const getOneCurrentTokenPrice = function(req, res){
   // console.log("[Controller] ------> get")
   const symbol = req.params.symbol
-  console.log("111111111")
-  console.log(symbol)
   Current.find({ symbol : symbol }, (err, tokens) => {
     res.send({sucess:true, response:{tokens:tokens}})
   });
