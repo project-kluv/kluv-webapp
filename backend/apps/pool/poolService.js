@@ -136,6 +136,7 @@ const getTokenPriceInApp = function (appName, lpPools) {
   calcTokenPrice(lpPools['data'], '0x158BeFF8C8cDEbD64654ADD5F6A1d9937e73536c'); // HOUSE -> WOOD
   calcTokenPrice(lpPools['data'], '0xe950bdcFa4d1e45472E76cf967Db93dBfc51Ba3E'); // KAI -> 합성자산
   calcTokenPrice(lpPools['data'], '0xDB116E2Dc96B4e69e3544f41b50550436579979a'); // KFI -> KSTA
+  calcTokenPrice(lpPools['data'], '0x5c74070FDeA071359b86082bd9f9b3dEaafbe32b'); // KDAI -> KRNO
   
   
 
