@@ -720,6 +720,26 @@
               </div>
             </div>
           </div>
+          
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klayfox.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="http://www.klayfox.com/" target="_blank" class="ul-widget2__title">
+                   Klayfox  <b-badge pill variant="danger m-2">Now minting!</b-badge>
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="http://www.klayfox.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/gw6uENAd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
 
           <div class="ul-widget__body">
             <div class="ul-widget1">
@@ -740,6 +760,7 @@
               </div>
             </div>
           </div>
+
 
           <div class="ul-widget__body">
             <div class="ul-widget1">
@@ -816,7 +837,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
-                    Klaycity <b-badge pill variant="info m-2">wating</b-badge>
+                    Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
@@ -835,7 +856,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klaygenome.com/" target="_blank" class="ul-widget2__title">
-                    Kenome <b-badge pill variant="info m-2">wating</b-badge>
+                    Kenome <b-badge pill variant="info m-2">waiting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
