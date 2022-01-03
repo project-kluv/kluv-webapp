@@ -1,5 +1,8 @@
 {
+  "chart": "차트",
+  "hub":"허브",
   "dashboard": "대시보드",
   "myAsset": "내자산",
+  "portal": "포탈",
   "donation": "Donation"
 }

@@ -16,18 +16,32 @@
           <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
+            data-item="portal"
+            :class="{ active: selectedParentMenu == 'portal' }"
+            :data-submenu="false"
+          >
+            <router-link tag="a" class="nav-item-hold" to="/app/portal">
+              <i class="nav-icon i-Jet"></i>
+                <span class="nav-text">{{ $t("portal") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
+          
+          <li
+            @mouseenter="toggleSubMenu"
+            class="nav-item"
             data-item="dashboards"
             :class="{ active: selectedParentMenu == 'dashboards' }"
             :data-submenu="false"
           >
             <router-link tag="a" class="nav-item-hold" to="/app/dashboard">
               <i class="nav-icon i-Bar-Chart"></i>
-                <span class="nav-text">{{ $t("dashboard") }}</span>
+                <span class="nav-text">{{ $t("chart") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>
 
-         <li
+         <!-- <li
             @mouseenter="toggleSubMenu"
             @click="commingSoon()"
             class="nav-item"
@@ -41,9 +55,9 @@
                 <span class="nav-text">(Comming soon)</span>
               <div class="triangle"></div>
             </router-link>
-          </li> 
+          </li>  -->
 
-          <li
+          <!-- <li
             @mouseenter="toggleSubMenu"
             @click="clip()"
             class="nav-item"
@@ -56,7 +70,7 @@
                 <span class="nav-text">{{ $t("donation") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li>
+          </li> -->
 
         </ul>
       </div>
