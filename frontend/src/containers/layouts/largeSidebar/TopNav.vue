@@ -2,7 +2,7 @@
   <div class="main-header">
     <div style="font-size:20px;" class="logo">
       <center>
-        <a href="/app/dashboard">KLUV.me</a>
+        <a href="/app/portal">KLUV.me</a>
       </center>
       <!-- <img src="@/assets/images/logo1.png" style="width:45%; height:45%;" alt /> -->
     </div>
