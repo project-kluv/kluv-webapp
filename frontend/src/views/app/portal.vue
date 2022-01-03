@@ -290,7 +290,7 @@
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://www.neuronswap.com/" target="_blank" class="ul-widget2__title">
                     Neuron
-                  <b-badge pill variant="light m-2">High lisk</b-badge>
+                  <b-badge pill variant="light m-2">High risk</b-badge>
                   </a>
                   <span href="#" class="ul-widget2__username">
                   </span>
@@ -467,7 +467,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://qbt.fi/app" target="_blank" class="ul-widget2__title">
-                    Kleva Protocol <b-badge pill variant="info m-2">wating</b-badge>
+                    Kleva Protocol <b-badge pill variant="info m-2">waiting</b-badge>
                   </a>
                   <span href="#" class="ul-widget2__username">
                   </span>
@@ -887,6 +887,33 @@
                 </div>
                 <a href="https://tothem.pro/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/tothempro" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              DeFi 2.0
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/krono.svg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://kronosdao.finance/" target="_blank" class="ul-widget2__title">
+                    Kronosdao
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://kronosdao.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/kronosdao_eng" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
