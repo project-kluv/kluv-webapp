@@ -145,7 +145,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://v2.scope.klaytn.com/" target="_blank" class="ul-widget2__title">
-                    Klaytnscope
+                    Klaytnscope <b-badge pill variant="success m-2">v2 update</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
