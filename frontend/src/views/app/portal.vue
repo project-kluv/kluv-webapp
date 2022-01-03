@@ -225,6 +225,21 @@
 
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/definix.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaytn.definix.com/" target="_blank" class="ul-widget2__title">
+                    Definix
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://klaytn.definix.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/SIXNetwork" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/ufoswap.svg"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -770,6 +785,25 @@
                 </div>
                 <a href="https://klaymeta.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/klaymeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+              <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/junmeta.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://junprotocol.io/" target="_blank" class="ul-widget2__title">
+                    JUN Meta
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://junprotocol.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/JUN_META" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
