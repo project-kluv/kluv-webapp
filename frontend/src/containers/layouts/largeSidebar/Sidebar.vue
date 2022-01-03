@@ -57,7 +57,7 @@
             </router-link>
           </li>  -->
 
-          <!-- <li
+          <li
             @mouseenter="toggleSubMenu"
             @click="clip()"
             class="nav-item"
@@ -70,7 +70,7 @@
                 <span class="nav-text">{{ $t("donation") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li> -->
+          </li>
 
         </ul>
       </div>

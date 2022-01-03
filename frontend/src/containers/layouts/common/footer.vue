@@ -5,7 +5,7 @@
     <div class="app-footer">
       <strong>Disclaimer : 본 사이트에 등재된 모든 프로젝트는 안전성을 보장하지 않으며, 사용 혹은 투자에 따른 책임은 전적으로 사용자에게 있습니다.</strong>
       <br>
-      Donate Klaytn Address : <span class="clickable" @click="clip();"><u>0xB55d37D4D42437E72E9D55e3Ac37ae6c1bfcF444</u></span>
+      <!-- Donate Klaytn Address : <span class="clickable" @click="clip();"><u>0xB55d37D4D42437E72E9D55e3Ac37ae6c1bfcF444</u></span> -->
       <!-- <div class="row"> -->
         <!-- <div class="col-md-9">
           <p><strong>Kluv.me</strong></p>
