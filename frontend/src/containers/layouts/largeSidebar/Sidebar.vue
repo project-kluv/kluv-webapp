@@ -56,6 +56,20 @@
               <div class="triangle"></div>
             </router-link>
           </li>  -->
+          
+          <li
+            @mouseenter="toggleSubMenu"
+            class="nav-item"
+            data-item="aboutus"
+            :class="{ active: selectedParentMenu == 'aboutus' }"
+            :data-submenu="false"
+          >
+            <router-link class="nav-item-hold" to="/app/aboutus">
+              <i class="nav-icon i-Humor"></i>
+                <span class="nav-text">{{ $t("aboutus") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
 
           <li
             @mouseenter="toggleSubMenu"
@@ -66,11 +80,12 @@
             :data-submenu="false"
           >
             <router-link class="nav-item-hold" to="">
-              <i class="nav-icon i-Safe-Box1"></i>
+              <i class="nav-icon i-Love-User"></i>
                 <span class="nav-text">{{ $t("donation") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>
+
 
         </ul>
       </div>

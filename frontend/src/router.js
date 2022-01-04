@@ -27,6 +27,10 @@ const routes = [
         component: () => import("./views/app/portal")
       },
       {
+        path: "/app/aboutus",
+        component: () => import("./views/app/aboutus")
+      },
+      {
         path: "/app/hidden",
         component: () => import("./views/app/dashboard2")
       },
