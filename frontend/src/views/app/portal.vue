@@ -562,7 +562,7 @@
                     Klaybank <b-badge pill variant="info m-2">1/19 Open</b-badge>
                   </a>
                   <span href="#" class="ul-widget2__username">
-                    Backed by a41
+                    Backed by a41 | Krust
                   </span>
                 </div>
                 <a href="https://klaybank.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
