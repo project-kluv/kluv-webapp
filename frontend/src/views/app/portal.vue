@@ -1065,7 +1065,7 @@
                     Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
-                    Backed by Krust
+                    Backed by Krust | Animoca Brands
                   </span>
                 </div>
                 <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
