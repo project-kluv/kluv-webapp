@@ -559,7 +559,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title">
-                    Klaybank <b-badge pill variant="info m-2">wating</b-badge>
+                    Klaybank <b-badge pill variant="info m-2">1/19 Open</b-badge>
                   </a>
                   <span href="#" class="ul-widget2__username">
                     Backed by a41
@@ -1144,6 +1144,33 @@
             </div>
           </div>
         </b-card>
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Meme coin
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/injeolmi.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://tteok.org/" target="_blank" class="ul-widget2__title">
+                    인절미닷컴
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://tteok.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/g1nYzIHd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
       </b-col>
       <b-col lg="3" xl="3" class=" mb-30">
         <b-card>
@@ -1282,31 +1309,97 @@
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
-              Meme coin
+              YouTube
             </h3>
           </div>
           <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/injeolmi.png"/>
+                  <img src="@/assets/images/site/corin.jpg"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://tteok.org/" target="_blank" class="ul-widget2__title">
-                    인절미닷컴
+                  <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank" class="ul-widget2__title">
+                    코린이유치원
                   </a>
                   <span class="ul-widget2__username">
+                    유용한 디파이 정보 영상 및 디파이 입문자용 커뮤니티 운영
                   </span>
                 </div>
-                <a href="https://tteok.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/g1nYzIHd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+                <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/g8VYNJxc" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/jaeyoun.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.youtube.com/c/jaeyuntv" target="_blank" class="ul-widget2__title">
+                    재윤티비
+                  </a>
+                  <span class="ul-widget2__username">
+                    블록체인, 디파이 등에 대한 개념 이해에 도움이 되는 영상 제공
+                  </span>
+                </div>
+                <a href="https://www.youtube.com/c/jaeyuntv" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/coinboy.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank" class="ul-widget2__title">
+                    코인소년
+                  </a>
+                  <span class="ul-widget2__username">
+                    디파이, NFT 등 다양한 클레이튼 프로젝트 소개 영상 제공
+                  </span>
+                </div>
+                <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                <a></a>
               </div>
             </div>
           </div>
         </b-card>
-        <br>
-  <br>
+
+      </b-col>
+      <b-col lg="3" xl="3" class=" mb-30">
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Community
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaytnx.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://t.me/klaytn_info" target="_blank" class="ul-widget2__title">
+                    Klaytn X
+                  </a>
+                  <span class="ul-widget2__username">
+                    클레이튼 생태계 최대 규모 사설 텔레그램 커뮤니티
+                  </span>
+                </div>
+                <a href="https://t.me/klaytn_info" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
 
       </b-col>
 
