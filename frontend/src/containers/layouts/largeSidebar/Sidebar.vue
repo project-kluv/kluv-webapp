@@ -41,6 +41,20 @@
             </router-link>
           </li>
 
+          <li
+            @mouseenter="toggleSubMenu"
+            class="nav-item"
+            data-item="testpage"
+            :class="{ active: selectedParentMenu == 'testpage' }"
+            :data-submenu="false"
+          >
+            <router-link tag="a" class="nav-item-hold" to="/app/testpage">
+              <i class="nav-icon i-Bar-Chart"></i>
+                <span class="nav-text">{{ $t("chart") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
+
          <!-- <li
             @mouseenter="toggleSubMenu"
             @click="commingSoon()"

@@ -19,7 +19,7 @@
           </div>
         </b-card>
       </b-col>
-      <b-col lg="3" md="6" sm="12">
+      <!-- <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
         >
@@ -30,7 +30,7 @@
             <p class="text-muted text-16 line-height-1 mb-1">${{swapKspPriceUsd}}</p>
           </div>
         </b-card>
-      </b-col>
+      </b-col> -->
       <b-col lg="3" md="6" sm="12">
         <b-card
           class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
