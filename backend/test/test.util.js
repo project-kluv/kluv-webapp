@@ -1,6 +1,9 @@
+const createCsvWriter = require('csv-writer').createObjectCsvWriter
+
 const cexUtils = require('../utils/cexUtils')
 const scopeUtils = require('../utils/scopeUtils')
-const gazuaService = require('../apps/gazua/gazuaService')
+const CONSTS = require('../utils/consts.js');
+const poolService = require('../apps/pool/poolService')
 
 //실행방법 : mocha test.util.js 
 
@@ -44,11 +47,26 @@ const gazuaService = require('../apps/gazua/gazuaService')
 // });
 
 
-describe('차익거래 후보군- axios async', function () {
+describe('LP 정보 가져오기- axios async', function () {
   this.timeout(5000);
-  it('차익기회 확인', async function () {
-    let rtn = await gazuaService.searchOpportunity(0.01);
-    console.log(rtn)
+  it('LP 확인', async function () {
+    
+    const csvWriter = createCsvWriter({
+      path: './out.csv',
+      header: [
+        { id: 'dex', title: 'dex' },
+        { id: 'address', title: 'address' },
+        { id: 'name', title: 'name' },
+        { id: 'decimals', title: 'decimals' },
+        { id: 'tokenA', title: 'tokenA' },
+        { id: 'tokenB', title: 'tokenB' }
+      ]
+    });
+
+    const swapName = 'klayswap'
+    let rtn = await poolService.getAllLPPool(swapName, CONSTS.AUTH_NAME.DEFAULT)
+    console.log(rtn.data[0])
+    
   });
 });
 
