@@ -16,8 +16,7 @@
                 <b-col xs="12" md="12" lg="12">
                   <div class ="p-4 mb-2">
                     DAPP
-
-                    <b-button variant="outline-success m-1">ALL</b-button>
+                    <b-button @click="onClickAllBtn()" variant="outline-success m-1">ALL</b-button>
                     <b-button variant="outline-primary ripple m-1">DEFI</b-button>
                     <b-button variant="outline-primary ripple m-1">NFT</b-button>
                     <b-button variant="outline-primary ripple m-1">FARM</b-button>
@@ -32,39 +31,25 @@
 
 
              <!-- (기준시 : {{tokenInfoDatetime}}) -->
-    <vue-good-table
-      :columns="columns"
-      :line-numbers="true"
-      :search-options="{
-        enabled: true,
-        placeholder: 'Search this table'
-      }"
-      :pagination-options="{
-        enabled: true,
-        mode: 'records'
-      }"
-      compactMode
-      styleClass="tableOne vgt-table"
-      :selectOptions="{
-        enabled: false,
-        selectionInfoClass: 'table-alert__box'
-      }"
-      :rows="rows"
-    >
-
-      <!-- <template slot="table-row" slot-scope="props">
-        <span v-if="props.column.field == 'button'">
-          <a href="">
-            <i class="i-Eraser-2 text-25 text-success mr-2"></i>
-            {{ props.row.button }}</a
-          >
-          <a href="">
-            <i class="i-Close-Window text-25 text-danger"></i>
-            {{ props.row.button }}</a
-          >
-        </span>
-      </template> -->
-    </vue-good-table>
+            <vue-good-table
+              :columns="columns"
+              :line-numbers="true"
+              :search-options="{
+                enabled: true,
+                placeholder: 'Search this table'
+              }"
+              :pagination-options="{
+                enabled: true,
+                mode: 'records'
+              }"
+              compactMode
+              styleClass="tableOne vgt-table"
+              :rows="testData"
+              :selectOptions="{
+                enabled: false,
+                selectionInfoClass: 'table-alert__box'
+              }">
+            </vue-good-table>
           </div>
         </div>
       </div>  
@@ -86,143 +71,131 @@ export default {
     return {
       columns: [
         {
-          label: "Name",
+          label: "name",
           field: "name",
           html: true
         },
         {
-          label: "Tag",
+          label: "tag",
           field: "tag",
           html: true
         },
         {
-          label: "Desc",
+          label: "desc",
           field: "desc",
           html: true
         },
         {
-          label: "Category",
+          label: "category",
           field: "category",
           html: true
         },
         {
-          label: "Link",
+          label: "link",
           field: "link",
-          html: true,
-          // tdClass: "text-right",
-          // thClass: "text-right"
+          html: true
         },
         {
-          label: "Tvl",
+          label: "tvl",
           field: "tvl",
-          html: true, 
+          html: true
         },
         {
-          label: "Score",
+          label: "score",
           field: "score",
           html: true
         }
       ],
-      rows: [
-        {
-          id: 1,
-          name:  '<img width="30" height="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAABYlAAAWJQFJUiTwAAABpElEQVRYCcWXga2DIBCG794EjsAIjtARHMEROoIjdISO4AgdwRF8G7gBL5ifhicHwkmiyaUtNfd9ChzA1lq68/q5ld5CgJkfzDwxs1ElcF2gCSIa8Tm7NIg3ET1q8mnhDvQkIhPAw1jxf9dcAPDNJSeiV0LAx4b7TRMBJNtfNX5vJwIuFsiKEhq4i96NgQq4vzcaHxr4B21LJdx3SVclcIBbJOwVcB9TsYAA3xLtpfDoLdTAd3sk18K/bzErkHlCg/l9Bf6dRaJABj7j//Ui3MUqCpz07YOIhgbwPSKBE/hq47qvhqcEsoNGqPuLH82tBFJlVar7/sldPXhpJCSBT2rEArYJcN/2rpRYJIHUymaCxBLcKiTiaZgor2Hdz8FrJYbUNDzO8RHTrwReKrH+Yx4ExuONaCuFl0g8s4tRMBinQ/eUwnMSS8QTBAxg5gJcknA5+qINSVBgrsCPEuIGVTwXWGs3fDUYmNrr1712Zu6CnPXnAsyE3FoRPXXp+aBIIOwa7AekJXnFhiW5BZdCfThl5gGDi9DPsyqPVqDVde/pmIj+AL6bAVImW5OaAAAAAElFTkSuQmCC"/>　Klaytn  ',
-          tag:'<span class="badge badge-primary"> Update</span>',
-          desc: '이것은 설명 이다 클레이튼 DEX 입니다',
-          category: 'DEX',
-          link: '<a href="https://bridge.orbitchain.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a><a href="https://t.me/Orbit_Chain" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>',
-          score: '68',
-          tvl:'1,231,515M'
-        },
-        {
-          id: 2,
-          name:  '<img src="http://localhost:8080/img/klayswap.c47fc52e.svg" width="30" height="30"/>　Ksp  ',
-          tag:'<span class="badge badge-danger">Danger</span>',
-          desc: '이것은 망하기 직전인 KSP 입니다',  
-          category: 'DEX',
-          link: '<a href="https://bridge.orbitchain.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a><a href="https://t.me/Orbit_Chain" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>',
-          score: '24',
-          tvl:'231,515M'
-        },
-        {
-          id: 3,
-          name:  '<img src="http://localhost:8080/img/krust.df728401.png" width="30" height="30"/>　Krust  ',
-          tag:'<span class="badge badge-primary"> Update</span>',
-          desc: '이것은 설명 이다 클레이튼 DEX 입니다',
-          category: 'DEX',
-          link: '<a href="https://bridge.orbitchain.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a><a href="https://t.me/Orbit_Chain" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>',
-          score: '35',
-          tvl:'3,231,515M'
-        },
-        {
-          id: 4,
-          name: "Chris",
-          span: '<span class="badge badge-primary">Primary</span>',
-          createdAt: "2011-10-11",
-          score: 0.03343
-        },
-        {
-          id: 5,
-          name: "Dan",
-          span: '<span class="badge badge-danger">Primary</span>',
-          createdAt: "2011-10-21",
-          score: 0.03343
-        },
-        {
-          id: 6,
-          name: "John",
-          span: '<span class="badge badge-success">success</span>',
-          createdAt: "2011-10-31",
-          score: 0.03343
-        },
-        {
-          id: 1,
-          name: "John",
-          span: '<span class="badge badge-warning">Warning</span>',
-          createdAt: "2019-10-29",
-          score: 0.03343
-        },
-        {
-          id: 2,
-          name: "Jane",
-          span: '<span class="badge badge-info">Info</span>',
-          createdAt: "2011-10-31",
-          score: 0.03343
-        },
-        {
-          id: 3,
-          name: "Susan",
-          span: '<span class="badge badge-dark">Dark</span>',
-          createdAt: "2011-10-30",
-          score: 0.03343
-        },
-        {
-          id: 4,
-          name: "Chris",
-          span: '<span class="badge badge-warning">Warning</span>',
-          createdAt: "2011-10-11",
-          score: 0.03343
-        },
-        {
-          id: 5,
-          name: "Dan",
-          span: '<span class="badge badge-info">Info</span>',
-          createdAt: "2011-10-21",
-          score: 0.03343
-        },
-        {
-          id: 6,
-          name: "John",
-          span: '<span class="badge badge-primary">Primary</span>',
-          createdAt: "2011-10-31",
-          score: 0.03343
-        }
-      ]
+      testData:[]
     };
   },
   methods: {
 
+      /**
+       * 조회 test
+       */
+      getPortalData() {
+        var arr = []
+        return axios.get("/a.json").then((res) => {
+            if (res.data.success == false) {
+              this.$router.go(-1)
+            } else {
+              
+              res.data.forEach(el => {
+                var id = el.id
+                var name = el.name 
+                var tag = this.setTagStyle(el.tag)
+                var desc = el.desc
+                var category = el.category
+                var link = '<a href="'+el.link+'" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a><a href="'+el.link+'" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>'
+                var score = el.score
+                var tvl = el.tvl
 
+                var obj = {id:id, name:name, tag:tag, desc:desc, category:category, link:link, score:score, tvl:tvl}
+                
+                arr.push(obj)
+
+              });
+              return arr
+            }
+          })
+          .catch((error) => {
+            console.log('proxyRequest error', error)
+            return false
+          })
+      },
+      
+      /**
+       * 
+       */
+      setTagStyle(tagName) {
+        
+        var a = tagName.split(";")
+        var res = ""
+
+        console.log(a)
+
+        a.forEach(el => {
+
+          var b = el.split("/")
+          var color = b[1]
+
+          switch (color) {
+            case "red":
+              res += '<span class="badge badge-danger p-1">'+b[0] +'</span>&nbsp;'
+              break;
+            case "green":
+              res +=  '<span class="badge badge-success p-1">'+b[0] +'</span>&nbsp;'
+              break;
+            case "blue":
+              res +=  '<span class="badge badge-info p-1">'+b[0]+'</span>&nbsp;'
+              break;
+            case "purple":
+              res += '<span class="badge badge-primary p-1">'+b[0]+'</span>&nbsp;'
+              break;
+            default:
+              break;
+          }
+        });
+
+        console.log(res)
+        return res
+        
+
+
+      },
+
+      /**
+       * All btn
+       */
+      async onClickAllBtn() {
+        
+          var testData = await this.getPortalData()
+          this.testData = testData
+
+          console.log(testData)
+
+      },
 
   },
     
@@ -232,90 +205,7 @@ export default {
     //Vue Instance 데이터가 마운트된 후 호출
     mounted() {
 
-        //resize 이벤트리스너 추가 
-        window.addEventListener('resize', this.handleResize)
 
-        this.resetTokenPrice('c')
-
-        //초기 차트영역 div width 
-        var chartArea = document.getElementById('chartArea');
-        var chartAreaWidth = chartArea.clientWidth
-
-        //차트생성
-        const chart = createChart(document.getElementById('chartArea'), {
-          width: chartAreaWidth,
-          height: 300,
-          localization: {
-            dateFormat: 'yyyy-MM-dd',
-          },
-          rightPriceScale: {
-            borderVisible: false,
-          },
-          layout: {
-            backgroundColor: '#000',
-            textColor: 'rgba(255, 255, 255, 0.8)',
-          },
-          grid: {
-            vertLines: {
-              color: 'rgba(197, 203, 206, 0.7)',
-            },
-            horzLines: {
-              color: 'rgba(197, 203, 206, 0.7)',
-            },
-          },
-          timeScale: {
-            timeVisible: true,
-            secondsVisible: false,
-          },
-          // localization: {
-          //   timeFormatter: businessDayOrTimestamp => {
-          //     // console.log(businessDayOrTimestamp);
-
-          //     if (LightweightCharts.isBusinessDay(businessDayOrTimestamp)) {
-          //       return 'Format for business day';
-          //     }
-
-          //     return 'Format for timestamp';
-          //   },
-          // },
-        });
-      chart.applyOptions({
-            watermark: {
-                color: 'rgba(67, 95, 118, 0.4)',
-                visible: true,
-                text: 'KLUV.ME',
-                fontSize: 24,
-                horzAlign: 'left',
-                vertAlign: 'bottom',
-            },
-            priceFormat: {
-                type: 'custom',
-                minMove: '0.000001',
-                formatter: (price) => {
-                    if (price < 0.000001) return parseFloat(price).toPrecision(8)
-                    else if (price >= 0.00001 && price < 1) return parseFloat(price).toPrecision(5)
-                    else if (price >= 1 && price < 10000) return parseFloat(price).toPrecision(5)
-                    else return parseFloat(price).toPrecision(8)
-                }
-            }, 
-            priceScale: {
-              autoScale: true
-            },
-            localization: {
-              locale: 'en-US',
-                priceFormatter: (price) => {
-                  if (price < 0.000001) return parseFloat(price).toPrecision(8)
-                else if (price >= 0.000001 && price < 1) return parseFloat(price).toPrecision(6)
-                  else if (price >= 1 && price < 10000) return parseFloat(price).toPrecision(5)
-                else return parseFloat(price).toPrecision(8)
-                }
-},
-        });
-      const lineSeries = chart.addLineSeries();
-
-      //차트 데이터 컨트롤가능 객체, 전역으로 사용
-      this.chart = chart;
-      this.lineSeries = lineSeries 
       
     }
   }
