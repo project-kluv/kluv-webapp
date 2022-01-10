@@ -462,7 +462,7 @@
                     Kokoa Finance
                   </a>
                   <span href="#" class="ul-widget2__username">
-                    Backed by #Hashed | SVC | a41
+                    Backed by #Hashed | Krust | SVC | a41
                   </span>
                 </div>
                 <a href="https://kokoa.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
@@ -950,7 +950,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="http://www.klayfox.com/" target="_blank" class="ul-widget2__title">
-                   Klayfox  <b-badge pill variant="danger m-2">Now minting!</b-badge>
+                   Klayfox  <!--b-badge pill variant="danger m-2">Now minting!</b-badge-->
                   </a>
                   <span class="ul-widget2__username">
                     Partners : Tothem | 인절미닷컴
