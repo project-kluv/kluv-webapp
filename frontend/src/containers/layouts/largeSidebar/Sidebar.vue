@@ -55,6 +55,20 @@
             </router-link>
           </li>
 
+          <li
+            @mouseenter="toggleSubMenu"
+            class="nav-item"
+            data-item="product"
+            :class="{ active: selectedParentMenu == 'product' }"
+            :data-submenu="false"
+          >
+            <router-link tag="a" class="nav-item-hold" to="/app/product">
+              <i class="nav-icon i-Money"></i>
+                <span class="nav-text">{{ $t("product") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
+
          <!-- <li
             @mouseenter="toggleSubMenu"
             @click="commingSoon()"
