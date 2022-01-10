@@ -49,8 +49,8 @@
             :data-submenu="false"
           >
             <router-link tag="a" class="nav-item-hold" to="/app/testpage">
-              <i class="nav-icon i-Bar-Chart"></i>
-                <span class="nav-text">{{ $t("chart") }}</span>
+              <i class="nav-icon i-Loading"></i>
+                <span class="nav-text">{{ $t("testpage") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>
@@ -84,7 +84,6 @@
               <div class="triangle"></div>
             </router-link>
           </li>  -->
-          
           <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
