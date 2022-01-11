@@ -3,7 +3,7 @@
     <breadcumb :page="'Who We Are'" :folder="'About us'" />
     <b-row>
       <!-- widget-chart--bar phase-3 -->
-          <b-col md="4">
+          <b-col md="3">
             <b-card class="card-profile-1 mb-30 text-center">
               <div class="avatar box-shadow-2 mb-3">
                 <img src="@/assets/images/profile/leafcat.png" alt="" />
@@ -14,7 +14,7 @@
               </p>
             </b-card>
           </b-col>
-          <b-col md="4">
+          <b-col md="3">
             <b-card class="card-profile-1 mb-30 text-center">
               <div class="avatar box-shadow-2 mb-3">
                 <img src="@/assets/images/profile/kerin.png" alt="" />
@@ -23,13 +23,22 @@
               <p class="mt-0 text-muted">UX / Frontend / Bot Developer</p>
             </b-card>
           </b-col>
-          <b-col md="4">
+          <b-col md="3">
             <b-card class="card-profile-1 mb-30 text-center">
               <div class="avatar box-shadow-2 mb-3">
                 <img src="@/assets/images/profile/noname.png" alt="" />
               </div>
               <h5 class="m-0">To be announced</h5>
               <p class="mt-0 text-muted">Financial specialist</p>
+            </b-card>
+          </b-col>
+          <b-col md="3">
+            <b-card class="card-profile-1 mb-30 text-center">
+              <div class="avatar box-shadow-2 mb-3">
+                <img src="@/assets/images/profile/jason.jpg" alt="" />
+              </div>
+              <h5 class="m-0">Jason</h5>
+              <p class="mt-0 text-muted">Marketing Expert</p>
             </b-card>
           </b-col>
         </b-row>
