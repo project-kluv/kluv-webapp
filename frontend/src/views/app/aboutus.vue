@@ -20,7 +20,7 @@
                 <img src="@/assets/images/profile/kerin.png" alt="" />
               </div>
               <h5 class="m-0">Kerin</h5>
-              <p class="mt-0 text-muted">UX / Frontend / Bot Developer</p>
+              <p class="mt-0 text-muted">UX / Frontend / Bot developer</p>
             </b-card>
           </b-col>
           <b-col md="3">
