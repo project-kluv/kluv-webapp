@@ -762,6 +762,25 @@
               </div>
             </div>
           </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaymint.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.klaymint.io/" target="_blank" class="ul-widget2__title">
+                    KlayMint
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.klaymint.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/KLAYMINTCHAT" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
         </b-card>
         <br>
         <b-card>
@@ -819,26 +838,6 @@
             </h3>
           </div>
           <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/dogesoundclub.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://dogesound.club/" target="_blank" class="ul-widget2__title">
-                    Doge sound club
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Ozys
-                  </span>
-                </div>
-                <a href="https://dogesound.club/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/dogesoundclub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
@@ -876,6 +875,26 @@
                 </div>
                 <a href="https://www.klapes.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://discord.com/invite/eVyrkTgX2P" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+              <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/dogesoundclub.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://dogesound.club/" target="_blank" class="ul-widget2__title">
+                    Doge sound club
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : Ozys
+                  </span>
+                </div>
+                <a href="https://dogesound.club/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/dogesoundclub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
@@ -962,6 +981,26 @@
               </div>
             </div>
           </div>
+
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/perfriends.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.perfriends.com/" target="_blank" class="ul-widget2__title">
+                   Perfriends  <!--b-badge pill variant="danger m-2">Now minting!</b-badge-->
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.perfriends.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/MXtxrdKwfh" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
           
           <div class="ul-widget__body">
             <div class="ul-widget1">
@@ -1015,6 +1054,87 @@
             </h3>
           </div>
           <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaycity.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
+                    Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
+                  </a>
+                  <span class="ul-widget2__username">
+                    Backed by Krust | Animoca Brands | A&T Capital
+                  </span>
+                </div>
+                <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/ksv5mxsRcx" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/syltare.svg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.syltare.com/" target="_blank" class="ul-widget2__title">
+                    Syltare
+                  </a>
+                  <span class="ul-widget2__username">
+                    Dev by Like Lion
+                  </span>
+                </div>
+                <a href="https://www.syltare.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/Cb2tNa4zte" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/kenome.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaygenome.com/" target="_blank" class="ul-widget2__title">
+                    Kenome 
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : Klayswap | MyTems | Sooho | Newklaypunks | Bombus | KAI Lawfirm
+                  </span>
+                </div>
+                <a href="https://klaygenome.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/Kenome_official" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/sheepfarm.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://sheepfarm.io/" target="_blank" class="ul-widget2__title">
+                    Sheepfarm 
+                  </a>
+                  <span class="ul-widget2__username">
+                    Dev by Nightingale Interactive <br>
+                    Partners : Ozys | AURORA | uprise | nooslab
+                  </span>
+                </div>
+                <a href="https://sheepfarm.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/sheepmeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
               <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
@@ -1050,67 +1170,6 @@
                 </div>
                 <a href="https://junprotocol.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/JUN_META" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaycity.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
-                    Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
-                  </a>
-                  <span class="ul-widget2__username">
-                    Backed by Krust | Animoca Brands
-                  </span>
-                </div>
-                <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/ksv5mxsRcx" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/kenome.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaygenome.com/" target="_blank" class="ul-widget2__title">
-                    Kenome <b-badge pill variant="info m-2">1/11 Minting</b-badge>
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Klayswap | MyTems | Sooho | Newklaypunks | Bombus | KAI Lawfirm
-                  </span>
-                </div>
-                <a href="https://klaygenome.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/Kenome_official" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/sheepfarm.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://sheepfarm.io/" target="_blank" class="ul-widget2__title">
-                    Sheepfarm <b-badge pill variant="info m-2">waiting</b-badge>
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Nightingale Interactive <br>
-                    Partners : Ozys | AURORA | uprise | nooslab
-                  </span>
-                </div>
-                <a href="https://sheepfarm.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/sheepmeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
