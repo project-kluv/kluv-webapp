@@ -312,6 +312,21 @@
                 <a href="https://t.me/roundrobin_official" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
               </div>
 
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/grdswap.svg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://grdswap.com/" target="_blank" class="ul-widget2__title">
+                    GRDSwap
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://grdswap.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/GRDHouse" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+
               <!-- <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
                   <img src="@/assets/images/site/neuron.png"/>
@@ -541,7 +556,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://kleva.io/" target="_blank" class="ul-widget2__title">
-                    Kleva Protocol <b-badge pill variant="info m-2">waiting</b-badge>
+                    Kleva Protocol <b-badge pill variant="info m-2">1/19 Open</b-badge>
                   </a>
                   <span href="#" class="ul-widget2__username">
                     Dev by Wemade
@@ -1064,7 +1079,7 @@
                     Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
-                    Backed by Krust | Animoca Brands | A&T Capital
+                    Backed by Krust | Animoca Brands | A&T Capital | Okex
                   </span>
                 </div>
                 <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
