@@ -314,6 +314,20 @@
 
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/neuron.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.neuronswap.com/" target="_blank" class="ul-widget2__title">
+                    Neuron Swap
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.neuronswap.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/NEURONswap" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/grdswap.svg"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -327,70 +341,9 @@
                 <a href="https://t.me/GRDHouse" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
               </div>
 
-              <!-- <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/neuron.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.neuronswap.com/" target="_blank" class="ul-widget2__title">
-                    Neuron
-                  <b-badge pill variant="light m-2">High risk</b-badge>
-                  </a>
-                  <span href="#" class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://www.neuronswap.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/NEURONswap" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-              </div> -->
             </div>
           </div>
         </b-card>    
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              Stable Swap
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/i4i.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://i4i.finance/" target="_blank" class="ul-widget2__title">
-                    i4i Finance
-                  </a>
-                  <span href="#" class="ul-widget2__username">
-                    Dev by Kokoa Finance
-                  </span>
-                </div>
-                <a href="https://i4i.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/i4iFinance_kr" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-              </div>
-            </div>
-
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/eklipse.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://eklipse.finance/" target="_blank" class="ul-widget2__title">
-                    Eklipse
-                  </a>
-                  <span href="#" class="ul-widget2__username">
-                    Backed by Miraeasset venture Investment
-                  </span>
-                </div>
-                <a href="https://eklipse.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/eklipsefinanceofficial" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-
       </b-col>
 
       <b-col lg="3" xl="3" class=" mb-30">
@@ -504,6 +457,51 @@
           </div>
         </b-card>
         <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Stable Swap
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/i4i.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://i4i.finance/" target="_blank" class="ul-widget2__title">
+                    i4i Finance
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                    Dev by Kokoa Finance
+                  </span>
+                </div>
+                <a href="https://i4i.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/i4iFinance_kr" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+            </div>
+
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/eklipse.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://eklipse.finance/" target="_blank" class="ul-widget2__title">
+                    Eklipse
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                    Backed by Miraeasset venture Investment
+                  </span>
+                </div>
+                <a href="https://eklipse.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/eklipsefinanceofficial" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
+
       </b-col>
 
       <b-col lg="3" xl="3" class=" mb-30">
