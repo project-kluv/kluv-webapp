@@ -377,6 +377,25 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/fletaconnect.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.fletaconnect.io/" target="_blank" class="ul-widget2__title">
+                    Fleta Connect
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.fletaconnect.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/FLETAofficialGroup" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/orca.svg"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -1122,6 +1141,26 @@
                 </div>
                 <a href="https://klaygenome.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/Kenome_official" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/pixelground.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.pixelground.net/" target="_blank" class="ul-widget2__title">
+                    Pixel Ground 
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : NFT Mania | Infinity Market | Doge soundclub | Meta Kongz | Blueberry NFT
+                  </span>
+                </div>
+                <a href="https://www.pixelground.net/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/gnj9KdUd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
