@@ -1033,26 +1033,46 @@
               </div>
             </div>
           </div>
-          
           <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytnmap.png"/>
+                  <img src="@/assets/images/site/mongz.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaytnmap.io/" target="_blank" class="ul-widget2__title">
-                   Klaytnmap
+                  <a href="https://www.oxooxoxx.com/" target="_blank" class="ul-widget2__title">
+                   Mongz
                   </a>
                   <span class="ul-widget2__username">
+                    Partners : Meta Kongz
                   </span>
                 </div>
-                <a href="https://klaytnmap.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://www.oxooxoxx.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/gdyko6Fd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
           </div>
-
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/roomerclub.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://roomerclub.com/" target="_blank" class="ul-widget2__title">
+                   Roomer Club
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : Meta Kongz
+                  </span>
+                </div>
+                <a href="https://roomerclub.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/roomerclub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
 
           <div class="ul-widget__body">
             <div class="ul-widget1">
@@ -1069,6 +1089,26 @@
                 </div>
                 <a href="https://joseonnft.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://open.kakao.com/o/gS1a6rCd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaytnmap.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaytnmap.io/" target="_blank" class="ul-widget2__title">
+                   Klaytnmap
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://klaytnmap.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                <a></a>
               </div>
             </div>
