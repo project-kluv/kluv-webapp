@@ -1093,10 +1093,10 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
-                    Klaycity <b-badge pill variant="info m-2">waiting</b-badge>
+                    Klaycity <b-badge pill variant="info m-2">1/27 Minting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
-                    Backed by Krust | Animoca Brands | A&T Capital | Okex
+                    Backed by Krust | Animoca Brands | A&T Capital | Okex | Naver Z | GBV Capital | KuCoin
                   </span>
                 </div>
                 <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
@@ -1153,7 +1153,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://www.pixelground.net/" target="_blank" class="ul-widget2__title">
-                    Pixel Ground 
+                    Pixel Ground <b-badge pill variant="info m-2">1/19 Minting</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                     Partners : NFT Mania | Infinity Market | Doge soundclub | Meta Kongz | Blueberry NFT
@@ -1215,7 +1215,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://junprotocol.io/" target="_blank" class="ul-widget2__title">
-                    JUN Meta
+                    JUN Meta <b-badge pill variant="info m-2">1/20 Open</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
