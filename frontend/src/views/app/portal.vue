@@ -155,13 +155,13 @@
                   <img src="@/assets/images/site/clink.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://clink.pro/" target="_blank" class="ul-widget2__title">
-                    Clink
+                  <a href="https://clink.money/" target="_blank" class="ul-widget2__title">
+                    Clink <b-badge pill variant="success m-2">Update</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
                 </div>
-                <a href="https://clink.pro/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://clink.money/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://open.kakao.com/o/geLRqNsd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
@@ -531,6 +531,42 @@
             </h3>
           </div>
           <div class="ul-widget__body">
+
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/kleva.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://kleva.io/" target="_blank" class="ul-widget2__title">
+                    Kleva Protocol
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                    Dev by Wemade
+                  </span>
+                </div>
+                <a href="https://kleva.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/joinchat/DVU5RIt2pBQzMjVl" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+            </div>
+
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaybank.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title">
+                    Klaybank
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                    Backed by a41 | Krust
+                  </span>
+                </div>
+                <a href="https://klaybank.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/Klaybank_KR" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+            </div>            
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
@@ -566,41 +602,6 @@
               </div>
             </div>
 
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/kleva.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://kleva.io/" target="_blank" class="ul-widget2__title">
-                    Kleva Protocol <b-badge pill variant="info m-2">1/19 Open</b-badge>
-                  </a>
-                  <span href="#" class="ul-widget2__username">
-                    Dev by Wemade
-                  </span>
-                </div>
-                <a href="https://kleva.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/joinchat/DVU5RIt2pBQzMjVl" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-              </div>
-            </div>
-
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaybank.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title">
-                    Klaybank <b-badge pill variant="info m-2">1/19 Open</b-badge>
-                  </a>
-                  <span href="#" class="ul-widget2__username">
-                    Backed by a41 | Krust
-                  </span>
-                </div>
-                <a href="https://klaybank.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/Klaybank_KR" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-              </div>
-            </div>
           </div>
         </b-card>
         <br>
