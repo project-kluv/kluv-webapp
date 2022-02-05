@@ -66,6 +66,13 @@
           </div>
         </b-card>   
    </b-col>
+   <!-- Banner -->
+ <b-col lg="3" xl="3" class=" mb-30">
+                            <span class="ul-widget2__username">
+                    Ad
+                  </span>
+          <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title"><img src="@/assets/images/banner/banner_klaybank.png"/></a>
+   </b-col>
 </b-row>
 
     <b-row class="">
@@ -84,8 +91,8 @@
                   <img src="@/assets/images/site/klaytnscope.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://v2.scope.klaytn.com/" target="_blank" class="ul-widget2__title">
-                    Klaytnscope <b-badge pill variant="success m-2">v2 update</b-badge>
+                  <a href="https://scope.klaytn.com/" target="_blank" class="ul-widget2__title">
+                    Klaytnscope
                   </a>
                   <span class="ul-widget2__username">
                     Dev by Ozys
@@ -1154,26 +1161,6 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaycity.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
-                    Klaycity <b-badge pill variant="info m-2">1/27 Minting</b-badge>
-                  </a>
-                  <span class="ul-widget2__username">
-                    Backed by Krust | Animoca Brands | A&T Capital | Okex | Naver Z | GBV Capital | KuCoin
-                  </span>
-                </div>
-                <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/ksv5mxsRcx" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/syltare.svg"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -1214,26 +1201,6 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/pixelground.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.pixelground.net/" target="_blank" class="ul-widget2__title">
-                    Pixel Ground <b-badge pill variant="info m-2">1/19 Minting</b-badge>
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : NFT Mania | Infinity Market | Doge soundclub | Meta Kongz | Blueberry NFT
-                  </span>
-                </div>
-                <a href="https://www.pixelground.net/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gnj9KdUd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/sheepfarm.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -1247,6 +1214,47 @@
                 </div>
                 <a href="https://sheepfarm.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/sheepmeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaycity.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
+                    Klaycity 
+                  </a>
+                  <span class="ul-widget2__username">
+                    Backed by Krust | Animoca Brands | A&T Capital | Okex | Naver Z | GBV Capital | KuCoin
+                  </span>
+                </div>
+                <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/ksv5mxsRcx" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>          
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/pixelground.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.pixelground.net/" target="_blank" class="ul-widget2__title">
+                    Pixel Ground 
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : NFT Mania | Infinity Market | Doge soundclub | Meta Kongz | Blueberry NFT
+                  </span>
+                </div>
+                <a href="https://www.pixelground.net/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/gnj9KdUd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
@@ -1280,7 +1288,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://junprotocol.io/" target="_blank" class="ul-widget2__title">
-                    JUN Meta <b-badge pill variant="info m-2">1/20 Open</b-badge>
+                    JUN Meta 
                   </a>
                   <span class="ul-widget2__username">
                   </span>
@@ -1327,7 +1335,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
-                    Neverland  <b-badge pill variant="success m-2">whitelisting ~1/23</b-badge>
+                    Neverland 
                   </a>
                   <span class="ul-widget2__username">
                   </span>
