@@ -1,44 +1,16 @@
+<style scoped>
+.z_container{
+  position:relative;
+}
+.z_box{
+  position:absolute;
+  transform: translate(-50%,-50%);
+}
+
+</style>
 <template>
   <div class="main-content">
     <breadcumb :page="'Klaytn Portal'" :folder="'Portal'" />
-
-
-    <!-- <b-row>
-      <b-col lg="4" md="4" sm="12">
-        <b-card
-          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
-        >
-          <i class="i-Coin"></i>
-          <div class="content" style="max-width:120px;">
-            <p class="text-primary text-20 line-height-1.2 mb-2 font-weight-bold">KLAY</p>
-            <p class="text-muted text-15 line-height-1 mb-1">&#8361;{{klayKrwPriceExchange}}(Bithumb)</p>
-            <p class="text-muted text-15 line-height-1 mb-1">${{swapKlayPriceUsd}}(Klayswap)</p>
-          </div>
-        </b-card>
-      </b-col>
-      <b-col lg="4" md="4" sm="12">
-        <b-card
-          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
-        >
-          <i class="i-Cloud-Weather"></i>
-          <div class="content" style="max-width:120px;">
-            <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">K-Premium</p>
-            <p class="text-muted text-22 line-height-1.1 mb-2">{{(kPremium*100).toFixed(2)}}%</p>
-          </div>
-        </b-card>
-      </b-col>
-      <b-col lg="4" md="4" sm="12">
-        <b-card
-          class="card-icon-bg card-icon-bg-primary o-hidden mb-30 text-center"
-        >
-          <i class="i-Dollar"></i>
-          <div class="content" style="max-width:120px;">
-            <p class="text-primary text-20 line-height-1.5 mb-2 font-weight-bold">환율(USD)</p>
-            <p class="text-muted text-22 line-height-1.1 mb-2">&#8361;{{usdKrw}}</p>
-          </div>
-        </b-card>
-      </b-col>
-    </b-row> -->
 <b-row class="">
  <b-col lg="6" xl="6" class=" mb-30">
         <b-card>
@@ -68,13 +40,14 @@
    </b-col>
    <!-- Banner -->
  <b-col lg="3" xl="3" class=" mb-30">
-                            <span class="ul-widget2__username">
-                    Ad
-                  </span>
-          <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title"><img src="@/assets/images/banner/banner_klaybank.png"/></a>
+      <span class="ul-widget2__username">
+        ad
+      </span>
+            <div class="ul-widget1">
+                <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title"><img src="@/assets/images/banner/banner_klaybank.png" style="max-width:auto; height:110px;"/></a>
+        </div>
    </b-col>
 </b-row>
-
     <b-row class="">
       <!-- authors-profit -->
       <b-col lg="3" xl="3" class=" mb-30">
@@ -1335,7 +1308,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
-                    Neverland 
+                    Neverland  <b-badge pill variant="success m-2">whitelisting ~1/23</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>
