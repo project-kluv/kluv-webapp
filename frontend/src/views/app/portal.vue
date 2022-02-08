@@ -653,7 +653,6 @@
           </div>
         </b-card>
       </b-col>
-
       <b-col lg="3" xl="3" class=" mb-30">
         <b-card>
           <div class="d-flex justify-content-between">
@@ -1349,6 +1348,34 @@
         </b-card>
       </b-col>
       <b-col lg="3" xl="3" class=" mb-30">
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Name Service
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/kns.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaytn.name/" target="_blank" class="ul-widget2__title">
+                    KNS (Klaytn Name Service)
+                  </a>
+                  <span class="ul-widget2__username">
+                    Dev by Like Lion
+                  </span>
+                </div>
+                <a href="https://klaytn.name/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/KlaytnNameService" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
+        <br>
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
