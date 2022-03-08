@@ -136,7 +136,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://clink.money/" target="_blank" class="ul-widget2__title">
-                    Clink <b-badge pill variant="success m-2">Update</b-badge>
+                    Clink <!--b-badge pill variant="success m-2">Update</b-badge-->
                   </a>
                   <span class="ul-widget2__username">
                   </span>
@@ -451,6 +451,23 @@
                 </div>
                 <a href="https://kaiprotocol.fi/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/kaiprotocol" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+              </div>
+            </div>
+
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaypay.svg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://klaypay.io/" target="_blank" class="ul-widget2__title">
+                    KlayPay
+                  </a>
+                  <span href="#" class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://klaypay.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/klaypaycommunity" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
               </div>
             </div>
           </div>
@@ -1153,6 +1170,26 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/metatoydragonz.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://metatoydragonz.io/" target="_blank" class="ul-widget2__title">
+                    Meta Toy DragonZ
+                  </a>
+                  <span class="ul-widget2__username">
+                    Dev by Sandbox
+                  </span>
+                </div>
+                <a href="https://metatoydragonz.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/JRe5962rTa" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
                   <img src="@/assets/images/site/kenome.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
@@ -1307,7 +1344,7 @@
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
-                    Neverland  <b-badge pill variant="success m-2">whitelisting ~1/23</b-badge>
+                    Neverland
                   </a>
                   <span class="ul-widget2__username">
                   </span>
@@ -1365,7 +1402,6 @@
                     KNS (Klaytn Name Service)
                   </a>
                   <span class="ul-widget2__username">
-                    Dev by Like Lion
                   </span>
                 </div>
                 <a href="https://klaytn.name/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
