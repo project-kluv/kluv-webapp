@@ -44,7 +44,7 @@
         ad
       </span>
             <div class="ul-widget1">
-                <a href="https://klaybank.org/" target="_blank" class="ul-widget2__title"><img src="@/assets/images/banner/banner_klaybank.png" style="max-width:auto; height:110px;"/></a>
+                <a href="https://bit.ly/3CrbdkQ" target="_blank" class="ul-widget2__title"><img src="@/assets/images/banner/banner_klaybank2.png" style="max-width:auto; height:110px;"/></a>
         </div>
    </b-col>
 </b-row>
