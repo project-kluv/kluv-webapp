@@ -10,15 +10,17 @@
 </style>
 <template>
   <div class="main-content">
-    <breadcumb :page="'Klaytn Portal'" :folder="'Portal'" />
+    <breadcumb :page="'Klaytn Metaverse'" :folder="'Metaverse'" />
 <b-row class="">
- <b-col lg="6" xl="6" class=" mb-30">
+  <b-col lg="6" xl="6" class=" mb-30">
         <b-card>
           <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                 <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title"><img src="@/assets/images/site/kluvme.png"/></a>
+                  <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title">
+                    <img src="@/assets/images/site/kluvme.png"/>
+                  </a>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title">
@@ -27,7 +29,7 @@
                   <span class="ul-widget2__username">
                     KLUV.ME 텔레그램 커뮤니티에서 클레이튼 생태계의 모든 프로젝트 정보를 공유하고 자유로운 토론을 즐기세요!
                     <br>
-                     신규 프로젝트 추가 요청, 기타 협력 제안 - [Telegram] @Kerinkluv
+                    신규 프로젝트 추가 요청, 기타 협력 제안 - [Telegram] @Kerinkluv
                   </span>
                 </div>
                 <div class="ul-widget4__img">
@@ -37,7 +39,7 @@
             </div>
           </div>
         </b-card>   
-   </b-col>
+  </b-col>
    <!-- Banner -->
  <b-col lg="3" xl="3" class=" mb-30">
       <span class="ul-widget2__username">
@@ -62,21 +64,21 @@
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
-              Block explorer
+              Metaverse Portal
             </h3>
           </div>
           <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytnscope.png"/>
+                  <img src="https://klayguildgames.com/img/logos/kggLogo0.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://scope.klaytn.com/" target="_blank" class="ul-widget2__title">
-                    Klaytnscope
+                    klayguildgames
                   </a>
                   <span class="ul-widget2__username">
-                    Dev by Ozys
+                    
                   </span>
                 </div>
                 <a href="https://v2.scope.klaytn.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>

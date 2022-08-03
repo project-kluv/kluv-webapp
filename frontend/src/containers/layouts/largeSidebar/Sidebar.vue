@@ -26,8 +26,21 @@
               <div class="triangle"></div>
             </router-link>
           </li>
-          
           <li
+            @mouseenter="toggleSubMenu"
+            class="nav-item"
+            data-item="metaverse"
+            :class="{ active: selectedParentMenu == 'metaverse' }"
+            :data-submenu="false"
+          >
+            <router-link tag="a" class="nav-item-hold" to="/app/metaverse">
+              <i class="nav-icon i-Inifity"></i>
+                <span class="nav-text">{{ $t("metaverse") }}</span>
+              <div class="triangle"></div>
+            </router-link>
+          </li>
+
+          <!-- <li
             @mouseenter="toggleSubMenu"
             class="nav-item"
             data-item="dashboards"
@@ -39,7 +52,7 @@
                 <span class="nav-text">{{ $t("chart") }}</span>
               <div class="triangle"></div>
             </router-link>
-          </li>
+          </li> -->
 
          <!-- <li
             @mouseenter="toggleSubMenu"

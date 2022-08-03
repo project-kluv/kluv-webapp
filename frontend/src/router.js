@@ -27,6 +27,10 @@ const routes = [
         component: () => import("./views/app/portal")
       },
       {
+        path: "/app/metaverse",
+        component: () => import("./views/app/metaverse")
+      },
+      {
         path: "/app/aboutus",
         component: () => import("./views/app/aboutus")
       },
