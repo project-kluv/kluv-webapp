@@ -46,7 +46,7 @@
         ad
       </span>
             <div class="ul-widget1">
-                <a href="https://bit.ly/3CrbdkQ" target="_blank" class="ul-widget2__title"><img width="100%"  src="@/assets/images/banner/banner_kgg.png" style="max-width:auto; height:110px;"/></a>
+                <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"><img width="100%"  src="@/assets/images/banner/banner_kgg.png" style="max-width:auto; height:110px;"/></a>
         </div>
    </b-col>
  <b-col lg="3" xl="3" class=" mb-30">
@@ -54,7 +54,7 @@
         ad
       </span>
             <div class="ul-widget1">
-                <a href="https://bit.ly/3CrbdkQ" target="_blank" class="ul-widget2__title"><img img width="100%" src="https://i.imgur.com/8PkzK5w.png" style="max-width:auto; height:110px;"/></a>
+                <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"><img img width="100%" src="https://i.imgur.com/8PkzK5w.png" style="max-width:auto; height:110px;"/></a>
         </div>
    </b-col>
 </b-row>
