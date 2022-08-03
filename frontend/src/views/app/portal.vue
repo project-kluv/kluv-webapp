@@ -193,7 +193,110 @@
               </div>
             </div>
           </div>
-        </b-card>        
+        </b-card>
+        <br>  
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              DeFi 2.0
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/krono.svg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://kronosdao.finance/" target="_blank" class="ul-widget2__title">
+                    Kronosdao
+                  </a>
+                  <span class="ul-widget2__username">
+                    Partners : Kokoa | Hotbit | Ozys
+                  </span>
+                </div>
+                <a href="https://kronosdao.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/kronosdao_eng" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/neverland.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
+                    Neverland
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://neverland.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/neverlandfi_kor/" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+
+        </b-card>
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Community
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaytnx.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://t.me/klaytn_info" target="_blank" class="ul-widget2__title">
+                    Klaytn X
+                  </a>
+                  <span class="ul-widget2__username">
+                    클레이튼 생태계 최대 규모 사설 텔레그램 커뮤니티2
+                  </span>
+                </div>
+                <a href="https://t.me/klaytn_info" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Asset Bridge
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/orbit.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://bridge.orbitchain.io/" target="_blank" class="ul-widget2__title">
+                    Orbit Bridge
+                  </a>
+                  <span class="ul-widget2__username">
+                    Dev by Ozys
+                  </span>
+                </div>
+                <a href="https://bridge.orbitchain.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/Orbit_Chain" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>   
       </b-col>
       <b-col lg="3" xl="3" class=" mb-30">
         <b-card>
@@ -377,7 +480,72 @@
             </div>
           </div>
         </b-card>
-
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              YouTube
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/corin.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank" class="ul-widget2__title">
+                    코린이유치원
+                  </a>
+                  <span class="ul-widget2__username">
+                    유용한 디파이 정보 영상 및 디파이 입문자용 커뮤니티 운영
+                  </span>
+                </div>
+                <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://open.kakao.com/o/g8VYNJxc" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/jaeyoun.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.youtube.com/c/jaeyuntv" target="_blank" class="ul-widget2__title">
+                    재윤티비
+                  </a>
+                  <span class="ul-widget2__username">
+                    블록체인, 디파이 등에 대한 개념 이해에 도움이 되는 영상 제공
+                  </span>
+                </div>
+                <a href="https://www.youtube.com/c/jaeyuntv" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/coinboy.jpg"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank" class="ul-widget2__title">
+                    코인소년
+                  </a>
+                  <span class="ul-widget2__username">
+                    디파이, NFT 등 다양한 클레이튼 프로젝트 소개 영상 제공
+                  </span>
+                </div>
+                <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
       </b-col>
 
       <b-col lg="3" xl="3" class=" mb-30">
@@ -543,7 +711,66 @@
             </div>
           </div>
         </b-card>
+        <br>
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Klaytn Family
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaytn.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.klaytn.com/" target="_blank" class="ul-widget2__title">
+                    Klaytn
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.klaytn.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://t.me/KlaytnSouthKorea" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
 
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/krust.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://krustuniverse.com/" target="_blank" class="ul-widget2__title">
+                    Krust
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://krustuniverse.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+
+                <!-- <a href="" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a> -->
+               <a></a>
+              </div>
+
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/groundx.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.groundx.xyz/"  target="_blank"  class="ul-widget2__title">
+                    GroundX
+                  </a>
+                  <span class="ul-widget2__username">
+                  </span>
+                </div>
+                <a href="https://www.groundx.xyz/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
       </b-col>
 
       <b-col lg="3" xl="3" class=" mb-30">
@@ -696,722 +923,6 @@
             </div>
           </div>
         </b-card>
-      </b-col>
-      <b-col lg="3" xl="3" class=" mb-30">
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              NFT Market
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/opensea.svg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://opensea.io/" target="_blank" class="ul-widget2__title">
-                    Opensea
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://opensea.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/opensea" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klipdrops.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klipdrops.com/" target="_blank" class="ul-widget2__title">
-                    Klipdrops
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by GroundX
-                  </span>
-                </div>
-                <a href="https://klipdrops.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://pf.kakao.com/_CmEKs" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/3space.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://3space.art/" target="_blank" class="ul-widget2__title">
-                   3space Art
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by (주)세번째 공간<br>
-                    Partners : Klaytn Founation | Somesing | Sam seoul | 449+Block | Block Crafters ..
-                  </span>
-                </div>
-                <a href="https://3space.art/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/threespaceart" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>          
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klubs.svg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klu.bs/" target="_blank" class="ul-widget2__title">
-                    Klubs
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://klu.bs/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gfsahfHd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/clubrare.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://clubrare.com/" target="_blank" class="ul-widget2__title">
-                    Clubrare
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by VitalHint
-                  </span>
-                </div>
-                <a href="https://clubrare.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/ANSWER_GOVERNANCE" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klayhub.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.klayhub.com/" target="_blank" class="ul-widget2__title">
-                    Klay Hub
-                  </a>
-                  <span class="ul-widget2__username">
-                    <!-- Audit by S2W -->
-                  </span>
-                </div>
-                <a href="https://www.klayhub.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/klayhub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/pics.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://mypics.one/en" target="_blank" class="ul-widget2__title">
-                    Mypics
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://mypics.one/en" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/PICS_Community" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaymint.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.klaymint.io/" target="_blank" class="ul-widget2__title">
-                    KlayMint
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://www.klaymint.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/KLAYMINTCHAT" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              NFT Maker
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/krafterspace.svg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.krafter.space/" target="_blank" class="ul-widget2__title">
-                    Krafterspace
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by GroundX
-                  </span>
-                </div>
-                <a href="https://www.krafter.space/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/mytems.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://mytems.io/" target="_blank" class="ul-widget2__title">
-                    Mytems
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by GroundX
-                  </span>
-                </div>
-                <a href="https://mytems.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-      </b-col>
-
-      <b-col lg="3" xl="3" class=" mb-30">
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              NFT Project
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/metakongz.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://themetakongz.com/" target="_blank" class="ul-widget2__title">
-                    Metakongz
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Like Lion
-                  </span>
-                </div>
-                <a href="https://themetakongz.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/the_metakongz" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klapes.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.klapes.io/" target="_blank" class="ul-widget2__title">
-                   Klapes
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Marshmallow Jetpack <br>
-                    Backed by Klaytn Foundation
-                  </span>
-                </div>
-                <a href="https://www.klapes.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/eVyrkTgX2P" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/dogesoundclub.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://dogesound.club/" target="_blank" class="ul-widget2__title">
-                    Doge sound club
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Ozys
-                  </span>
-                </div>
-                <a href="https://dogesound.club/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/dogesoundclub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/newklaypunks.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://newklaypunksofficial.com/" target="_blank" class="ul-widget2__title">
-                   Newklaypunks
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Ozys | Klayswap | Klaymore | Tothem | MyTerms | Kai | Kenome
-                  </span>
-                </div>
-                <a href="https://newklaypunksofficial.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/+ISg4GThg0m5jYWRl" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/animalspunk.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://animals-punks.com/animals-v2/index.html" target="_blank" class="ul-widget2__title">
-                   Animals Punks v2
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Dog sound club
-                  </span>
-                </div>
-                <a href="https://animals-punks.com/animals-v2/index.html" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gnaiJczd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>          
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaydoges.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaydoges.app/" target="_blank" class="ul-widget2__title">
-                   KlayDoges
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://klaydoges.app/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-                    
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klayfox.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="http://www.klayfox.com/" target="_blank" class="ul-widget2__title">
-                   Klayfox  <!--b-badge pill variant="danger m-2">Now minting!</b-badge-->
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Tothem | 인절미닷컴
-                  </span>
-                </div>
-                <a href="http://www.klayfox.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gw6uENAd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/perfriends.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.perfriends.com/" target="_blank" class="ul-widget2__title">
-                   Perfriends  <!--b-badge pill variant="danger m-2">Now minting!</b-badge-->
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://www.perfriends.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/MXtxrdKwfh" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/mongz.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.oxooxoxx.com/" target="_blank" class="ul-widget2__title">
-                   Mongz
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Meta Kongz
-                  </span>
-                </div>
-                <a href="https://www.oxooxoxx.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gdyko6Fd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/roomerclub.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://roomerclub.com/" target="_blank" class="ul-widget2__title">
-                   Roomer Club
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Meta Kongz
-                  </span>
-                </div>
-                <a href="https://roomerclub.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/roomerclub" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/joseon.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://joseonnft.com/" target="_blank" class="ul-widget2__title">
-                   Joseon Dynasty
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://joseonnft.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gS1a6rCd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytnmap.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaytnmap.io/" target="_blank" class="ul-widget2__title">
-                   Klaytnmap
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://klaytnmap.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          
-        </b-card>
-      </b-col>
-
-      <b-col lg="3" xl="3" class=" mb-30">
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              P2E Game
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/syltare.svg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.syltare.com/" target="_blank" class="ul-widget2__title">
-                    Syltare
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Like Lion
-                  </span>
-                </div>
-                <a href="https://www.syltare.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/Cb2tNa4zte" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/metatoydragonz.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://metatoydragonz.io/" target="_blank" class="ul-widget2__title">
-                    Meta Toy DragonZ
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Sandbox
-                  </span>
-                </div>
-                <a href="https://metatoydragonz.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/JRe5962rTa" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/kenome.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaygenome.com/" target="_blank" class="ul-widget2__title">
-                    Kenome 
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Klayswap | MyTems | Sooho | Newklaypunks | Bombus | KAI Lawfirm
-                  </span>
-                </div>
-                <a href="https://klaygenome.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/Kenome_official" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/sheepfarm.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://sheepfarm.io/" target="_blank" class="ul-widget2__title">
-                    Sheepfarm 
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Nightingale Interactive <br>
-                    Partners : Ozys | AURORA | uprise | nooslab
-                  </span>
-                </div>
-                <a href="https://sheepfarm.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/sheepmeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaycity.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaycity.com/" target="_blank" class="ul-widget2__title">
-                    Klaycity 
-                  </a>
-                  <span class="ul-widget2__username">
-                    Backed by Krust | Animoca Brands | A&T Capital | Okex | Naver Z | GBV Capital | KuCoin
-                  </span>
-                </div>
-                <a href="https://klaycity.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://discord.com/invite/ksv5mxsRcx" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>          
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/pixelground.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.pixelground.net/" target="_blank" class="ul-widget2__title">
-                    Pixel Ground 
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : NFT Mania | Infinity Market | Doge soundclub | Meta Kongz | Blueberry NFT
-                  </span>
-                </div>
-                <a href="https://www.pixelground.net/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/gnj9KdUd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaymeta.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaymeta.io/" target="_blank" class="ul-widget2__title">
-                    Klaymeta
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Natris <br>
-                    Partners : Ozys | Kai Protocol
-                  </span>
-                </div>
-                <a href="https://klaymeta.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/klaymeta" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-              <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/junmeta.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://junprotocol.io/" target="_blank" class="ul-widget2__title">
-                    JUN Meta 
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://junprotocol.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/JUN_META" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              DeFi 2.0
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/krono.svg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://kronosdao.finance/" target="_blank" class="ul-widget2__title">
-                    Kronosdao
-                  </a>
-                  <span class="ul-widget2__username">
-                    Partners : Kokoa | Hotbit | Ozys
-                  </span>
-                </div>
-                <a href="https://kronosdao.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/kronosdao_eng" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/neverland.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
-                    Neverland
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://neverland.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/neverlandfi_kor/" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              Meme coin
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/injeolmi.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://tteok.org/" target="_blank" class="ul-widget2__title">
-                    인절미닷컴
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://tteok.org/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/g1nYzIHd" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-      </b-col>
-      <b-col lg="3" xl="3" class=" mb-30">
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
@@ -1438,66 +949,7 @@
             </div>
           </div>
         </b-card>
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              Klaytn Family
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytn.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.klaytn.com/" target="_blank" class="ul-widget2__title">
-                    Klaytn
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://www.klaytn.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/KlaytnSouthKorea" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
 
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/krust.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://krustuniverse.com/" target="_blank" class="ul-widget2__title">
-                    Krust
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://krustuniverse.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-
-                <!-- <a href="" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a> -->
-               <a></a>
-              </div>
-
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/groundx.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.groundx.xyz/"  target="_blank"  class="ul-widget2__title">
-                    GroundX
-                  </a>
-                  <span class="ul-widget2__username">
-                  </span>
-                </div>
-                <a href="https://www.groundx.xyz/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
         <br>
         <b-card>
           <div class="d-flex justify-content-between">
@@ -1540,137 +992,9 @@
             </div>
           </div>
         </b-card>
-        <br>
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              Asset Bridge
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/orbit.png"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://bridge.orbitchain.io/" target="_blank" class="ul-widget2__title">
-                    Orbit Bridge
-                  </a>
-                  <span class="ul-widget2__username">
-                    Dev by Ozys
-                  </span>
-                </div>
-                <a href="https://bridge.orbitchain.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/Orbit_Chain" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>        
       </b-col>
     </b-row>
-    <b-row>
-      <b-col lg="3" xl="3" class=" mb-30">
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              YouTube
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/corin.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank" class="ul-widget2__title">
-                    코린이유치원
-                  </a>
-                  <span class="ul-widget2__username">
-                    유용한 디파이 정보 영상 및 디파이 입문자용 커뮤니티 운영
-                  </span>
-                </div>
-                <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://open.kakao.com/o/g8VYNJxc" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/jaeyoun.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.youtube.com/c/jaeyuntv" target="_blank" class="ul-widget2__title">
-                    재윤티비
-                  </a>
-                  <span class="ul-widget2__username">
-                    블록체인, 디파이 등에 대한 개념 이해에 도움이 되는 영상 제공
-                  </span>
-                </div>
-                <a href="https://www.youtube.com/c/jaeyuntv" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/coinboy.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank" class="ul-widget2__title">
-                    코인소년
-                  </a>
-                  <span class="ul-widget2__username">
-                    디파이, NFT 등 다양한 클레이튼 프로젝트 소개 영상 제공
-                  </span>
-                </div>
-                <a href="https://www.youtube.com/c/%EC%BD%94%EC%9D%B8%EC%86%8C%EB%85%84" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
 
-      </b-col>
-      <b-col lg="3" xl="3" class=" mb-30">
-        <b-card>
-          <div class="d-flex justify-content-between">
-            <h3 class="ul-widget__head-title">
-              Community
-            </h3>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytnx.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://t.me/klaytn_info" target="_blank" class="ul-widget2__title">
-                    Klaytn X
-                  </a>
-                  <span class="ul-widget2__username">
-                    클레이튼 생태계 최대 규모 사설 텔레그램 커뮤니티
-                  </span>
-                </div>
-                <a href="https://t.me/klaytn_info" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-        </b-card>
-
-      </b-col>
-
-
-    </b-row>
   </div>
 </template>
 
