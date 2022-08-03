@@ -35,7 +35,7 @@
           >
             <router-link tag="a" class="nav-item-hold" to="/app/metaverse">
               <i class="nav-icon i-Inifity"></i>
-                <span class="nav-text">{{ $t("metaverse") }}</span>
+                <span class="nav-text">{{ $t("Metaverse") }}</span>
               <div class="triangle"></div>
             </router-link>
           </li>

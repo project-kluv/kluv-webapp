@@ -27,7 +27,7 @@
                   <span class="ul-widget2__username">
                     KLUV.ME 텔레그램 커뮤니티에서 클레이튼 생태계의 모든 프로젝트 정보를 공유하고 자유로운 토론을 즐기세요!
                     <br>
-                     신규 프로젝트 추가 요청, 기타 협력 제안 - [Telegram] @Kerinkluv
+                     신규 프로젝트 추가 요청, 광고문의 외 기타 협력 제안 dm
                   </span>
                 </div>
                 <div class="ul-widget4__img">
@@ -69,7 +69,26 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/klaytnscope.png"/>
+                  <img src="@/assets/images/site/klaytnfinder.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.klaytnfinder.io/" target="_blank" class="ul-widget2__title">
+                    klaytnFinder
+                  </a>
+                  <span class="ul-widget2__username">
+                    klaytn Official
+                  </span>
+                </div>
+                <a href="https://www.klaytnfinder.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>          
+          <div class="ul-widget__body">
+            <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/klaytnscope2.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://scope.klaytn.com/" target="_blank" class="ul-widget2__title">
@@ -84,6 +103,7 @@
               </div>
             </div>
           </div>
+
         </b-card>
         <br>
         <b-card>
@@ -174,7 +194,7 @@
               </div>
             </div>
           </div>
-          <div class="ul-widget__body">
+          <!-- <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
@@ -192,7 +212,7 @@
                <a></a>
               </div>
             </div>
-          </div>
+          </div> -->
         </b-card>
         <br>  
         <b-card>
@@ -503,25 +523,6 @@
                 </div>
                 <a href="https://www.youtube.com/c/%EC%BD%94%EB%A6%B0%EC%9D%B4%EC%9C%A0%EC%B9%98%EC%9B%90" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://open.kakao.com/o/g8VYNJxc" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
-               <a></a>
-              </div>
-            </div>
-          </div>
-          <div class="ul-widget__body">
-            <div class="ul-widget1">
-              <div class="ul-widget__item ul-widget4__users">
-                <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/jaeyoun.jpg"/>
-                </div>
-                <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://www.youtube.com/c/jaeyuntv" target="_blank" class="ul-widget2__title">
-                    재윤티비
-                  </a>
-                  <span class="ul-widget2__username">
-                    블록체인, 디파이 등에 대한 개념 이해에 도움이 되는 영상 제공
-                  </span>
-                </div>
-                <a href="https://www.youtube.com/c/jaeyuntv" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                <a></a>
               </div>
             </div>
@@ -923,6 +924,7 @@
             </div>
           </div>
         </b-card>
+        <br>
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
@@ -936,14 +938,14 @@
                   <img src="@/assets/images/site/kns.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="https://klaytn.name/" target="_blank" class="ul-widget2__title">
+                  <a href="https://klaytn.domains/" target="_blank" class="ul-widget2__title">
                     KNS (Klaytn Name Service)
                   </a>
                   <span class="ul-widget2__username">
                   </span>
                 </div>
-                <a href="https://klaytn.name/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
-                <a href="https://t.me/KlaytnNameService" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+                <a href="https://klaytn.domains/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/kns" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
