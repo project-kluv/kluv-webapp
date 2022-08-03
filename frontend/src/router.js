@@ -52,50 +52,20 @@ const routes = [
         redirect: "/app/pages/profile",
         children: [
           {
-            name: "test",
-            path: "myTest",
-            component: () => import("./views/app/pages/myTest")
-          },
-          {
             name: "account",
             path: "account",
             component: () => import("./views/app/pages/account")
-          },
-          {
-            path: "profile",
-            component: () => import("./views/app/pages/profile")
           },
           {
             path: "error",
             component: () => import("./views/app/pages/notFound")
           },
           {
-            path: "icons",
-            component: () => import("./views/app/pages/icons")
-          },
-          {
-            path: "search-result",
-            component: () => import("./views/app/pages/search-result")
-          },
-          {
-            path: "pricing-table",
-            component: () => import("./views/app/pages/pricingTable")
-          },
-          {
-            path: "faq",
-            component: () => import("./views/app/pages/faq")
-          },
-          {
             path: "blank",
             component: () => import("./views/app/pages/blank")
           }
-  
         ]
       },
-
-    
-
-    
     ]
   },
   // sessions
@@ -118,8 +88,6 @@ const routes = [
       }
     ]
   },
-
-
   {
     path: "*",
     component: () => import("./views/app/pages/notFound")
