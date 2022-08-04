@@ -27,7 +27,7 @@
                   <span class="ul-widget2__username">
                     KLUV.ME 텔레그램 커뮤니티에서 클레이튼 생태계의 모든 프로젝트 정보를 공유하고 자유로운 토론을 즐기세요!
                     <br>
-                    신규 프로젝트 추가 요청, 광고문의 외 기타 협력 제안 dm
+                    신규 프로젝트 추가 요청, 광고문의 및 기타 협력 제안 : contact@kluv.me
                   </span>
                 </div>
                 <div class="ul-widget4__img">
@@ -45,9 +45,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/8PkzK5w.png"/>
-              </a>
+          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
+          <!-- </a> -->
         </div>
       </b-col>
       <!-- 2 -->
@@ -56,9 +56,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/8PkzK5w.png"/>
-              </a>
+          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
+          <!-- </a> -->
         </div>
       </b-col>
     </b-row>
