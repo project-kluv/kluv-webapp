@@ -11,51 +11,57 @@
 <template>
   <div class="main-content">
     <breadcumb :page="'Klaytn Portal'" :folder="'Portal'" />
-<b-row class="">
- <b-col lg="6" xl="6" class=" mb-30">
+    <b-row class="">
+      <b-col lg="6" xl="6" class=" mb-30">
         <b-card>
           <div class="ul-widget__body">
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                 <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title"><img src="@/assets/images/site/kluvme.png"/></a>
+                <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title"><img src="@/assets/images/site/kluvme.png"/></a>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://t.me/kluvme" target="_blank" class="ul-widget2__title">
-                     Join our telegram community!
+                    Join our telegram community!
                   </a>
                   <span class="ul-widget2__username">
                     KLUV.ME 텔레그램 커뮤니티에서 클레이튼 생태계의 모든 프로젝트 정보를 공유하고 자유로운 토론을 즐기세요!
                     <br>
-                     신규 프로젝트 추가 요청, 광고문의 외 기타 협력 제안 dm
+                    신규 프로젝트 추가 요청, 광고문의 외 기타 협력 제안 dm
                   </span>
                 </div>
                 <div class="ul-widget4__img">
-               <a href="https://t.me/kluvme" target="_blank"><img src="@/assets/images/site/telegram.png"/></a>
-               </div>
+              <a href="https://t.me/kluvme" target="_blank"><img src="@/assets/images/site/telegram.png"/></a>
+              </div>
               </div>
             </div>
           </div>
-        </b-card>   
-   </b-col>
-   <!-- Banner -->
- <b-col lg="3" xl="3" class=" mb-30">
-      <span class="ul-widget2__username">
-        ad
-      </span>
-            <div class="ul-widget1">
-                <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"><img width="100%"  src="@/assets/images/banner/banner_kgg.png" style="max-width:auto; height:110px;"/></a>
+        </b-card>
+      </b-col>
+      <!-- Banner -->
+      <!-- 1 -->
+      <b-col lg="3" xl="3" class=" mb-30">
+        <span class="ul-widget2__username">
+          ad
+        </span>
+        <div class="ul-widget1">
+          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/8PkzK5w.png"/>
+              </a>
         </div>
-   </b-col>
- <b-col lg="3" xl="3" class=" mb-30">
-      <span class="ul-widget2__username">
-        ad
-      </span>
-            <div class="ul-widget1">
-                <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"><img img width="100%" src="https://i.imgur.com/8PkzK5w.png" style="max-width:auto; height:110px;"/></a>
+      </b-col>
+      <!-- 2 -->
+      <b-col lg="3" xl="3" class=" mb-30">
+        <span class="ul-widget2__username">
+          ad
+        </span>
+        <div class="ul-widget1">
+          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/8PkzK5w.png"/>
+              </a>
         </div>
-   </b-col>
-</b-row>
+      </b-col>
+    </b-row>
     <b-row class="">
       <!-- authors-profit -->
       <b-col lg="3" xl="3" class=" mb-30">
@@ -996,7 +1002,6 @@
         </b-card>
       </b-col>
     </b-row>
-
   </div>
 </template>
 
