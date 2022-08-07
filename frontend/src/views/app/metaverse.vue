@@ -739,7 +739,7 @@
               <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="https://klayguildgames.com/img/logos/kggLogoWhite.png"/>
+                  <img src="@/assets/images/site/kgg.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
