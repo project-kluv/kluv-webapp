@@ -45,9 +45,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
-          <!-- </a> -->
+          <a href="https://gleam.io/cwGxe/kgg-nft-raffle-zep" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="@/assets/images/banner/banner_kgg_whitelist.png"/>
+          </a>
         </div>
       </b-col>
       <!-- 2 -->
@@ -56,9 +56,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
-          <!-- </a> -->
+          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border:1px solid #444444; border-radius:10px;" src="@/assets/images/banner/banner_kgg_public_black.png"/>
+          </a>
         </div>
       </b-col>
     </b-row>
@@ -236,9 +236,11 @@
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://kronosdao.finance/" target="_blank" class="ul-widget2__title">
                     Kronosdao
+                    <b-badge pill variant="danger m-2">deprecated</b-badge>
                   </a>
+                  
                   <span class="ul-widget2__username">
-                    Partners : Kokoa | Hotbit | Ozys
+                    <!-- Partners : Kokoa | Hotbit | Ozys -->
                   </span>
                 </div>
                 <a href="https://kronosdao.finance/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
@@ -256,6 +258,7 @@
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://neverland.finance/" target="_blank" class="ul-widget2__title">
                     Neverland
+                    <b-badge pill variant="danger m-2">deprecated</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                   </span>

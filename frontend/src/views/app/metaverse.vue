@@ -45,9 +45,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
-          <!-- </a> -->
+          <a href="https://gleam.io/cwGxe/kgg-nft-raffle-zep" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="@/assets/images/banner/banner_kgg_whitelist.png"/>
+          </a>
         </div>
       </b-col>
       <!-- 2 -->
@@ -56,9 +56,9 @@
           ad
         </span>
         <div class="ul-widget1">
-          <!-- <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title"> -->
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="https://i.imgur.com/qMoSABo.png"/>
-          <!-- </a> -->
+          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border:1px solid #444444; border-radius:10px;" src="@/assets/images/banner/banner_kgg_public_black.png"/>
+          </a>
         </div>
       </b-col>
     </b-row>
@@ -537,7 +537,7 @@
         <b-card>
           <div class="d-flex justify-content-between">
             <h3 class="ul-widget__head-title">
-              P2E Game
+              Play to Earn
             </h3>
           </div>
           <div class="ul-widget__body">
@@ -744,6 +744,7 @@
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
                     KlayGuildgames
+                    <b-badge pill variant="primary m-2">event</b-badge>
                   </a>
                   <span class="ul-widget2__username">
                     Metaverse Gaming Community
@@ -751,6 +752,54 @@
                 </div>
                 <a href="https://klayguildgames.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
                 <a href="https://t.me/klayguildgames/" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+        </b-card>
+        <br>        
+        <b-card>
+          <div class="d-flex justify-content-between">
+            <h3 class="ul-widget__head-title">
+              Move to Earn
+            </h3>
+          </div>
+          <div class="ul-widget__body">
+              <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/snkrz.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://www.thesnkrz.com/" target="_blank" class="ul-widget2__title">
+                    SNKRZ
+                  </a>
+                  <span class="ul-widget2__username">
+                    backed by CRIT ventures | Com2us | Polygon | LootEx | jpyc | SVC | ArcheWorld...
+                  </span>
+                </div>
+                <a href="https://www.thesnkrz.com/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/thesnkrz/" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
+               <a></a>
+              </div>
+            </div>
+          </div>
+          <div class="ul-widget__body">
+              <div class="ul-widget1">
+              <div class="ul-widget__item ul-widget4__users">
+                <div class="ul-widget4__img">
+                  <img src="@/assets/images/site/superwalk.png"/>
+                </div>
+                <div class="ul-widget2__info ul-widget4__users-info">
+                  <a href="https://superwalk.io/" target="_blank" class="ul-widget2__title">
+                    SuperWalk
+                  </a>
+                  <span class="ul-widget2__username">
+                    Backed By NaverZ | KREAM | springcamp | KlayCity | IPX | HaechiLabs | Pala | KlayDice...
+                  </span>
+                </div>
+                <a href="https://superwalk.io/" target="_blank"><span class="ul-widget4__number t-font-boldest text-info"><i class="i-Internet"></i></span></a>
+                <a href="https://discord.com/invite/superwalk/" target="_blank"><span class="ul-widget4__number t-font-boldest text-success"><i class="i-Speach-Bubbles"></i></span></a>
                <a></a>
               </div>
             </div>
