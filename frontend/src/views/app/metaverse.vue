@@ -154,7 +154,7 @@
             <div class="ul-widget1">
               <div class="ul-widget__item ul-widget4__users">
                 <div class="ul-widget4__img">
-                  <img src="@/assets/images/site/clubrare.png"/>
+                  <img src="@/assets/images/site/clubrare2.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
                   <a href="https://clubrare.com/" target="_blank" class="ul-widget2__title">
