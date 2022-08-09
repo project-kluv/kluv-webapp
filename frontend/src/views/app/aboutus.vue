@@ -9,7 +9,7 @@
                 <img src="@/assets/images/profile/leafcat.png" alt="" />
               </div>
               <h5 class="m-0">Leafcat</h5>
-              <p class="mt-0 text-muted">SW Architect / Full stack developer</p>
+              <p class="mt-0 text-muted">SW Architect / Full stack</p>
               <p>
               </p>
             </b-card>
@@ -17,10 +17,10 @@
           <b-col md="4">
             <b-card class="card-profile-1 mb-30 text-center">
               <div class="avatar box-shadow-2 mb-3">
-                <img src="@/assets/images/profile/kerin.png" alt="" />
+                <img src="@/assets/images/profile/kerinpu.png" alt="" />
               </div>
               <h5 class="m-0">Kerin</h5>
-              <p class="mt-0 text-muted">UX / Frontend / Bot developer</p>
+              <p class="mt-0 text-muted">Solidity / Frontend / Bot</p>
             </b-card>
           </b-col>
           <b-col md="4">
