@@ -11,7 +11,7 @@
         <div class="d-flex align-items-center">
           <div style="">
               <!-- <p class="m-0">All rights reserved</p> -->
-              <strong> Contact : contact@kluv.me | &copy; Kluv.me 2021-2022. All rights reserved</strong> 
+              <strong>&copy; Kluv.me 2021-2022. All rights reserved</strong> 
           </div>
           <span class="flex-grow-1"></span>
         </div>

@@ -27,7 +27,7 @@
                   <span class="ul-widget2__username">
                     KLUV.ME 텔레그램 커뮤니티에서 클레이튼 생태계의 모든 프로젝트 정보를 공유하고 자유로운 토론을 즐기세요!
                     <br>
-                    신규 프로젝트 추가 요청, 광고문의 및 기타 협력 제안 : contact@kluv.me
+                    신규 프로젝트 추가 요청, 광고문의 및 기타 협력 제안 : <a href="https://t.me/Kerinkluv" target="_blank">@Kerinkluv</a> (via Telegram DM)
                   </span>
                 </div>
                 <div class="ul-widget4__img">
