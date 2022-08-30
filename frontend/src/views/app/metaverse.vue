@@ -45,8 +45,8 @@
           ad
         </span>
         <div class="ul-widget1">
-          <a href="https://gleam.io/cwGxe/kgg-nft-raffle-zep" target="_blank" class="ul-widget2__title">
-            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="@/assets/images/banner/banner_kgg_whitelist.png"/>
+          <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
+            <img style="max-width:auto; max-height:auto; border-radius:10px;" src="@/assets/images/banner/banner_kgg_grey.png"/>
           </a>
         </div>
       </b-col>
@@ -57,10 +57,11 @@
         </span>
         <div class="ul-widget1">
           <a href="https://klayguildgames.com/" target="_blank" class="ul-widget2__title">
-            <img style="max-width:auto; max-height:auto; border:1px solid #444444; border-radius:10px;" src="@/assets/images/banner/banner_kgg_public_black.png"/>
+            <img style="max-width:auto; max-height:auto; border:1px solid #444444; border-radius:10px;" src="@/assets/images/banner/banner_kgg_back.png"/>
           </a>
         </div>
       </b-col>
+    <!-- banner end -->
     </b-row>
     <b-row class="">
       <!-- authors-profit -->
