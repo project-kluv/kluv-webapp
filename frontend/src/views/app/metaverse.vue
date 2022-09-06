@@ -548,7 +548,7 @@
                   <img src="https://klaykingdoms.com/assets/icon.7462a700.png"/>
                 </div>
                 <div class="ul-widget2__info ul-widget4__users-info">
-                  <a href="http://forum.klayguildgames.com/t/klaykingdoms" target="_blank" class="ul-widget2__title">
+                  <a href="https://forum.klayguildgames.com/t/klaykingdoms" target="_blank" class="ul-widget2__title">
                     Klaykingdoms
                   </a>
                   <span class="ul-widget2__username">
